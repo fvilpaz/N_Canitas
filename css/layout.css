@@ -86,40 +86,34 @@ body.light .chip {
 
 .tabs {
   display: flex;
-  justify-content: flex-start; /* Alinea a la izquierda para poder deslizar */
+  justify-content: center;
+  flex-wrap: wrap;       /* Aquí permitimos que bajen si es necesario, pero... */
+  gap: 6px;              /* Hueco más pequeño para que quepan más */
   margin-bottom: 20px;
-  gap: 10px;
-  overflow-x: auto;            /* Habilita el movimiento lateral */
-  white-space: nowrap;         /* Impide que las pestañas bajen de fila */
-  padding: 10px 5px;           /* Espacio para que no se corten las sombras */
-  scrollbar-width: none;       /* Esconde la barra en Firefox */
-  -webkit-overflow-scrolling: touch; /* Suavidad total en iPhone/Android */
-}
-
-/* Esconde la barra de scroll en Chrome/Safari para que quede limpio */
-.tabs::-webkit-scrollbar {
-  display: none;
 }
 
 .tab {
-  flex: 0 0 auto;              /* Evita que las pestañas se encojan */
-  padding: 10px 20px;
-  cursor: pointer;
-  border-radius: 20px;         /* Más redondeadas, estilo "píldora" */
+  flex: 1 1 auto;        /* Esto hace que se repartan el ancho */
+  min-width: 60px;       /* Pero no deja que se compriman demasiado */
+  padding: 6px 10px;     /* Relleno muy pequeño para ahorrar espacio */
+  font-size: 0.8em;      /* Letra más pequeña por defecto */
+  text-align: center;
+  border-radius: 12px;
   background: var(--card);
   color: var(--text);
-  transition: all 0.3s ease;
-  font-size: 0.9em;
-  border: 1px solid rgba(255, 255, 255, 0.05); /* Borde casi invisible */
+  opacity: 0.6;          /* Se ven "apagadas" si no están seleccionadas */
+  transition: all 0.2s ease;
+  white-space: nowrap;
 }
 
 .tab.active {
+  opacity: 1;            /* Solo brilla la activa */
+  padding: 8px 16px;     /* La activa se hace más grande */
+  font-size: 0.9em;      /* Y la letra crece un poco */
   background: var(--accent);
   color: white;
-  box-shadow: 0 4px 12px rgba(23, 147, 209, 0.3); /* Brillo bajo la pestaña activa */
-  transform: translateY(-2px); /* Pequeña elevación */
+  font-weight: bold;
 }
-
 .card {
   background: var(--card);
   padding: 20px;
