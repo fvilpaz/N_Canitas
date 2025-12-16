@@ -86,27 +86,38 @@ body.light .chip {
 
 .tabs {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start; /* Alinea a la izquierda para poder deslizar */
   margin-bottom: 20px;
-  flex-wrap: wrap; /* Permite que las pestañas bajen si no caben */
-  gap: 8px;
+  gap: 10px;
+  overflow-x: auto;            /* Habilita el movimiento lateral */
+  white-space: nowrap;         /* Impide que las pestañas bajen de fila */
+  padding: 10px 5px;           /* Espacio para que no se corten las sombras */
+  scrollbar-width: none;       /* Esconde la barra en Firefox */
+  -webkit-overflow-scrolling: touch; /* Suavidad total en iPhone/Android */
+}
+
+/* Esconde la barra de scroll en Chrome/Safari para que quede limpio */
+.tabs::-webkit-scrollbar {
+  display: none;
 }
 
 .tab {
-  padding: 8px 15px;
-  margin: 2px;
+  flex: 0 0 auto;              /* Evita que las pestañas se encojan */
+  padding: 10px 20px;
   cursor: pointer;
-  border-radius: 8px 8px 0 0;
+  border-radius: 20px;         /* Más redondeadas, estilo "píldora" */
   background: var(--card);
   color: var(--text);
-  transition: background 0.2s ease;
+  transition: all 0.3s ease;
   font-size: 0.9em;
-  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.05); /* Borde casi invisible */
 }
 
 .tab.active {
   background: var(--accent);
   color: white;
+  box-shadow: 0 4px 12px rgba(23, 147, 209, 0.3); /* Brillo bajo la pestaña activa */
+  transform: translateY(-2px); /* Pequeña elevación */
 }
 
 .card {

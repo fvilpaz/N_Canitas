@@ -2,12 +2,14 @@
   /* ==========================================================
      OPCIÓN 3: "Pure Gray" (LA QUE QUIERES PROBAR - ACTIVADA)
      ========================================================== */
-  --bg: #1c1c1c;           /* Tu gris oscuro original */
-  --card: #2b2b2b;         /* Tu color de tarjeta original */
-  --text: #e0e0e0;         
-  --accent: #1793d1;       
+  /* Tus colores originales con estructura pro */
+  
+  --bg: #1c1c1c;           /* Tu color original */
+  --card: #2b2b2b;         /* Tu color original */
+  --text: #e0e0e0;         /* Tu color original */
+  --accent: #1793d1;       /* Tu azul original */
   --hover: #147ab9;
-  --text-dim: #b0b0b0;     /* El gris intermedio para detalles */
+  --text-dim: #b0b0b0;     /* Un gris intermedio para detalles */
 
   /* ==========================================================
      OPCIÓN 2: "Deep Ocean" (Sugerencia azulada - Comentada)
@@ -32,13 +34,14 @@
 
 body.light {
   /* Opción Pure Gray Light (ACTIVADA) */
+
   --bg: #ffffff;
   --card: #f4f4f4;
   --text: #222222;
   --accent: #1793d1;
   --hover: #147ab9;
   --text-dim: #666666;
-
+  
   /* Opción Deep Ocean Light (Comentada)
      /*
      --bg: #f1f5f9;        
