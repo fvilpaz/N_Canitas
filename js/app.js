@@ -1,76 +1,66 @@
 import { menuData } from './data.js';
 
-let currentStep = 0;
-let currentSection = 'ene'; 
-
-// Función para cambiar de sección (Lobby, Restaurante, etc.)
-window.showSection = function (id, tab) {
-    currentSection = id;
-    currentStep = 0; 
+/* 1. NAVEGACIÓN GLOBAL */
+window.showSection = function(id, element) {
+    // Ocultamos todas las secciones de platos
+    document.querySelectorAll('.section').forEach(s => s.classList.add('hidden'));
     
-    // Ocultar todo
-    document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
-    const examen = document.getElementById('zona-examen');
-    if (examen) examen.classList.add('hidden');
-
-    // Mostrar sección actual
-    const target = document.getElementById(id);
-    if (target) target.classList.remove('hidden');
-
-    // Cambiar pestaña activa
+    // Quitamos el color azul de todos los botones
     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-    if (tab) tab.classList.add('active');
-
-    renderApp();
+    
+    // Mostramos la sección que queremos
+    const target = document.getElementById(id);
+    if(target) {
+        target.classList.remove('hidden');
+        if(element) element.classList.add('active');
+        renderPlatos(id);
+    }
 }
 
-// Función para mostrar el plato actual
-function renderApp() {
-    const container = document.getElementById(currentSection);
-    if (!container) return;
-
-    const platos = menuData[currentSection];
-
-    if (!platos || platos.length === 0) {
-        container.innerHTML = `<div class="card">🚧 Próximamente...</div>`;
+/* 2. DIBUJAR LOS PLATOS (Bucle Map) */
+function renderPlatos(seccion) {
+    const container = document.getElementById(seccion);
+    const platos = menuData[seccion];
+    
+    if(!platos || platos.length === 0) {
+        container.innerHTML = `<div class="card" style="text-align:center;">🚧 Próximamente en ${seccion}...</div>`;
         return;
     }
 
-    const plato = platos[currentStep];
-    
-    container.innerHTML = `
+    // Este bloque .map recorre TODO tu data.js y crea las tarjetas una a una
+    container.innerHTML = platos.map(p => `
         <div class="card">
-            <div style="display:flex; justify-content:space-between; color:var(--accent); font-weight:bold; font-size:0.8rem;">
-                <span>PLATO ${currentStep + 1} / ${platos.length}</span>
-                <span>${plato.precio}</span>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                <span style="color:var(--accent); font-weight:bold; font-size:0.8rem;">${p.precio || ''}</span>
             </div>
-            <h2>${plato.nombre}</h2>
-            <p style="font-style:italic; opacity:0.8;">"${plato.descripcion}"</p>
-            <p>${plato.historia}</p>
-            <p><strong>Trazabilidad:</strong> ${plato.trazabilidad}</p>
-            <div class="alergenos">
-                ${plato.alergenos.map(a => `<span class="chip">${a}</span>`).join('')}
+            <h2 style="margin:0; color:var(--accent);">${p.nombre}</h2>
+            <p style="font-style:italic; font-size:0.9rem; margin:10px 0;">"${p.descripcion}"</p>
+            <p style="font-size:0.95rem;">${p.historia}</p>
+            <div style="border-top:1px solid rgba(255,255,255,0.1); padding-top:10px; margin-top:10px;">
+                <p style="font-size:0.8rem; margin:0;"><strong>Origen:</strong> ${p.trazabilidad}</p>
+                <div style="margin-top:10px;">
+                    ${p.alergenos.map(a => `<span class="chip">${a}</span>`).join('')}
+                </div>
             </div>
-            <button onclick="window.siguientePlato()" style="width:100%; margin-top:20px;">SIGUIENTE PLATO ➔</button>
         </div>
-    `;
+    `).join('');
 }
 
-window.siguientePlato = function() {
-    const platos = menuData[currentSection];
-    if (currentStep < platos.length - 1) {
-        currentStep++;
-        renderApp();
-        window.scrollTo(0,0);
-    } else {
-        alert("¡Has llegado al final de esta sección!");
-        if (currentSection === 'ene') {
-            document.getElementById('zona-examen').classList.remove('hidden');
-        }
+/* 3. LÓGICA DEL BOTÓN DE EXAMEN */
+const btnExamen = document.getElementById('btn-certificacion');
+if(btnExamen) {
+    btnExamen.onclick = () => {
+        alert("¡Prepárate! El examen de certificación de " + document.querySelector('.tab.active').innerText + " comenzará pronto.");
+        // Aquí podrías redirigir a un Typeform o Google Forms si quieres algo rápido
+        // window.location.href = "URL_DE_TU_EXAMEN";
+    };
+}
+
+/* 4. ARRANQUE INICIAL */
+window.onload = () => {
+    // Buscamos el primer botón (Eñe) y lo pulsamos automáticamente
+    const primeraTab = document.querySelector('.tab');
+    if(primeraTab) {
+        window.showSection('ene', primeraTab);
     }
 }
-
-// Arrancar la app
-window.onload = () => {
-    showSection('ene', document.querySelector('.tab'));
-};
