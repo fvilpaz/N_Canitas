@@ -1,192 +1,133 @@
-/* 1. Reset y Variables Globales */
-* {
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
+/* 1. RESET Y BASE */
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html, body { 
+    margin: 0; 
+    padding: 0; 
+    width: 100%; 
+    overflow-x: hidden; /* Evita que la web baile hacia los lados */
 }
-
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-    line-height: 1.5;
-}
-
 body {
     font-family: 'Poppins', sans-serif;
     background-color: var(--bg);
     color: var(--text);
     padding: 20px;
+    line-height: 1.6;
     transition: background 0.3s ease;
 }
 
-/* 2. Estructura Principal */
+/* 2. CONTENEDOR (Se adapta al dispositivo) */
 .container {
-    max-width: 800px;
+    max-width: 950px; /* Ancho de PC */
     margin: 0 auto;
     width: 100%;
 }
 
+/* 3. TOPBAR */
 .topbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
-    margin-bottom: 20px;
+    gap: 15px;
+    margin-bottom: 30px;
 }
+.logo { height: clamp(40px, 8vw, 80px); width: auto; object-fit: contain; }
+h1 { font-size: clamp(1.2rem, 4vw, 2rem); color: var(--accent); margin: 0; text-align: center; flex: 1; }
 
-.logo {
-    height: 50px;
-    width: auto;
-    object-fit: contain;
-    flex-shrink: 0;
-}
-
-h1 {
-    font-size: 1.3rem;
-    color: var(--accent);
-    margin: 0;
-    cursor: pointer;
-    text-align: center;
-    flex: 1;
-    line-height: 1.2;
-}
-
-/* 3. Navegación (Tabs) */
+/* 4. TABS (Scrollable en móvil, centradas en PC) */
 .tabs {
     display: flex;
-    gap: 8px;
-    margin-bottom: 25px;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
     overflow-x: auto;
     padding-bottom: 10px;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
 }
-
-.tabs::-webkit-scrollbar {
-    display: none;
-}
-
 .tab {
     flex: 0 0 auto;
-    padding: 8px 16px;
+    padding: 10px 20px;
     background: var(--card);
-    border-radius: 10px;
+    border-radius: 12px;
     cursor: pointer;
     font-weight: 600;
-    font-size: 0.8rem;
-    text-align: center;
-    transition: all 0.2s ease;
+    transition: 0.3s;
     border: 1px solid rgba(255,255,255,0.05);
 }
+.tab.active { background: var(--accent); color: white; }
 
-.tab.active {
-    background: var(--accent);
-    color: white;
-    box-shadow: 0 4px 10px rgba(23, 147, 209, 0.2);
-}
-
-/* 4. Tarjetas de Platos */
+/* 5. TARJETAS Y CONTENIDO */
 .card {
     background: var(--card);
-    border-radius: 18px;
-    padding: 20px;
-    margin-bottom: 20px;
-    width: 100%;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    border: 1px solid rgba(255,255,255,0.03);
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 25px;
+    width: 100%; /* Se adapta al contenedor */
 }
-
 .card-header {
-    display: flex;
-    justify-content: space-between;
+    display: flex; 
+    justify-content: space-between; 
     align-items: flex-start;
-    margin-bottom: 12px;
     gap: 10px;
 }
+.price { color: var(--accent); font-weight: 700; font-size: 1.2rem; }
 
-.card-header h2 {
-    margin: 0;
-    font-size: 1.15rem;
-    line-height: 1.3;
-}
-
-.price {
-    font-weight: 700;
-    color: var(--accent);
-    font-size: 1rem;
-    white-space: nowrap;
-}
-
-/* 5. Componentes Internos */
-.descripcion {
-    font-style: italic;
-    font-size: 0.9rem;
-    opacity: 0.85;
-    margin-bottom: 15px;
-    display: block;
-}
-
+/* 6. ALÉRGENOS (El fix para que no se salgan) */
 .alergenos {
     display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
+    flex-wrap: wrap; /* Esto hace que bajen de línea si no caben */
+    gap: 8px;
     margin: 15px 0;
+}
+.chip {
+    padding: 5px 12px;
+    background: rgba(255,255,255,0.08);
+    border-radius: 15px;
+    font-size: 0.8rem;
+}
+
+/* 7. QUIZ Y CUESTIONARIOS (Recuperados y mejorados) */
+.quiz-container, .quiz {
+    margin-top: 20px;
     width: 100%;
 }
-
-.chip {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.1);
-    padding: 3px 10px;
-    border-radius: 15px;
-    font-size: 0.7rem;
-    font-weight: 500;
-    white-space: nowrap;
+.quiz label {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: 0.2s;
 }
+.quiz label:hover { background: rgba(255, 255, 255, 0.08); }
+.quiz input[type="radio"] { margin-right: 15px; transform: scale(1.2); }
 
-.trazabilidad {
-    font-size: 0.75rem;
-    background: rgba(0,0,0,0.15);
-    padding: 10px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-/* 6. Botones y Quiz */
+/* 8. BOTONES */
 button {
     width: 100%;
-    padding: 14px;
-    border-radius: 12px;
+    padding: 16px;
+    border-radius: 15px;
     border: none;
     background: var(--accent);
     color: white;
-    font-family: inherit;
     font-weight: 700;
-    text-transform: uppercase;
     cursor: pointer;
+    font-size: 1rem;
+}
+#btn-certificacion {
+    background: #ffcc00 !important;
+    color: #000 !important;
+    margin-top: 30px;
 }
 
-.hidden { display: none; }
+.hidden { display: none !important; }
 
-/* 7. Media Queries (Móvil) */
+/* 9. MEDIA QUERIES (AJUSTES ESPECÍFICOS MÓVIL) */
 @media (max-width: 600px) {
-    body { padding: 12px; }
-    
-    .topbar { margin-bottom: 15px; }
-    
-    .logo { height: 40px; }
-
-    h1 { font-size: 1rem; }
-
-    .card { padding: 15px; }
-    
-    .card-header {
-        flex-direction: column;
-        gap: 4px;
-    }
-    
-    .card-header h2 { font-size: 1.1rem; }
-    
-    .tab { padding: 8px 12px; font-size: 0.75rem; }
+    body { padding: 15px; }
+    .topbar { flex-direction: row; }
+    .card-header { flex-direction: column; }
+    .tabs { justify-content: flex-start; }
+    .card { padding: 20px; }
 }
