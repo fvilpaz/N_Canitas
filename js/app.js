@@ -1,15 +1,12 @@
 import { menuData } from './data.js';
 
 /* ==========================================================
-   1. VARIABLES DE ESTADO
+   1. VARIABLES DE ESTADO Y VISIBILIDAD GLOBAL
    ========================================================== */
 let currentStep = 0;
 let currentSection = 'ene'; 
 
-/* ==========================================================
-   2. INTERFAZ Y NAVEGACIÓN
-   ========================================================== */
-
+// Hacemos las funciones visibles para el HTML (necesario por ser type="module")
 window.toggleTheme = function () {
     const body = document.body;
     const icon = document.getElementById('themeIcon');
@@ -21,12 +18,12 @@ window.showSection = function (id, tab) {
     currentSection = id;
     currentStep = 0; 
     
-    // Ocultar todas las secciones y la zona de examen
+    // Ocultar todas las secciones
     document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
     const zonaExamen = document.getElementById('zona-examen');
     if (zonaExamen) zonaExamen.classList.add('hidden');
 
-    // Mostrar la sección seleccionada
+    // Mostrar sección seleccionada
     const target = document.getElementById(id);
     if (target) target.classList.remove('hidden');
 
@@ -43,16 +40,16 @@ window.startQuiz = function (infoId, quizId) {
 }
 
 /* ==========================================================
-   3. RENDERIZADO DE UN SOLO PLATO
+   2. MOTOR DE RENDERIZADO (DIBUJAR PLATOS)
    ========================================================== */
-
 function renderApp() {
     const container = document.getElementById(currentSection);
     if (!container) return;
 
-    const platos = menuData[currentSection];
+    // 'listaPlatos' evita el choque de nombres con el ID 'ene'
+    const listaPlatos = menuData[currentSection];
 
-    if (!platos || platos.length === 0) {
+    if (!listaPlatos || listaPlatos.length === 0) {
         container.innerHTML = `
             <div class="coming-soon" style="text-align:center; padding:40px; border:2px dashed #444; border-radius:15px; margin:20px;">
                 <p>🚧 Contenido de <strong>${currentSection.toUpperCase()}</strong> próximamente...</p>
@@ -60,13 +57,13 @@ function renderApp() {
         return;
     }
 
-    const plato = platos[currentStep];
-    const isLastPlato = currentStep === platos.length - 1;
+    const plato = listaPlatos[currentStep];
+    const isLastPlato = currentStep === listaPlatos.length - 1;
 
     container.innerHTML = `
         <div class="card">
             <div class="card-header" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:15px;">
-                <span style="font-size:0.75rem; color:var(--accent); font-weight:bold;">PLATO ${currentStep + 1} / ${platos.length}</span>
+                <span style="font-size:0.75rem; color:var(--accent); font-weight:bold;">PLATO ${currentStep + 1} / ${listaPlatos.length}</span>
                 <span class="price">${plato.precio}</span>
             </div>
             
@@ -117,9 +114,8 @@ function generarQuizHTML(plato, isLastPlato) {
 }
 
 /* ==========================================================
-   4. LÓGICA DE VERIFICACIÓN Y AVANCE
+   3. VERIFICACIÓN Y NAVEGACIÓN
    ========================================================== */
-
 window.verificarQuiz = function (platoId, isLastPlato) {
     const platos = menuData[currentSection];
     const plato = platos[currentStep];
@@ -137,25 +133,18 @@ window.verificarQuiz = function (platoId, isLastPlato) {
 
     if (todoCorrecto) {
         btnVerificar.style.display = 'none';
-
         if (isLastPlato) {
-            resDiv.innerHTML = `
-                <div style="color:#4ade80; margin-bottom:15px;">✅ ¡PLATO DOMINADO! SECCIÓN COMPLETADA.</div>
-            `;
-            // Si estamos en Eñe, mostramos el botón de examen final
+            resDiv.innerHTML = `<div style="color:#4ade80;">✅ SECCIÓN COMPLETADA.</div>`;
             if (currentSection === 'ene') {
-                const zonaExamen = document.getElementById('zona-examen');
-                if (zonaExamen) zonaExamen.classList.remove('hidden');
+                document.getElementById('zona-examen').classList.remove('hidden');
             }
         } else {
             resDiv.innerHTML = `
-                <div style="color:#4ade80; margin-bottom:15px;">✅ ¡PLATO DOMINADO!</div>
-                <button onclick="window.siguientePlato()" style="width:100%; background:#22c55e; padding:15px;">
-                    SIGUIENTE PLATO ➔
-                </button>`;
+                <div style="color:#4ade80; margin-bottom:15px;">✅ ¡CORRECTO!</div>
+                <button onclick="window.siguientePlato()" style="width:100%; background:#22c55e;">SIGUIENTE PLATO ➔</button>`;
         }
     } else {
-        resDiv.innerHTML = `<p style="color:#f87171;">❌ Hay algún error. ¡Repasa e inténtalo de nuevo!</p>`;
+        resDiv.innerHTML = `<p style="color:#f87171;">❌ Revisa tus respuestas.</p>`;
     }
 }
 
@@ -166,63 +155,49 @@ window.siguientePlato = function() {
 }
 
 /* ==========================================================
-   5. INICIALIZACIÓN
+   4. EXAMEN FINAL Y CERTIFICACIÓN
    ========================================================== */
-
-renderApp();
-
-// Manejador del botón de certificación
 const btnCert = document.getElementById('btn-certificacion');
 if (btnCert) {
     btnCert.addEventListener('click', () => {
-        // Escondemos la sección de platos y el botón
         document.getElementById('ene').classList.add('hidden');
         document.getElementById('zona-examen').classList.add('hidden');
-
         const testSection = document.getElementById('super-test-container');
         const testContent = document.getElementById('test-content');
         testSection.classList.remove('hidden');
 
-        let htmlExamen = '<h2 style="color:#facc15; text-align:center;">🏆 EXAMEN DE CERTIFICACIÓN</h2>';
-        htmlExamen += '<p style="text-align:center; margin-bottom:30px;">Demuestra que dominas la carta de Eñe Lobby.</p>';
-
-        // Generamos una pregunta aleatoria por cada uno de los 14 platos
+        let htmlExamen = '<h2 style="color:#facc15; text-align:center;">🏆 EXAMEN FINAL</h2>';
         menuData.ene.forEach((plato, index) => {
             const randomQ = plato.quiz.preguntas[Math.floor(Math.random() * plato.quiz.preguntas.length)];
             htmlExamen += `
-                <div class="card" style="margin-bottom: 20px; border-left: 5px solid #facc15;">
-                    <p style="font-size:0.8rem; color:#facc15;">Pregunta ${index + 1} · Sobre: ${plato.nombre}</p>
+                <div class="card" style="margin-bottom:20px;">
+                    <p style="font-size:0.8rem; color:#facc15;">${plato.nombre}</p>
                     <p><strong>${randomQ.texto}</strong></p>
                     ${randomQ.opciones.map((opt, i) => `
-                        <label style="display: block; margin: 12px 0; cursor: pointer;">
-                            <input type="radio" name="p${index}" value="${opt.correcta}" style="margin-right:10px;">
-                            ${opt.texto}
+                        <label style="display:block; margin:10px 0;">
+                            <input type="radio" name="p${index}" value="${opt.correcta}"> ${opt.texto}
                         </label>
                     `).join('')}
                 </div>`;
         });
-
-        htmlExamen += `<button id="finalizar-examen" style="width: 100%; padding: 20px; background: #22c55e; color: white; border: none; border-radius: 12px; font-weight: bold; cursor: pointer; margin-top: 20px;">FINALIZAR Y ENTREGAR EXAMEN</button>`;
+        htmlExamen += `<button id="finalizar-examen" style="width:100%; padding:20px; background:#22c55e;">ENTREGAR EXAMEN</button>`;
         testContent.innerHTML = htmlExamen;
 
         document.getElementById('finalizar-examen').onclick = () => {
             const seleccionadas = document.querySelectorAll('#test-content input[type="radio"]:checked');
-
             if (seleccionadas.length < menuData.ene.length) {
-                alert("⚠️ Por favor, responde a todas las preguntas antes de entregar.");
+                alert("Responde a todas las preguntas.");
                 return;
             }
-
             let aciertos = 0;
             seleccionadas.forEach(radio => { if (radio.value === "true") aciertos++; });
-
-            alert(`Resultado: Has acertado ${aciertos} de ${menuData.ene.length}.`);
-            location.reload(); // Reinicia la app tras el examen
+            alert(`Has acertado ${aciertos} de ${menuData.ene.length}.`);
+            location.reload();
         };
     });
 }
 
-// Fuerza el renderizado al cargar la página por primera vez
-document.addEventListener('DOMContentLoaded', () => {
+// Inicialización
+window.onload = () => {
     showSection('ene', document.querySelector('.tab'));
-});
+};
