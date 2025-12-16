@@ -197,6 +197,20 @@ button:hover {
   .container { max-width: 800px; }
 }
 
+
+/* Esto es un seguro de vida: oculta el div del examen por su nombre propio */
 #zona-examen {
     display: none !important;
+}
+
+/* Y esto permite que el JS lo muestre cuando sea necesario quitando la clase hidden */
+#zona-examen.hidden {
+    display: none !important;
+}
+
+/* Movemos el diseño que quitamos del HTML aquí */
+#zona-examen:not(.hidden) {
+    display: block !important;
+    text-align: center;
+    margin: 40px 0;
 }
