@@ -12,7 +12,6 @@ body {
   overflow-x: hidden;
 }
 
-/* LA REGLA CLAVE: Sin el !important el botón amarillo no se va */
 .hidden {
   display: none !important;
 }
@@ -52,7 +51,6 @@ h1 {
    ========================================================== */
 .tabs {
   display: grid;
-  /* Creamos 3 columnas iguales */
   grid-template-columns: repeat(3, 1fr); 
   gap: 10px;
   margin-bottom: 25px;
@@ -77,7 +75,6 @@ h1 {
   line-height: 1.2;
 }
 
-/* El cuarto botón (Room Service) ocupa las 3 columnas de la fila de abajo */
 .tab:nth-child(4) {
   grid-column: span 3;
 }
@@ -91,7 +88,7 @@ h1 {
 }
 
 /* ==========================================================
-   4. TARJETAS Y CONTENIDO
+   4. TARJETAS Y CONTENIDO (CORREGIDO)
    ========================================================== */
 .card {
   background: var(--card);
@@ -102,8 +99,22 @@ h1 {
   box-sizing: border-box;
 }
 
+/* ESTA ES LA REGLA PARA EL PRECIO AZUL */
+.price {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
 .descripcion {
   margin-bottom: 12px;
+}
+
+/* ESTO DA EL BORDE AZUL A LA IZQUIERDA EN HISTORIA */
+.formacion-extra {
+  border-left: 4px solid var(--accent);
+  padding-left: 15px;
+  margin-bottom: 20px;
 }
 
 .trazabilidad {
@@ -130,9 +141,6 @@ h1 {
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
-  max-width: 140px;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 body.light .chip {
@@ -165,7 +173,6 @@ button:hover {
   cursor: pointer;
 }
 
-/* BOTÓN ESPECIAL DE EXAMEN */
 .btn-premium-examen {
   background: #facc15 !important;
   color: #000 !important;
