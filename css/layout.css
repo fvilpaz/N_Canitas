@@ -1,133 +1,179 @@
-/* 1. RESET Y BASE */
-* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
-html, body { 
-    margin: 0; 
-    padding: 0; 
-    width: 100%; 
-    overflow-x: hidden; /* Evita que la web baile hacia los lados */
-}
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--bg);
-    color: var(--text);
-    padding: 20px;
-    line-height: 1.6;
-    transition: background 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95em;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 20px;
+  transition: all 0.3s ease;
 }
 
-/* 2. CONTENEDOR (Se adapta al dispositivo) */
 .container {
-    max-width: 950px; /* Ancho de PC */
-    margin: 0 auto;
-    width: 100%;
+  max-width: 950px;
+  margin: auto;
 }
 
-/* 3. TOPBAR */
+/* TOPBAR responsive (logos izq/der + título centrado) */
 .topbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 15px;
-    margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
 }
-.logo { height: clamp(40px, 8vw, 80px); width: auto; object-fit: contain; }
-h1 { font-size: clamp(1.2rem, 4vw, 2rem); color: var(--accent); margin: 0; text-align: center; flex: 1; }
 
-/* 4. TABS (Scrollable en móvil, centradas en PC) */
-.tabs {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 30px;
-    overflow-x: auto;
-    padding-bottom: 10px;
+.logo {
+  height: clamp(44px, 7vw, 92px);
+  width: auto;
+  display: block;
+  object-fit: contain;
 }
-.tab {
-    flex: 0 0 auto;
-    padding: 10px 20px;
-    background: var(--card);
-    border-radius: 12px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: 0.3s;
-    border: 1px solid rgba(255,255,255,0.05);
-}
-.tab.active { background: var(--accent); color: white; }
 
-/* 5. TARJETAS Y CONTENIDO */
-.card {
-    background: var(--card);
-    border-radius: 20px;
-    padding: 25px;
-    margin-bottom: 25px;
-    width: 100%; /* Se adapta al contenedor */
+h1 {
+  margin: 0;
+  color: var(--accent);
+  cursor: pointer;
+  text-align: center;
 }
-.card-header {
-    display: flex; 
-    justify-content: space-between; 
-    align-items: flex-start;
-    gap: 10px;
-}
-.price { color: var(--accent); font-weight: 700; font-size: 1.2rem; }
 
-/* 6. ALÉRGENOS (El fix para que no se salgan) */
+#titulo {
+  flex: 1;
+  text-align: center;
+  margin: 0;
+  font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+}
+
+h1 span {
+  margin-right: 10px;
+  font-size: 1em;
+}
+
+h2 {
+  font-size: 1.3em;
+}
+
+/* descripción y trazabilidad */
+.descripcion {
+  margin-bottom: 12px;
+}
+
+.trazabilidad {
+  font-size: .9em;
+  opacity: .75;
+  margin-bottom: 15px;
+}
+
+/* chips alérgenos */
 .alergenos {
-    display: flex;
-    flex-wrap: wrap; /* Esto hace que bajen de línea si no caben */
-    gap: 8px;
-    margin: 15px 0;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
 }
+
 .chip {
-    padding: 5px 12px;
-    background: rgba(255,255,255,0.08);
-    border-radius: 15px;
-    font-size: 0.8rem;
+  padding: 5px 12px;
+  font-size: .75em;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, .08);
+  border: 1px solid rgba(255, 255, 255, .2);
+  white-space: nowrap;
 }
 
-/* 7. QUIZ Y CUESTIONARIOS (Recuperados y mejorados) */
-.quiz-container, .quiz {
-    margin-top: 20px;
-    width: 100%;
+body.light .chip {
+  background: rgba(0, 0, 0, .05);
+  border-color: rgba(0, 0, 0, .15);
 }
-.quiz label {
-    display: flex;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.03);
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    cursor: pointer;
-    transition: 0.2s;
-}
-.quiz label:hover { background: rgba(255, 255, 255, 0.08); }
-.quiz input[type="radio"] { margin-right: 15px; transform: scale(1.2); }
 
-/* 8. BOTONES */
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-wrap: nowrap;
+  gap: 8px;
+}
+
+.tab {
+  padding: 8px 15px;
+  margin: 2px;
+  cursor: pointer;
+  border-radius: 8px 8px 0 0;
+  background: var(--card);
+  color: var(--text);
+  transition: background 0.2s ease;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+.tab.active {
+  background: var(--accent);
+  color: white;
+}
+
+.card {
+  background: var(--card);
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+/* centra botón "Empezar quiz" */
+.card div[id^="info"] {
+  text-align: center;
+}
+
+.card p {
+  text-align: left;
+}
+
 button {
-    width: 100%;
-    padding: 16px;
-    border-radius: 15px;
-    border: none;
-    background: var(--accent);
-    color: white;
-    font-weight: 700;
-    cursor: pointer;
-    font-size: 1rem;
-}
-#btn-certificacion {
-    background: #ffcc00 !important;
-    color: #000 !important;
-    margin-top: 30px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background 0.2s ease;
+  display: inline-block;
 }
 
-.hidden { display: none !important; }
-
-/* 9. MEDIA QUERIES (AJUSTES ESPECÍFICOS MÓVIL) */
-@media (max-width: 600px) {
-    body { padding: 15px; }
-    .topbar { flex-direction: row; }
-    .card-header { flex-direction: column; }
-    .tabs { justify-content: flex-start; }
-    .card { padding: 20px; }
+button:hover {
+  background: var(--hover);
 }
+
+.quiz label {
+  display: block;
+  margin: 6px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Móviles: apila topbar */
+@media (max-width: 520px) {
+  .topbar {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .logo {
+    height: clamp(52px, 18vw, 90px);
+  }
+
+  #titulo {
+    flex: 0;
+  }
+}
+
+/* responsive general */
+@media (min-width: 600px) {
+  body { font-size: 1em; }
+  h2 { font-size: 1.5em; }
+  .tabs { gap: 10px; }
+  .tab { padding: 10px 20px; font-size: 1em; }
+  .container { max-width: 1200px; }
+}
+
