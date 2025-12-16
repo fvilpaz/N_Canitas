@@ -52,7 +52,6 @@ h1 {
    ========================================================== */
 .tabs {
   display: grid;
-  /* Creamos 3 columnas iguales */
   grid-template-columns: repeat(3, 1fr); 
   gap: 10px;
   margin-bottom: 25px;
@@ -61,7 +60,7 @@ h1 {
 
 .tab {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Esto hace que el icono quede ARRIBA del texto */
   align-items: center;
   justify-content: center;
   padding: 15px 10px;
@@ -77,7 +76,18 @@ h1 {
   line-height: 1.2;
 }
 
-/* El cuarto botón (Room Service) ocupa las 3 columnas de la fila de abajo */
+.tab i {
+  font-size: 1.4rem; /* Tamaño del icono */
+  margin-bottom: 8px; /* Separación con el texto de abajo */
+  color: var(--accent); /* Tu azul brillante */
+  display: block;
+}
+
+.tab.active i {
+  color: white; /* El icono cambia a blanco al pulsar */
+}
+/* ---------------------------------------------- */
+
 .tab:nth-child(4) {
   grid-column: span 3;
 }
@@ -89,7 +99,6 @@ h1 {
   box-shadow: 0 8px 15px rgba(56, 189, 248, 0.2);
   border-color: rgba(255, 255, 255, 0.1);
 }
-
 /* ==========================================================
    4. TARJETAS Y CONTENIDO
    ========================================================== */
