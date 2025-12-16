@@ -1,16 +1,20 @@
+/* ==========================================================
+   1. REGLAS BASE Y RESET
+   ========================================================== */
 body {
   font-family: 'Poppins', sans-serif;
   font-size: 0.95em;
   background: var(--bg);
   color: var(--text);
   margin: 0;
-  padding: 10px; /* Reducido para ganar espacio en móvil */
+  padding: 10px;
   transition: all 0.3s ease;
-  overflow-x: hidden; /* Evita el scroll lateral accidental */
+  overflow-x: hidden;
 }
 
+/* LA REGLA CLAVE: Sin el !important el botón amarillo no se va */
 .hidden {
-    display: none !important;
+  display: none !important;
 }
 
 .container {
@@ -18,7 +22,9 @@ body {
   margin: auto;
 }
 
-/* TOPBAR responsive */
+/* ==========================================================
+   2. CABECERA (TOPBAR)
+   ========================================================== */
 .topbar {
   display: flex;
   align-items: center;
@@ -41,57 +47,13 @@ h1 {
   text-align: center;
 }
 
-#titulo {
-  flex: 1;
-  text-align: center;
-  margin: 0;
-  font-size: clamp(1.6rem, 3.2vw, 2.4rem);
-}
-
-/* descripción y trazabilidad */
-.descripcion {
-  margin-bottom: 12px;
-}
-
-.trazabilidad {
-  font-size: .9em;
-  opacity: .75;
-  margin-bottom: 15px;
-}
-
-/* chips alérgenos */
-.alergenos {
-  display: flex;
-  flex-wrap: wrap; /* Permite que los chips bajen de línea */
-  gap: 8px;
-  margin-bottom: 15px;
-  justify-content: flex-start;
-}
-
-.chip {
-  padding: 5px 12px;
-  font-size: .75em;
-  border-radius: 14px;
-  background: rgba(255, 255, 255, .08);
-  border: 1px solid rgba(255, 255, 255, .2);
-  white-space: nowrap;
-  display: inline-flex; /* Mejor alineación interna */
-  align-items: center;
-  max-width: 140px; /* Evita que un nombre largo empuje la tarjeta */
-  overflow: hidden;
-  text-overflow: ellipsis; /* Pone "..." si el texto no cabe */
-  box-sizing: border-box; /* Asegura que el padding no sume ancho */
-}
-
-body.light .chip {
-  background: rgba(0, 0, 0, .05);
-  border-color: rgba(0, 0, 0, .15);
-}
-
+/* ==========================================================
+   3. PESTAÑAS (DISEÑO 3 ARRIBA, 1 ABAJO)
+   ========================================================== */
 .tabs {
   display: grid;
-  /* Dos columnas iguales */
-  grid-template-columns: 1fr 1fr; 
+  /* Creamos 3 columnas iguales */
+  grid-template-columns: repeat(3, 1fr); 
   gap: 10px;
   margin-bottom: 25px;
   padding: 0 5px;
@@ -111,6 +73,13 @@ body.light .chip {
   color: var(--text-dim);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-align: center;
+  white-space: normal;
+  line-height: 1.2;
+}
+
+/* El cuarto botón (Room Service) ocupa las 3 columnas de la fila de abajo */
+.tab:nth-child(4) {
+  grid-column: span 3;
 }
 
 .tab.active {
@@ -121,45 +90,69 @@ body.light .chip {
   border-color: rgba(255, 255, 255, 0.1);
 }
 
-/* Toque para que el texto largo no se rompa feo */
-.tab {
-  white-space: normal;
-  line-height: 1.2;
-}
-
-/* Iconos sutiles (opcional si quieres añadir emojis en el HTML) */
-.tab::before {
-  font-size: 1.2rem;
-  margin-bottom: 4px;
-}
+/* ==========================================================
+   4. TARJETAS Y CONTENIDO
+   ========================================================== */
 .card {
   background: var(--card);
   padding: 20px;
   border-radius: 12px;
   margin-bottom: 30px;
   width: 100%;
-  box-sizing: border-box; /* Vital para que no desborde en móvil */
+  box-sizing: border-box;
 }
 
-/* centra botón "Empezar quiz" */
-.card div[id^="info"] {
-  text-align: center;
+.descripcion {
+  margin-bottom: 12px;
 }
 
-.card p {
-  text-align: left;
+.trazabilidad {
+  font-size: .9em;
+  opacity: .75;
+  margin-bottom: 15px;
 }
 
+/* CHIPS ALÉRGENOS */
+.alergenos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 15px;
+  justify-content: flex-start;
+}
+
+.chip {
+  padding: 5px 12px;
+  font-size: .75em;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, .08);
+  border: 1px solid rgba(255, 255, 255, .2);
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  max-width: 140px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+body.light .chip {
+  background: rgba(0, 0, 0, .05);
+  border-color: rgba(0, 0, 0, .15);
+}
+
+/* ==========================================================
+   5. BOTONES Y FORMULARIOS
+   ========================================================== */
 button {
   background: var(--accent);
   color: white;
   border: none;
-  padding: 10px 18px;
+  padding: 12px 20px;
   border-radius: 20px;
   cursor: pointer;
   margin-top: 15px;
   transition: background 0.2s ease;
-  display: inline-block;
+  font-weight: bold;
 }
 
 button:hover {
@@ -168,36 +161,42 @@ button:hover {
 
 .quiz label {
   display: block;
-  margin: 6px 0;
+  margin: 10px 0;
+  cursor: pointer;
 }
 
-.hidden {
-  display: none;
+/* BOTÓN ESPECIAL DE EXAMEN */
+.btn-premium-examen {
+  background: #facc15 !important;
+  color: #000 !important;
+  font-size: 1.1rem;
+  padding: 20px;
+  width: 100%;
+  border-radius: 15px;
+  font-weight: 800;
+  box-shadow: 0 10px 20px rgba(250, 204, 21, 0.3);
 }
 
-/* Móviles: apila topbar */
+/* ==========================================================
+   6. RESPONSIVE
+   ========================================================== */
 @media (max-width: 520px) {
   .topbar {
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     gap: 10px;
   }
-
+  
   .logo {
-    height: clamp(52px, 18vw, 90px);
-  }
-
-  #titulo {
-    flex: 0;
+    height: 60px;
   }
 }
 
-/* responsive general */
 @media (min-width: 600px) {
   body { font-size: 1em; padding: 20px; }
-  h2 { font-size: 1.5em; }
-  .tabs { gap: 10px; flex-wrap: nowrap; }
-  .tab { padding: 10px 20px; font-size: 1em; }
-  .container { max-width: 1200px; }
+  .container { max-width: 800px; }
+}
+
+#zona-examen {
+    display: none !important;
 }
