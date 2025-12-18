@@ -4,7 +4,7 @@ Plataforma interactiva de formación para el equipo de sala de **Cañitas Maite*
 
 ---
 
-## 🌠 Características Principales
+## 🚀 Características Principales
 
 * **Fichas Técnicas Interactivas:** Historia, concepto y trazabilidad de cada plato.
 * **Gestión de Alérgenos:** Visualización clara por cada plato de la carta.
@@ -31,7 +31,7 @@ La aplicación es multiplataforma: funciona en ordenadores, tablets y está opti
 - **Hosting:** GitHub Pages
 
 
-## 🚀 ¡Explora y Aprende en Cañitas Maite!  
+## 🌠 ¡Explora y Aprende en Cañitas Maite!  
 
 🎯 **Aprende sobre cada plato** – historia, ingredientes y trazabilidad.  
 🧩 **Pon a prueba tus conocimientos** – quizzes interactivos para cada plato.  
