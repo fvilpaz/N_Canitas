@@ -6,10 +6,10 @@ Plataforma interactiva de formación para el equipo de sala de **Cañitas Maite*
 
 ## 🚀 Características Principales
 
-* **Fichas Técnicas Interactivas:** Historia, concepto y trazabilidad (Joselito, Atún Fuentes, etc.) de cada plato.
+* **Fichas Técnicas Interactivas:** Historia, concepto y trazabilidad de cada plato.
 * **Gestión de Alérgenos:** Visualización clara por cada plato de la carta.
 * **Quizzes Individuales:** Micro-entrenamientos por cada plato para fijar conocimientos.
-* **Examen de Certificación Eñe Lobby:** Un super-test aleatorio que evalúa el conocimiento global antes de permitir el servicio en sala.
+* **Examen de Certificación de casa punto de venta:** Un super-test aleatorio que evalúa el conocimiento global antes de permitir el servicio en sala.
 * **Modo Noche/Día:** Adaptado para entornos de trabajo con poca luz.
 
 ## 🛠️ Estructura del Proyecto
@@ -26,6 +26,6 @@ La aplicación es multiplataforma: funciona en ordenadores, tablets y está opti
 ---
 
 ## 🛠️ Tecnologías y Créditos
-- **Desarrollo:** [Tu Nombre/Equipo de Cañitas Maite]
+- **Desarrollo:** Nando
 - **Asistencia Técnica:** Desarrollado con el apoyo de Inteligencia Artificial (Google Gemini) para la optimización de lógica, estructuración de datos y diseño de experiencia de usuario.
 - **Hosting:** GitHub Pages.
