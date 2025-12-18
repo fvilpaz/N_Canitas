@@ -28,4 +28,15 @@ La aplicación es multiplataforma: funciona en ordenadores, tablets y está opti
 ## 🛠️ Tecnologías y Créditos
 - **Desarrollo:** Nando
 - **Asistencia Técnica:** Desarrollado con el apoyo de Inteligencia Artificial (Google Gemini) para la optimización de lógica, estructuración de datos y diseño de experiencia de usuario.
-- **Hosting:** GitHub Pages.
+- **Hosting:** GitHub Pages
+
+
+## 🚀 ¡Explora y Aprende en Cañitas Maite!  
+
+🎯 **Aprende sobre cada plato** – historia, ingredientes y trazabilidad.  
+🧩 **Pon a prueba tus conocimientos** – quizzes interactivos para cada plato.  
+🏆 **Certifícate** – demuestra que estás listo para el servicio en sala.  
+
+💻 **Prueba la plataforma aquí:** [https://fvilpaz.github.io/N_Canitas/](https://fvilpaz.github.io/N_Canitas/)  
+
+✨ **Tip:** ¡Usa el modo Noche si estás de guardia y sigue aprendiendo sin molestar a nadie!
