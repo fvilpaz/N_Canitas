@@ -984,3 +984,317 @@ export const menuData = {
         }
     ]
 };
+export const examenes = {
+    ene: [
+        {
+            texto: "¿En qué congreso ganó la croqueta de Cañitas Maite el premio a la mejor del mundo?",
+            opciones: ["Madrid Fusión 2021", "San Sebastián Gastronomika", "Fitur"],
+            correcta: 0
+        },
+        {
+            texto: "¿Qué técnica de cocina define al 'Homenaje al cochino'?",
+            opciones: [
+                "Confitado en aceite",
+                "Deshidratación y fritura (suflado)",
+                "Asado al horno de leña"
+            ],
+            correcta: 1
+        },
+        {
+            texto: "¿Qué recomendación de servicio es vital para el Buñuelo de Queso de Cabra?",
+            opciones: [
+                "Comer de un solo bocado",
+                "Cortar por la mitad",
+                "Acompañar con pan"
+            ],
+            correcta: 0
+        },
+        {
+            texto: "¿Cuál es el proveedor principal de los ibéricos (Jamón y Piel)?",
+            opciones: ["5 Jotas", "Sánchez Romero Carvajal", "Joselito"],
+            correcta: 2
+        },
+        {
+            texto: "¿De qué tipo de leche es la bechamel de nuestra croqueta?",
+            opciones: ["Vaca", "Oveja", "Cabra"],
+            correcta: 1
+        },
+        {
+            texto: "¿Cuál es el gesto de servicio en la Ensaladilla de Gamba Blanca?",
+            opciones: [
+                "Rallar trufa",
+                "Mezclar con nitrógeno",
+                "Verter aceite al ajillo caliente"
+            ],
+            correcta: 2
+        },
+        {
+            texto: "¿Qué ingrediente especial lleva nuestra Leche de Tigre en el Ceviche?",
+            opciones: ["Soja", "Leche de coco", "Vinagre de Jerez"],
+            correcta: 0
+        },
+        {
+            texto: "En el Donut de Rabo de Toro, ¿por qué hay alérgeno de SULFITOS?",
+            opciones: [
+                "Por la masa del donut",
+                "Por la reducción de vino tinto del guiso",
+                "Por el queso"
+            ],
+            correcta: 1
+        },
+        {
+            texto: "¿Qué tipo de patata se usa para las Bravas Milhojas?",
+            opciones: [
+                "Patata Agria de Albacete",
+                "Patata Nueva de Málaga",
+                "Patata Gallega"
+            ],
+            correcta: 0
+        },
+        {
+            texto: "¿Cómo se prepara el atún rojo Fuentes para el Bollito Preñado?",
+            opciones: [
+                "A la plancha",
+                "Picado a cuchillo (Tartar)",
+                "Guisado"
+            ],
+            correcta: 1
+        },
+        {
+            texto: "¿Qué sustituye al pan de molde en nuestro Bikini de Pastrami?",
+            opciones: [
+                "Pan de cristal",
+                "Hojaldre de mantequilla",
+                "Pan brioche"
+            ],
+            correcta: 1
+        },
+        {
+            texto: "En el Saam de Alita, ¿de dónde viene el alérgeno MOLUSCOS?",
+            opciones: [
+                "Del langostino",
+                "De la lechuga",
+                "De la salsa de ostras del glaseado"
+            ],
+            correcta: 2
+        },
+        {
+            texto: "¿Por qué el flan de nata no tiene poros o 'ojos'?",
+            opciones: [
+                "Porque lleva gelatina",
+                "Por la cocción controlada a baja temperatura",
+                "Porque se bate mucho"
+            ],
+            correcta: 1
+        },
+        {
+            texto: "¿Qué pescado protagoniza el plato principal del Menú Hits?",
+            opciones: ["Lubina de estero", "Bacalao Giraldo", "Rodaballo"],
+            correcta: 0
+        },
+        {
+            texto: "¿Qué ingrediente se ralla sobre el Donut de Rabo de Toro?",
+            opciones: ["Trufa", "Parmesano 24 meses", "Lima"],
+            correcta: 1
+        },
+        {
+            texto: "¿Qué técnica se le da al Cogollo César antes de servirlo?",
+            opciones: [
+                "Se hierve",
+                "Se marca a la brasa",
+                "Se sirve crudo"
+            ],
+            correcta: 1
+        },
+        {
+            texto: "¿Cuál es el alérgeno principal del Mejillón de Roca?",
+            opciones: ["Pescado", "Moluscos", "Crustáceos"],
+            correcta: 1
+        },
+        {
+            texto: "¿Cómo se debe comer el Saam de Alita?",
+            opciones: [
+                "Con cubiertos",
+                "Con las manos (envolviendo la lechuga)",
+                "Troceado en un bol"
+            ],
+            correcta: 1
+        },
+        {
+            texto: "¿Qué tipo de vainilla se usa en el postre 'Primer Beso'?",
+            opciones: [
+                "Vainilla Bourbon",
+                "Vainilla de Tahití",
+                "Aroma artificial"
+            ],
+            correcta: 0
+        },
+        {
+            texto: "¿Qué madera alimenta nuestra brasa?",
+            opciones: ["Pino", "Encina", "Eucalipto"],
+            correcta: 1
+        }
+    ],
+    menus: [
+        {
+            texto: "¿En qué congreso ganó la croqueta de Cañitas Maite el premio a la mejor del mundo?",
+            opciones: ["Madrid Fusión", "San Sebastián Gastronomika", "Fitur"],
+            correcta: 0
+        },
+        {
+            texto: "¿Qué representa la Torta de Aceite en la historia de Javier y Juan?",
+            opciones: [
+                "Un postre tradicional de Málaga",
+                "Sus raíces y la unión de Albacete y Valencia",
+                "Un plato creado para el Room Service"
+            ],
+            correcta: 1
+        },
+        {
+            texto: "El 'Homenaje al cochino' utiliza una técnica de piel suflada. ¿En qué consiste?",
+            opciones: [
+                "En un hervido prolongado",
+                "En deshidratación y una fritura a alta temperatura",
+                "En un confitado en grasa de pato"
+            ],
+            correcta: 1
+        },
+        {
+            texto: "¿Quién es el proveedor de los productos ibéricos (jamón y sobrasada) del menú?",
+            opciones: ["5 Jotas", "Joselito", "Sánchez Romero Carvajal"],
+            correcta: 1
+        },
+        {
+            texto: "¿Qué tipo de leche hace única a la bechamel de la croqueta ganadora?",
+            opciones: [
+                "Leche de vaca frisona",
+                "Leche de cabra malagueña",
+                "Leche de oveja de una ganadería de Albacete"
+            ],
+            correcta: 2
+        },
+        {
+            texto: "¿Cuál es el gesto de servicio clave en la Ensaladilla de Gamba Blanca?",
+            opciones: [
+                "Se termina en mesa vertiendo aceite al ajillo caliente",
+                "Se ralla trufa negra en directo",
+                "Se mezcla con nitrógeno líquido"
+            ],
+            correcta: 0
+        },
+        {
+            texto: "¿De dónde proviene la Gamba Blanca que se sirve en este menú?",
+            opciones: [
+                "De la Bahía de Málaga",
+                "De las lonjas de Huelva",
+                "De Santa Pola"
+            ],
+            correcta: 0
+        },
+        {
+            texto: "En el plato de 'Setas silvestres con patata cremosa', ¿qué elemento emulsiona el conjunto?",
+            opciones: [
+                "Una salsa bechamel",
+                "La yema de huevo de corral",
+                "Un fondo de verduras"
+            ],
+            correcta: 1
+        },
+        {
+            texto: "El 'Mejillón de roca con sobrasada de bellota' es un ejemplo de:",
+            opciones: [
+                "Cocina mediterránea clásica",
+                "Concepto Mar y Montaña",
+                "Entrante vegano"
+            ],
+            correcta: 1
+        },
+        {
+            texto: "¿Con qué se acompaña el Langostino de costa para potenciar el sabor a asado?",
+            opciones: [
+                "Con una reducción de jugo de pollo asado",
+                "Con una salsa romesco",
+                "Con puré de castañas"
+            ],
+            correcta: 0
+        },
+        {
+            texto: "SEGURIDAD ALIMENTARIA: ¿Cuál es el alérgeno principal del Mejillón de Roca?",
+            opciones: ["Pescado", "Crustáceos", "Moluscos"],
+            correcta: 2
+        },
+        {
+            texto: "SEGURIDAD ALIMENTARIA: ¿Cuál es el alérgeno principal del Langostino?",
+            opciones: ["Moluscos", "Crustáceos", "Pescado"],
+            correcta: 1
+        },
+        {
+            texto: "¿Qué técnica de asado define a la Txuleta Vasca en Cañitas Maite?",
+            opciones: [
+                "Horno Josper cerrado",
+                "Parrilla abierta con carbón de encina",
+                "Plancha de hierro fundido"
+            ],
+            correcta: 1
+        },
+        {
+            texto: "¿Qué pescado protagoniza el plato principal del Menú Hits?",
+            opciones: [
+                "Bacalao Giraldo",
+                "Lubina de estero",
+                "Rodaballo salvaje"
+            ],
+            correcta: 1
+        },
+        {
+            texto: "¿Cómo se elabora el pil-pil que acompaña a la lubina?",
+            opciones: [
+                "Con nata y ajo",
+                "Emulsionando el colágeno del pescado con aceite",
+                "Con una base de tomate"
+            ],
+            correcta: 1
+        },
+        {
+            texto: "¿Por qué el Flan de Nata de Cañitas Maite no tiene 'ojos' o poros?",
+            opciones: [
+                "Porque se bate mucho",
+                "Por su cocción controlada a baja temperatura",
+                "Porque lleva gelatina"
+            ],
+            correcta: 1
+        },
+        {
+            texto: "¿Cuál es el ingrediente principal del flan (sustituyendo a la leche)?",
+            opciones: [
+                "Leche condensada",
+                "Nata fresca con alto contenido graso",
+                "Queso crema"
+            ],
+            correcta: 1
+        },
+        {
+            texto: "Si un cliente es alérgico a los LÁCTEOS, ¿qué plato NO puede tomar?",
+            opciones: [
+                "La croqueta y el flan",
+                "El mejillón de roca",
+                "La lubina al pil-pil"
+            ],
+            correcta: 0
+        },
+        {
+            texto: "¿Qué se debe advertir al cliente sobre la croqueta al servirla?",
+            opciones: [
+                "Que es picante",
+                "Que es extremadamente fluida y debe tener cuidado al morder",
+                "Que lleva trazas de frutos secos"
+            ],
+            correcta: 1
+        },
+        {
+            texto: "¿Qué madera se utiliza preferentemente para la brasa en Cañitas Maite?",
+            opciones: ["Pino", "Encina", "Eucalipto"],
+            correcta: 1
+        }
+    ]
+};

@@ -1,4 +1,4 @@
-import { menuData } from './data.js';
+import { menuData, examenes } from './data.js';
 
 let currentStep = 0;
 let currentSection = 'ene';
@@ -175,3 +175,63 @@ window.siguientePlato = function () {
 }
 
 window.onload = renderApp;
+/* ==========================================================
+   4. EXAMEN GLOBAL DE CERTIFICACIÓN
+   ========================================================== */
+document.getElementById('btn-examen-final').addEventListener('click', function () {
+    const container = document.getElementById('super-test-container');
+    const content = document.getElementById('test-content');
+    const preguntas = examenes[currentSection];
+
+    if (!preguntas) {
+        alert("Examen no disponible para esta sección aún.");
+        return;
+    }
+
+    // Ocultamos la zona del botón y mostramos el contenedor del test
+    document.getElementById('zona-examen').classList.add('hidden');
+    container.classList.remove('hidden');
+
+    // Generamos el HTML del examen (20 preguntas)
+    let html = `<h2 style="text-align:center; color:var(--accent); margin-bottom:30px;">EXAMEN OFICIAL: ${currentSection.toUpperCase()}</h2>`;
+
+    preguntas.forEach((p, i) => {
+        html += `
+            <div class="card" style="margin-bottom:20px; background: rgba(255,255,255,0.03);">
+                <p><strong>${i + 1}. ${p.texto}</strong></p>
+                ${p.opciones.map((o, j) => `
+                    <label style="display:block; margin:10px 0; cursor:pointer;">
+                        <input type="radio" name="exam-${i}" value="${j}" style="margin-right:10px;">
+                        ${o}
+                    </label>
+                `).join('')}
+            </div>
+        `;
+    });
+
+    html += `<button id="btn-finalizar-certificacion" style="width:100%; padding:20px; background:var(--accent); color:white; font-weight:bold;">FINALIZAR Y OBTENER CERTIFICADO</button>`;
+    html += `<div id="resultado-final" style="margin-top:20px; text-align:center; font-size:1.5rem;"></div>`;
+
+    content.innerHTML = html;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    // Lógica para corregir el examen
+    document.getElementById('btn-finalizar-certificacion').onclick = function () {
+        let aciertos = 0;
+        preguntas.forEach((p, i) => {
+            const seleccionada = document.querySelector(`input[name="exam-${i}"]:checked`);
+            if (seleccionada && parseInt(seleccionada.value) === p.correcta) {
+                aciertos++;
+            }
+        });
+
+        const resultadoDiv = document.getElementById('resultado-final');
+        const porcentaje = (aciertos / preguntas.length) * 100;
+
+        if (porcentaje >= 80) {
+            resultadoDiv.innerHTML = `<div style="color:#4ade80;">🏆 ¡APROBADO! (${aciertos}/${preguntas.length})<br><small>Has demostrado ser un experto en ${currentSection}</small></div>`;
+        } else {
+            resultadoDiv.innerHTML = `<div style="color:#f87171;">❌ NO APTO (${aciertos}/${preguntas.length})<br><small>Necesitas un 80% de aciertos. ¡Repasa y vuelve a intentarlo!</small></div>`;
+        }
+    };
+});
