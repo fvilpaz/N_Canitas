@@ -1,8 +1,11 @@
 import { menuData } from './data.js';
 
 let currentStep = 0;
-let currentSection = 'ene'; 
+let currentSection = 'ene';
 
+/* ==========================================================
+   1. INTERFAZ Y NAVEGACIÓN
+   ========================================================== */
 window.toggleTheme = function () {
     const body = document.body;
     const icon = document.getElementById('themeIcon');
@@ -12,32 +15,84 @@ window.toggleTheme = function () {
 
 window.showSection = function (id, tab) {
     currentSection = id;
-    currentStep = 0; 
+    currentStep = 0;
+
     document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
+
     const zonaExamen = document.getElementById('zona-examen');
-    if (zonaExamen) zonaExamen.classList.add('hidden');
+    if (zonaExamen) {
+        zonaExamen.classList.add('hidden');
+    }
+
+    const btnExamen = document.getElementById('btn-examen-final');
+    if (btnExamen) {
+        const nombresExamen = {
+            'ene': 'EÑE LOBBY',
+            'restaurant': 'RESTAURANTE CAÑITAS',
+            'pool': 'POOL SNACK',
+            'menus': 'MENÚS DEGUSTACIÓN',
+            'room': 'ROOM SERVICE'
+        };
+        const nombreActual = nombresExamen[id] || id.toUpperCase();
+        btnExamen.innerHTML = `🚀 EXAMEN DE CERTIFICACIÓN ${nombreActual}`;
+    }
 
     const target = document.getElementById(id);
-    if (target) target.classList.remove('hidden');
+    if (target) {
+        target.classList.remove('hidden');
+    }
 
     document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-    if (tab) tab.classList.add('active');
+    if (tab) {
+        tab.classList.add('active');
+    }
 
     renderApp();
 }
 
+/* ==========================================================
+   2. LÓGICA DEL QUIZ (ESTO ES LO QUE FALTABA)
+   ========================================================== */
+
+// Esta función hace que el botón de "Poner a prueba mi memoria" funcione
 window.startQuiz = function (infoId, quizId) {
-    document.getElementById(infoId).classList.add('hidden');
-    document.getElementById(quizId).classList.remove('hidden');
+    const infoDiv = document.getElementById(infoId);
+    const quizDiv = document.getElementById(quizId);
+
+    if (infoDiv && quizDiv) {
+        infoDiv.classList.add('hidden'); // Oculta la info del plato
+        quizDiv.classList.remove('hidden'); // Muestra el test
+    }
 }
 
+function generarQuizHTML(plato, isLastPlato) {
+    const preguntasHTML = plato.quiz.preguntas.map((p, i) => {
+        const opcionesHTML = p.opciones.map((o, j) => `
+            <label style="display:block; margin-bottom:10px; cursor:pointer;">
+                <input type="${p.tipo}" name="q-${plato.id}-${i}" id="opt-${plato.id}-${i}-${j}" style="margin-right:10px;">
+                ${o.texto}
+            </label>
+        `).join('');
+        return `<div style="margin-bottom:20px;"><p><strong>${p.texto}</strong></p>${opcionesHTML}</div>`;
+    }).join('');
+
+    return `
+        ${preguntasHTML}
+        <button id="btn-verificar-${plato.id}" onclick="verificarQuiz('${plato.id}', ${isLastPlato})" style="width:100%; padding:15px;">ENVIAR RESPUESTAS</button>
+        <div id="res-${plato.id}" style="margin-top:20px; text-align:center; font-weight:bold;"></div>
+    `;
+}
+
+/* ==========================================================
+   3. RENDERIZADO Y VERIFICACIÓN
+   ========================================================== */
 function renderApp() {
     const container = document.getElementById(currentSection);
     if (!container) return;
 
     const platos = menuData[currentSection];
     if (!platos || platos.length === 0) {
-        container.innerHTML = `<div class="card"><p>🚧 Próximamente...</p></div>`;
+        container.innerHTML = `<div class="card"><p>🚧 Contenido próximamente en ${currentSection.toUpperCase()}...</p></div>`;
         return;
     }
 
@@ -81,41 +136,30 @@ function renderApp() {
     `;
 }
 
-function generarQuizHTML(plato, isLastPlato) {
-    const preguntasHTML = plato.quiz.preguntas.map((p, i) => {
-        const opcionesHTML = p.opciones.map((o, j) => `
-            <label style="display:block; margin-bottom:10px; cursor:pointer;">
-                <input type="${p.tipo}" name="q-${plato.id}-${i}" id="opt-${plato.id}-${i}-${j}" style="margin-right:10px;">
-                ${o.texto}
-            </label>
-        `).join('');
-        return `<div style="margin-bottom:20px;"><p><strong>${p.texto}</strong></p>${opcionesHTML}</div>`;
-    }).join('');
-
-    return `
-        ${preguntasHTML}
-        <button id="btn-verificar-${plato.id}" onclick="verificarQuiz('${plato.id}', ${isLastPlato})" style="width:100%; padding:15px;">ENVIAR RESPUESTAS</button>
-        <div id="res-${plato.id}" style="margin-top:20px; text-align:center; font-weight:bold;"></div>
-    `;
-}
-
 window.verificarQuiz = function (platoId, isLastPlato) {
     const platos = menuData[currentSection];
     const plato = platos[currentStep];
     let todoCorrecto = true;
+
     plato.quiz.preguntas.forEach((p, i) => {
         p.opciones.forEach((o, j) => {
             const input = document.getElementById(`opt-${platoId}-${i}-${j}`);
-            if (input && o.correcta !== input.checked) todoCorrecto = false;
+            if (input) {
+                // Para radio y checkbox, comprobamos si el estado "checked" coincide con "correcta"
+                if (o.correcta !== input.checked) todoCorrecto = false;
+            }
         });
     });
+
     const resDiv = document.getElementById(`res-${platoId}`);
     const btnVerificar = document.getElementById(`btn-verificar-${platoId}`);
+
     if (todoCorrecto) {
         btnVerificar.style.display = 'none';
         if (isLastPlato) {
             resDiv.innerHTML = `<div style="color:#4ade80; margin-bottom:10px;">✅ ¡SECCIÓN COMPLETADA!</div>`;
-            if (currentSection === 'ene') document.getElementById('zona-examen').classList.remove('hidden');
+            const zonaExamen = document.getElementById('zona-examen');
+            if (zonaExamen) zonaExamen.classList.remove('hidden');
         } else {
             resDiv.innerHTML = `<button onclick="window.siguientePlato()" style="width:100%; background:#22c55e;">SIGUIENTE PLATO ➔</button>`;
         }
@@ -124,7 +168,7 @@ window.verificarQuiz = function (platoId, isLastPlato) {
     }
 }
 
-window.siguientePlato = function() {
+window.siguientePlato = function () {
     currentStep++;
     window.scrollTo({ top: 0, behavior: 'smooth' });
     renderApp();

@@ -28,27 +28,30 @@
             <div class="tab active" onclick="showSection('ene', this)">Eñe<br>Lobby</div>
             <div class="tab" onclick="showSection('restaurant', this)">Restaurante<br>Cañitas</div>
             <div class="tab" onclick="showSection('pool', this)">Pool<br>Snack</div>
+            <div class="tab" onclick="showSection('menus', this)">Menú<br>Degustación</div>
             <div class="tab" onclick="showSection('room', this)">Room<br>Service</div>
         </nav>
 
         <main id="app">
 
             <section id="ene" class="section active">
-                </section>
+            </section>
 
             <section id="restaurant" class="section hidden">
-                </section>
+            </section>
 
             <section id="pool" class="section hidden">
-                </section>
+            </section>
 
             <section id="room" class="section hidden">
-                </section>
+            </section>
 
-            <div id="zona-examen" style="text-align: center; margin: 40px 0; display: block !important;">
-                <button id="btn-certificacion"
-                    style="background: #ffcc00; color: #000; border: none; padding: 18px 35px; border-radius: 50px; font-family: 'Poppins', sans-serif; font-size: 1.1rem; font-weight: 700; cursor: pointer; transition: transform 0.2s;">
-                    🚀 EXAMEN DE CERTIFICACIÓN EÑE
+            <section id="menus" class="section hidden">
+            </section>
+
+            <div id="zona-examen" class="hidden" style="text-align: center; margin: 40px 0;">
+                <button id="btn-examen-final" class="btn-premium-examen">
+                    🚀 CARGANDO EXAMEN...
                 </button>
             </div>
 

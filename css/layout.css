@@ -47,11 +47,12 @@ h1 {
 }
 
 /* ==========================================================
-   3. PESTAÑAS (DISEÑO 3 ARRIBA, 1 ABAJO)
+   3. PESTAÑAS (DISEÑO EQUILIBRADO 3 ARRIBA, 2 ABAJO)
    ========================================================== */
 .tabs {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
+  grid-template-columns: repeat(6, 1fr);
+  /* 6 columnas para dividir entre 3 y entre 2 */
   gap: 10px;
   margin-bottom: 25px;
   padding: 0 5px;
@@ -72,10 +73,21 @@ h1 {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-align: center;
   white-space: normal;
+  /* Importante para los <br> */
   line-height: 1.2;
+  cursor: pointer;
 }
 
-.tab:nth-child(4) {
+/* Los 3 de arriba: cada uno ocupa 2 columnas (2+2+2 = 6) */
+.tab:nth-child(1),
+.tab:nth-child(2),
+.tab:nth-child(3) {
+  grid-column: span 2;
+}
+
+/* Los 2 de abajo: cada uno ocupa 3 columnas (3+3 = 6) */
+.tab:nth-child(4),
+.tab:nth-child(5) {
   grid-column: span 3;
 }
 
@@ -193,13 +205,19 @@ button:hover {
     justify-content: center;
     gap: 10px;
   }
-  
+
   .logo {
     height: 60px;
   }
 }
 
 @media (min-width: 600px) {
-  body { font-size: 1em; padding: 20px; }
-  .container { max-width: 800px; }
+  body {
+    font-size: 1em;
+    padding: 20px;
+  }
+
+  .container {
+    max-width: 800px;
+  }
 }

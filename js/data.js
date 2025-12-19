@@ -567,5 +567,420 @@ export const menuData = {
     ],
     restaurant: [],
     pool: [],
-    room: []
+    menus: [
+        {
+            id: "menu-torta-aceite",
+            nombre: "Torta de aceite y al-i-olí de ajos asados",
+            precio: "Classics: 45€ \u00A0\u00A0|\u00A0\u00A0 Hits: 55€",
+            descripcion: "Cortesía crujiente de pan tradicional con emulsión cremosa de ajos asados y AOVE.",
+            historia: "Este primer bocado es un homenaje a las raíces de Albacete y Valencia. Se trata de una torta de pan artesana, extremadamente fina y crocante, que destaca por un interior arreado y suave. El secreto reside en el ritual de servicio: al terminar la torta, se remoja generosamente en un Aceite de Oliva Virgen Extra que aporta notas intensas, herbáceas y frescas, perfectamente alineado con unos cristales de sal en escamas para potenciar el sabor del cereal.",
+            trazabilidad: "Pan artesano de la zona de Albacete · AOVE de recolección temprana · Ajo morado asado.",
+            alergenos: ["Gluten", "Huevo", "Lácteos", "Sulfitos"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Cómo se define la textura del interior de nuestra torta de aceite?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Compacta y densa", correcta: false },
+                            { texto: "Arreada y suave", correcta: true },
+                            { texto: "Húmeda y elástica", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué raíces geográficas homenajea este primer bocado del menú?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "La tradición puramente madrileña", correcta: false },
+                            { texto: "Las raíces de Albacete y Valencia", correcta: true },
+                            { texto: "Exclusivamente la huerta murciana", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Desde el punto de vista de trazabilidad, ¿qué tipo de ajo protagoniza nuestra emulsión?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Ajo tierno de cultivo hidropónico", correcta: false },
+                            { texto: "Ajo morado asado", correcta: true },
+                            { texto: "Ajo negro fermentado", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "SEGURIDAD ALIMENTARIA: ¿Por qué es crítico identificar este plato para un cliente con alergia al huevo?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Porque la torta se fríe en aceite de huevo", correcta: false },
+                            { texto: "Porque el al-i-olí es una emulsión que utiliza yema para lograr su textura cremosa", correcta: true },
+                            { texto: "No contiene huevo, es solo ajo y aceite", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué elemento se añade al final para aportar notas herbáceas e intensidad?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Mantequilla de oveja", correcta: false },
+                            { texto: "Aceite de Oliva Virgen Extra y sal en escamas", correcta: true },
+                            { texto: "Reducción de vinagre de Jerez", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "menu-aperitivos-dia",
+            nombre: "Aperitivos de bienvenida según el día",
+            precio: "Classics: 45€ \u00A0\u00A0|\u00A0\u00A0 Hits: 55€",
+            descripcion: "Selección de 2 bocados cambiantes basados en el producto de mercado y temporada.",
+            historia: "Este pase representa el dinamismo de Cañitas Maite. No hay una receta fija porque mandan las estaciones: desde un mini-buñuelo de temporada hasta una pequeña emulsión de verduras locales. Es la forma en que el equipo demuestra que el menú está vivo y conectado con el producto diario.",
+            trazabilidad: "Producto de km0 · Selección diaria de lonja y huerta local.",
+            alergenos: ["Gluten", "Pescado", "Moluscos", "Sulfitos", "Lácteos"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Por qué los aperitivos de bienvenida no aparecen con un nombre fijo en la formación?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Porque dependen estrictamente del producto de mercado y la temporada", correcta: true },
+                            { texto: "Porque no son importantes en el menú", correcta: false },
+                            { texto: "Porque se deciden al azar sin criterio", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Ante un cliente con alergias graves, ¿qué debe hacer el equipo en este pase?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Servir lo de siempre porque suelen ser bocados pequeños", correcta: false },
+                            { texto: "Consultar siempre los 2 bocados del día con cocina para asegurar la seguridad alimentaria", correcta: true },
+                            { texto: "No servir nada en este paso", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "menu-croqueta",
+            nombre: "La Mejor Croqueta del Mundo 2021",
+            precio: "Classics: 45€ \u00A0\u00A0|\u00A0\u00A0 Hits: 55€",
+            descripcion: "Bechamel ultrafina de leche de oveja y jamón Joselito.",
+            historia: "En el contexto del menú degustación, esta croqueta se sirve como un pase individual diseñado para mostrar la técnica de la bechamel al límite de su fluidez. El uso de leche de oveja, mucho más grasa que la de vaca, es lo que permite esa textura casi líquida sin perder estructura. Se finaliza con una lámina de Joselito que se funde con el calor residual del bocado.",
+            trazabilidad: "Jamón Joselito (Guijuelo) · Leche de oveja de Castilla-La Mancha.",
+            alergenos: ["Gluten", "Lácteos", "Huevo", "Sulfitos"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "Dentro de un menú degustación, ¿cuál es la principal dificultad técnica de esta croqueta?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Conseguir que el jamón no se queme", correcta: false },
+                            { texto: "Mantener la bechamel al límite de la fluidez sin que se rompa el rebozado", correcta: true },
+                            { texto: "Que el panko sepa a pan tradicional", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué recomendación de consumo es esencial dar al cliente en este pase del menú?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Comerla de un solo bocado o con cuidado por su interior casi líquido", correcta: true },
+                            { texto: "Trocearla bien antes de comer", correcta: false },
+                            { texto: "Esperar 10 minutos a que se enfríe totalmente", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué aporta la leche de oveja a diferencia de la de vaca en esta receta?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Un color mucho más oscuro", correcta: false },
+                            { texto: "Una mayor potencia grasa y una textura más sedosa y elegante", correcta: true },
+                            { texto: "Menos calorías al plato", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "menu-ensaladilla",
+            nombre: "Ensaladilla de gamba blanca malagueña al ajillo",
+            precio: "Classics: 45€ \u00A0\u00A0|\u00A0\u00A0 Hits: 55€",
+            descripcion: "Base cremosa de patata y ventresca con tartar de gamba blanca malagueña y aceite al ajillo.",
+            historia: "Es uno de los platos que mejor conecta Albacete con el Mediterráneo. La base es una ensaladilla clásica muy cremosa, pero el protagonismo lo tiene el tartar de gamba blanca de la bahía de Málaga que la corona. El momento clave es el servicio: se termina en mesa vertiendo un aceite infusionado al ajillo (estilo 'gamba al ajillo' tradicional) que cocina ligeramente el marisco y desprende un aroma irresistible.",
+            trazabilidad: "Gamba blanca de la bahía de Málaga · Patata nueva · Aceite de oliva virgen.",
+            alergenos: ["Crustáceos", "Huevo", "Pescado", "Sulfitos"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Cuál es el gesto de servicio que hace única a esta ensaladilla en mesa?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Se ralla trufa fresca por encima", correcta: false },
+                            { texto: "Se vierte un aceite al ajillo caliente sobre el tartar de gamba", correcta: true },
+                            { texto: "Se mezcla con un tenedor de plata", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué tipo de marisco protagoniza este plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Gamba roja de Denia", correcta: false },
+                            { texto: "Gamba blanca malagueña", correcta: true },
+                            { texto: "Quisquilla de Santa Pola", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "SEGURIDAD ALIMENTARIA: ¿A qué grupo de alérgenos pertenece la gamba blanca?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Moluscos", correcta: false },
+                            { texto: "Crustáceos", correcta: true },
+                            { texto: "Pescado blanco", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "menu-setas-patata",
+            nombre: "Setas silvestres con patata cremosa y yema",
+            precio: "Classics: 45€ \u00A0\u00A0|\u00A0\u00A0 Hits: 55€",
+            descripcion: "Selección de setas de temporada sobre base de patata cremosa y yema de huevo de corral.",
+            historia: "Este plato del Menú Hits busca el confort absoluto. A diferencia de otras versiones, aquí las setas silvestres se asientan sobre una base de patata trabajada hasta conseguir una textura sedosa y cremosa (estilo puré Robuchon). La yema de huevo actúa como nexo de unión, aportando riqueza y una textura aterciopelada que envuelve el sabor umami de los hongos. Es un bocado que representa el lado más amable y meloso de la cocina de Javier y Juan.",
+            trazabilidad: "Setas silvestres de temporada · Patata agria de Albacete · Huevos de corral.",
+            alergenos: ["Huevos", "Lácteos"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "Según la descripción del Menú Hits, ¿qué elemento acompaña a las setas y la yema?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Arroz meloso", correcta: false },
+                            { texto: "Patata cremosa", correcta: true },
+                            { texto: "Pasta fresca", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué característica define la textura de este plato al mezclar sus ingredientes?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Es una textura crujiente y seca", correcta: false },
+                            { texto: "Es una textura sedosa, melosa y envolvente", correcta: true },
+                            { texto: "Es una textura puramente líquida", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "SEGURIDAD ALIMENTARIA: ¿Contiene este plato alérgenos de origen lácteo?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "No, es 100% vegano", correcta: false },
+                            { texto: "Sí, la 'patata cremosa' suele elaborarse con mantequilla o lácteos para lograr su textura", correcta: true }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "menu-mejillon-sobrasada",
+            nombre: "Mejillón de roca con sobrasada de bellota",
+            precio: "Classics: 45€ \u00A0\u00A0|\u00A0\u00A0 Hits: 55€",
+            descripcion: "Mejillón de roca seleccionado con emulsión de sobrasada ibérica de bellota y un toque cítrico.",
+            historia: "Este bocado es un ejemplo radical del 'Mar y Montaña' que define a Javier Sanz y Juan Sahuquillo. Se utiliza mejillón de roca por su sabor intenso yodado, que se equilibra con la grasa elegante de una sobrasada de bellota de máxima calidad. La técnica consiste en fundir la sobrasada para crear una emulsión que napa el mejillón, rematando con un toque de frescura para limpiar el paladar. Es un bocado de contraste: la potencia de la matanza frente a la frescura del mar.",
+            trazabilidad: "Mejillón de roca de lonja · Sobrasada artesana de cerdo ibérico de bellota.",
+            alergenos: ["Moluscos", "Sulfitos"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué concepto gastronómico define la unión del mejillón y la sobrasada?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Cocina de vanguardia molecular", correcta: false },
+                            { texto: "Mar y Montaña (fusión de producto marino y cárnico)", correcta: true },
+                            { texto: "Cocina puramente marinera", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Según la trazabilidad del plato, ¿qué tipo de sobrasada se utiliza?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Sobrasada comercial de supermercado", correcta: false },
+                            { texto: "Sobrasada artesana de cerdo ibérico de bellota", correcta: true },
+                            { texto: "Sobrasada picante de Mallorca", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "SEGURIDAD ALIMENTARIA: ¿Cuál es el alérgeno principal de este plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Pescado", correcta: false },
+                            { texto: "Moluscos", correcta: true },
+                            { texto: "Crustáceos", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "menu-langostino-brasas",
+            nombre: "Langostino en brasas con jugo de pollo asado",
+            precio: "Classics: 45€ \u00A0\u00A0|\u00A0\u00A0 Hits: 55€",
+            descripcion: "Langostino de costa seleccionado, asado a la brasa y terminado con reducción de jugo de pollo asado.",
+            historia: "Este plato es una de las combinaciones más atrevidas y celebradas de Javier y Juan. El langostino se cocina brevemente sobre las brasas de encina para mantener su textura tersa y su sabor marino intacto. El contraste surge al bañarlo con un jugo de pollo asado tradicional, densamente reducido, que aporta notas tostadas y cárnicas. El resultado es un bocado donde el yodo del mar y el umami del asado se funden en una armonía perfecta.",
+            trazabilidad: "Langostino de costa nacional · Pollo de corral para el fondo de asado.",
+            alergenos: ["Crustáceos", "Sulfitos"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Cuál es el método de cocinado que define la textura del langostino en este plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Fritura en tempura", correcta: false },
+                            { texto: "Asado directo a la brasa", correcta: true },
+                            { texto: "Cocción al vapor de agua de mar", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué tipo de fondo se utiliza para crear el contraste 'Mar y Montaña'?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Fumet de pescado blanco", correcta: false },
+                            { texto: "Reducción de jugo de pollo asado", correcta: true },
+                            { texto: "Salsa de soja y miel", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "SEGURIDAD ALIMENTARIA: ¿A qué grupo de alérgenos pertenece el langostino?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Moluscos", correcta: false },
+                            { texto: "Crustáceos", correcta: true },
+                            { texto: "Pescado", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "menu-lubina-estero",
+            nombre: "8. Lubina de estero a la parrilla y su pil-pil",
+            precio: "Classics: 45€ \u00A0\u00A0|\u00A0\u00A0 Hits: 55€",
+            descripcion: "Lubina de estero asada a la brasa, servida con una emulsión de su propio colágeno (pil-pil).",
+            historia: "La lubina de estero es un producto de una calidad excepcional, criada en un entorno natural que le otorga una grasa infiltrada única. En Cañitas Maite se trata con el máximo respeto: se asila a la parrilla abierta para conseguir una piel crujiente y un corazón jugoso. El plato se termina con un pil-pil elaborado con los jugos y el colágeno del propio pescado, demostrando que no hace falta más que técnica y producto para alcanzar la excelencia.",
+            trazabilidad: "Lubina de estero de proximidad (Andalucía) · Aceite de oliva virgen extra.",
+            alergenos: ["Pescado"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué técnica se utiliza para elaborar la salsa (pil-pil) que acompaña a la lubina?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Una reducción de nata y vino blanco", correcta: false },
+                            { texto: "Emulsión del propio colágeno del pescado con aceite de oliva", correcta: true },
+                            { texto: "Una salsa de tomate y pimientos", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cuál es el punto clave del cocinado de la lubina en este menú?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Cocción lenta al horno de vapor", correcta: false },
+                            { texto: "Asado a la parrilla para potenciar la piel crujiente y el aroma a brasa", correcta: true },
+                            { texto: "Fritura en abundante aceite", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "menu-txuleta-vasca",
+            nombre: "Txuleta vasca asada en parrilla abierta",
+            precio: "Classics: 45€ \u00A0\u00A0|\u00A0\u00A0 Hits: 55€",
+            descripcion: "Corte premium de txuleta vasca, asada con técnica de parrilla abierta y sal de escamas.",
+            historia: "La txuleta representa el culto al fuego de Cañitas Maite. Se seleccionan piezas con una maduración óptima para garantizar ternura y profundidad de sabor. Se asa en parrilla abierta, una técnica que exige un control absoluto de las temperaturas y las alturas del fuego de encina, permitiendo que la grasa exterior se caramelice y perfume toda la pieza sin perder sus jugos naturales.",
+            trazabilidad: "Vacuno mayor seleccionado · Sal de Salinas de Añana.",
+            alergenos: ["Sin alérgenos comunes directos"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué tipo de parrilla se especifica en el Menú Hits para el asado de la txuleta?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Parrilla abierta (control directo del fuego y la altura)", correcta: true },
+                            { texto: "Horno Josper cerrado", correcta: false },
+                            { texto: "Plancha eléctrica", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "En el servicio de este plato, ¿cuál es el papel del camarero?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Cortar la carne en dados pequeños", correcta: false },
+                            { texto: "Informar sobre el punto de maduración y la procedencia de la pieza", correcta: true },
+                            { texto: "Salsear la carne con salsa barbacoa", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "menu-flan-nata",
+            nombre: "El flan de nata de Cañitas Maite",
+            precio: "Classics: 45€ \u00A0\u00A0|\u00A0\u00A0 Hits: 55€",
+            descripcion: "Flan artesano elaborado con nata fresca y yemas, de textura cremosa y sedosa.",
+            historia: "El flan de nata es ya una leyenda de la casa. Es un postre que apuesta por la sencillez extrema ejecutada a la perfección. No lleva leche, solo nata de alto contenido graso y yemas de huevo de corral, lo que le confiere una cremosidad que se deshace en la boca. Se hornea a baja temperatura para evitar que 'hierva' y asegurar que no tenga poros, resultando en una estructura lisa y brillante.",
+            trazabilidad: "Nata fresca de ganadería seleccionada · Yemas de huevos de corral.",
+            alergenos: ["Huevos", "Lácteos"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Cuál es el secreto de la textura ultra-cremosa de este flan?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "El uso de gelatina neutra", correcta: false },
+                            { texto: "El uso exclusivo de nata (sin leche) y yemas de huevo", correcta: true },
+                            { texto: "Que se cocina en microondas", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Por qué el flan de Cañitas Maite no tiene 'ojos' o poros en su interior?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Porque se bate mucho la mezcla", correcta: false },
+                            { texto: "Por una cocción controlada a baja temperatura que evita la ebullición", correcta: true },
+                            { texto: "Porque se congela antes de servir", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
+    room: [
+        {
+            id: 'room-sandwich-club',
+            nombre: "SANDWICH CLUB CAÑITAS",
+            precio: "18€",
+            descripcion: "Nuestra versión del clásico neoyorquino con ADN de Albacete.",
+            historia: "Elaborado con pan de molde artesano hecho en nuestro obrador, pechuga de pollo de corral a la brasa, bacon ahumado de bellota, huevo de corral y nuestra famosa mayonesa de trufa negra.",
+            trazabilidad: "Pollo de corral de pastoreo y pan de masa madre.",
+            alergenos: ["Gluten", "Huevo", "Lácteos", "Mostaza"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué ingrediente diferencial lleva nuestra mayonesa en el Sandwich Club?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Pimentón de la Vera", correcta: false },
+                            { texto: "Trufa negra", correcta: true },
+                            { texto: "Ajo negro", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cómo es el pan utilizado en este plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Pan de cristal", correcta: false },
+                            { texto: "Pan de molde artesano de nuestro obrador", correcta: true },
+                            { texto: "Focaccia de romero", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
 };
