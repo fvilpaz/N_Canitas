@@ -858,7 +858,7 @@ export const menuData = {
         },
         {
             id: "menu-lubina-estero",
-            nombre: "8. Lubina de estero a la parrilla y su pil-pil",
+            nombre: "Lubina de estero a la parrilla y su pil-pil",
             precio: "Classics: 45€ \u00A0\u00A0|\u00A0\u00A0 Hits: 55€",
             descripcion: "Lubina de estero asada a la brasa, servida con una emulsión de su propio colágeno (pil-pil).",
             historia: "La lubina de estero es un producto de una calidad excepcional, criada en un entorno natural que le otorga una grasa infiltrada única. En Cañitas Maite se trata con el máximo respeto: se asila a la parrilla abierta para conseguir una piel crujiente y un corazón jugoso. El plato se termina con un pil-pil elaborado con los jugos y el colágeno del propio pescado, demostrando que no hace falta más que técnica y producto para alcanzar la excelencia.",

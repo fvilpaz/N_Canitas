@@ -105,9 +105,17 @@ function renderApp() {
                 <span style="font-size:0.75rem; color:var(--accent); font-weight:bold; letter-spacing:1px;">PLATO ${currentStep + 1} / ${platos.length}</span>
             </div>
             
-            <div style="display:flex; justify-content:space-between; align-items: flex-start; gap: 15px; margin-bottom: 15px;">
-                <h2 style="margin:0; flex: 1; line-height: 1.2;">${plato.nombre}</h2>
-                <span class="price" style="white-space: nowrap;">${plato.precio}</span>
+            <div style="margin-bottom: 15px;">
+                <h2 style="margin: 0 0 10px 0; line-height: 1.2; font-size: 1.35rem; width: 100%;">${plato.nombre}</h2>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                    ${plato.precio.includes('|')
+            ? plato.precio.split('|').map(p => `
+                            <span style="background: rgba(0, 150, 255, 0.1); border: 1px solid var(--accent); color: var(--accent); padding: 3px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; white-space: nowrap;">
+                                ${p.trim()}
+                            </span>`).join('')
+            : `<span style="background: rgba(0, 150, 255, 0.1); border: 1px solid var(--accent); color: var(--accent); padding: 3px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: bold;">${plato.precio}</span>`
+        }
+                </div>
             </div>
 
             <div id="info-${plato.id}">
