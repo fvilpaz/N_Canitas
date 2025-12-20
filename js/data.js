@@ -951,32 +951,632 @@ export const menuData = {
         }
     ],
     room: [
+        /* --- BOCATERÍA FINA --- */
         {
-            id: 'room-sandwich-club',
-            nombre: "SANDWICH CLUB CAÑITAS",
-            precio: "18€",
-            descripcion: "Nuestra versión del clásico neoyorquino con ADN de Albacete.",
-            historia: "Elaborado con pan de molde artesano hecho en nuestro obrador, pechuga de pollo de corral a la brasa, bacon ahumado de bellota, huevo de corral y nuestra famosa mayonesa de trufa negra.",
-            trazabilidad: "Pollo de corral de pastoreo y pan de masa madre.",
+            id: "bikini-room",
+            nombre: "Bikini mixto trufado de jamón cocido y queso Comté 24 meses fundido",
+            precio: "17€",
+            descripcion: "Sándwich de corte fino con jamón cocido premium, queso Comté de alta maduración y aroma de trufa negra.",
+            historia: "En Cañitas Maite, un bocado clásico se transforma mediante la selección de proveedores excepcionales. El uso del Queso Comté con 24 meses de maduración (AOC) marca la diferencia: un queso de leche cruda de vaca de las montañas del Jura (Francia), que al fundirse libera notas de mantequilla tostada y avellana. La trufa negra aporta esa dimensión sensorial que caracteriza la cocina de Javier y Juan.",
+            trazabilidad: "Queso Comté 24 meses (AOC Francia) · Jamón cocido selección extra · Mantequilla artesana para el tostado.",
+            alergenos: ["Gluten", "Lácteos", "Sulfitos"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué tipo de leche se utiliza para elaborar el queso Comté del bikini?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Leche pasteurizada de cabra", correcta: false },
+                            { texto: "Leche cruda de vaca", correcta: true },
+                            { texto: "Leche de oveja merina", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Por qué se especifica que el Comté tiene 24 meses de maduración?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Porque es el tiempo mínimo legal", correcta: false },
+                            { texto: "Porque aporta notas de frutos secos y una mayor complejidad de sabor", correcta: true },
+                            { texto: "Para que el queso no se funda tanto", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué región francesa es la cuna del queso Comté AOC?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Normandía", correcta: false },
+                            { texto: "El macizo del Jura", correcta: true },
+                            { texto: "Provenza", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cómo se debe describir el perfil de sabor de este bikini al cliente?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Suave y convencional como un mixto normal", correcta: false },
+                            { texto: "Intenso, con notas de mantequilla tostada, frutos secos y aroma terroso de trufa", correcta: true }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "sandwich-club-room",
+            nombre: "Sandwich club versión Cañitas con huevo campero frito al momento y bacon crujiente",
+            precio: "19€",
+            descripcion: "Sándwich de tres pisos con pollo, huevo campero frito, bacon artesano crujiente, lechuga, tomate y mayonesa.",
+            historia: "El Sandwich Club es un icono mundial del Room Service, pero en Cañitas Maite lo tratamos como un plato de alta cocina. La clave absoluta es el punto del huevo: usamos huevos camperos que se fríen justo antes de que el carro salga hacia la habitación, asegurando que la yema llegue fluida para bañar el resto de ingredientes. El bacon se cocina a baja temperatura y se termina a alta para que sea una lámina de cristal crujiente, no una tira de grasa.",
+            trazabilidad: "Huevos camperos de granja nacional · Pan brioche de molde artesano · Bacon ahumado de selección.",
+            alergenos: ["Gluten", "Huevo", "Lácteos", "Mostaza", "Soja"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Cuál es el factor crítico de servicio en nuestro Sandwich Club?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Que el pan esté muy tostado", correcta: false },
+                            { texto: "Que el huevo sea campero y se fría al momento para que la yema llegue fluida", correcta: true },
+                            { texto: "Que lleve mucha mayonesa", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cómo se describe la técnica utilizada en nuestro bacon?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Frito en abundante aceite", correcta: false },
+                            { texto: "Cocinado para lograr una textura de 'cristal' crujiente", correcta: true },
+                            { texto: "Hervido previamente", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué tipo de pan se utiliza como estructura del sándwich?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Pan de cristal", correcta: false },
+                            { texto: "Pan brioche de molde artesano", correcta: true },
+                            { texto: "Pan integral de semillas", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Por qué es importante mencionar al cliente que el huevo es campero?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Por una cuestión puramente estética", correcta: false },
+                            { texto: "Porque garantiza mayor calidad, sabor y una yema de color más intenso debido a la alimentación de la gallina", correcta: true }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "roll-brioche-room",
+            nombre: "Roll brioche de salmón ahumado, aguacate malagueño y crema fresca de queso",
+            precio: "21€",
+            descripcion: "Pan brioche artesano relleno de finas láminas de salmón ahumado, aguacate de la Axarquía y una base de crema fresca acidulada.",
+            historia: "Este plato es un tributo a la frescura del Mediterráneo. El brioche, con un alto contenido en mantequilla, se tuesta ligeramente para que contraste con la temperatura del salmón y el aguacate. La importancia del origen es clave: el aguacate proviene de la Axarquía malagueña, donde el microclima permite obtener una fruta con una textura mantecosa excepcional que se funde con la crema fresca de queso.",
+            trazabilidad: "Aguacate de la Axarquía (Málaga) · Salmón ahumado de selección superior · Brioche artesano de mantequilla.",
+            alergenos: ["Gluten", "Pescado", "Lácteos", "Huevo"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué característica define al aguacate de la Axarquía utilizado en este roll?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Su textura fibrosa y ácida", correcta: false },
+                            { texto: "Su textura mantecosa y alto contenido en aceites naturales", correcta: true },
+                            { texto: "Que es un producto de importación", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cómo se prepara el pan brioche antes de montar el plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Se sirve frío directamente", correcta: false },
+                            { texto: "Se tuesta ligeramente para contrastar con el relleno frío", correcta: true },
+                            { texto: "Se humedece en leche", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué función cumple la crema fresca de queso en el conjunto?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Aportar un toque picante", correcta: false },
+                            { texto: "Aportar acidez y cremosidad para equilibrar la grasa del salmón y el aguacate", correcta: true },
+                            { texto: "Actuar como espesante", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿De qué región de Málaga procede nuestro proveedor de aguacates?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Antequera", correcta: false },
+                            { texto: "La Axarquía", correcta: true },
+                            { texto: "Serranía de Ronda", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "burger-lyo-room",
+            nombre: "Burger de vaca gallega madurada 120 días de Cárnicas Lyo, papada ibérica y yema",
+            precio: "24€",
+            descripcion: "Carne de vaca vieja seleccionada con 4 meses de maduración, acompañada de papada ibérica para aportar jugosidad y yema de huevo campero.",
+            historia: "Cárnicas Lyo (León) es mundialmente reconocida por seleccionar las mejores vacas de España y llevar las maduraciones al límite. Para Cañitas Maite, seleccionan piezas con 120 días de maduración, un punto donde la carne desarrolla notas de frutos secos, queso azul y una intensidad animal inigualable. La papada ibérica se añade para equilibrar la estructura de la carne madurada, que tiende a ser más magra, aportando una grasa infiltrada que se funde con la yema campera.",
+            trazabilidad: "Vaca Gallega con 120 días de maduración (Cárnicas Lyo, León) · Papada de cerdo ibérico puro · Yema de huevo campero de granja.",
+            alergenos: ["Gluten", "Huevo", "Lácteos", "Soja", "Sulfitos"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué hace única a la carne de Cárnicas Lyo seleccionada para esta burger?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Que es carne de ternera joven y suave", correcta: false },
+                            { texto: "Su maduración de 120 días que concentra sabores a frutos secos y notas animales intensas", correcta: true },
+                            { texto: "Que se pica muy fina para que no tenga sabor", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Por qué se añade papada ibérica a la mezcla de la carne?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Para que la burger pese más", correcta: false },
+                            { texto: "Para aportar la grasa necesaria y jugosidad que equilibre la carne madurada", correcta: true },
+                            { texto: "Para sustituir a la sal", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿De qué región de España proviene el proveedor Cárnicas Lyo?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Galicia", correcta: false },
+                            { texto: "León", correcta: true },
+                            { texto: "Madrid", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué función cumple la yema de huevo en este plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Es meramente decorativa", correcta: false },
+                            { texto: "Actúa como un hilo conductor de sabor, aportando cremosidad y untuosidad al conjunto", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "¿Cuál es la procedencia de la vaca utilizada?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Vaca Gallega", correcta: true },
+                            { texto: "Vaca de importación europea", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+
+        /* --- PRINCIPALES CLÁSICOS --- */
+        {
+            id: "cesar-payoyo-room",
+            nombre: "Ensalada césar de lechuga viva y queso Payoyo extra curado",
+            precio: "24€",
+            descripcion: "Hojas de lechuga viva, salsa césar artesana con anchoas del Cantábrico, croutones de pan brioche y lascas de queso Payoyo de la Sierra de Cádiz.",
+            historia: "Nuestra ensalada césar huye de los ingredientes industriales. Utilizamos 'lechuga viva', que llega a la cocina con su raíz hidropónica, garantizando un crujiente máximo que aguanta perfectamente el servicio en habitación. El toque maestro es la sustitución del parmesano por Queso Payoyo (Grazalema/Ubrique), un queso de cabra y oveja premiado internacionalmente que aporta una salinidad y elegancia únicas a la salsa artesana.",
+            trazabilidad: "Queso Payoyo (Sierra de Grazalema, Cádiz) · Lechuga viva de cultivo hidropónico · Anchoas del Cantábrico para la salsa.",
+            alergenos: ["Gluten", "Pescado", "Lácteos", "Huevo", "Mostaza"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué diferencia a la 'lechuga viva' de una lechuga convencional?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Que se sirve con la raíz para garantizar máximo frescor y textura crujiente", correcta: true },
+                            { texto: "Que es de color azul", correcta: false },
+                            { texto: "Que solo se cultiva en invierno", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿De dónde proviene el queso Payoyo extra curado?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "De los Alpes franceses", correcta: false },
+                            { texto: "De la Sierra de Grazalema y Ubrique (Cádiz)", correcta: true },
+                            { texto: "De la Mancha", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Con qué tipo de leche se elabora el queso Payoyo?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Únicamente leche de vaca", correcta: false },
+                            { texto: "Leche de cabra Payoya y oveja Merina de Grazalema", correcta: true },
+                            { texto: "Leche de búfala", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué ingrediente premium aporta el sabor Umami a nuestra salsa césar artesana?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Salsa de soja", correcta: false },
+                            { texto: "Anchoas del Cantábrico", correcta: true },
+                            { texto: "Extracto de carne", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cómo se elaboran los croutones de esta ensalada?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Son de pan industrial", correcta: false },
+                            { texto: "Se elaboran a mano con pan brioche artesano para mayor delicadeza", correcta: true }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "pasta-pesto-room",
+            nombre: "Pasta fresca con pesto de piñones y tomate seco",
+            precio: "26€",
+            descripcion: "Pasta de trigo duro elaborada artesanalmente, ligada con un pesto de albahaca fresca, piñones nacionales y tomates secos hidratados en AOVE.",
+            historia: "La pasta fresca es uno de los pilares de la cocina reconfortante en el Room Service de Cañitas Maite. Nuestra pasta se elabora diariamente para garantizar una textura elástica que absorba perfectamente la salsa. El pesto se diferencia por el uso exclusivo de piñones nacionales; a diferencia del piñón de importación, el nuestro es más graso y aromático, lo que proporciona una untuosidad natural sin necesidad de añadir excesiva grasa externa. El tomate seco aporta el contrapunto de acidez y dulzor necesario para equilibrar el conjunto.",
+            trazabilidad: "Piñones nacionales de selección · Pasta elaborada a diario en obrador artesano · Tomate seco de origen nacional.",
+            alergenos: ["Gluten", "Lácteos", "Frutos de cáscara"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué diferencia principal aporta el piñón nacional a nuestro pesto?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Es más barato que el de importación", correcta: false },
+                            { texto: "Es más graso y aromático, aportando una untuosidad superior", correcta: true },
+                            { texto: "Que es de color rojo", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Con qué frecuencia se elabora la pasta para este plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Se compra pasta seca industrial", correcta: false },
+                            { texto: "Se elabora diariamente en el obrador para asegurar frescura y textura", correcta: true },
+                            { texto: "Se prepara una vez al mes y se congela", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué ingrediente se utiliza para dar el contrapunto de acidez y dulzor?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Vinagre balsámico", correcta: false },
+                            { texto: "Tomate seco hidratado en AOVE", correcta: true },
+                            { texto: "Limón exprimido", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Por qué es importante la frescura de la pasta en el servicio a habitaciones?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Porque tarda menos en cocinarse", correcta: false },
+                            { texto: "Porque mantiene mejor la textura 'al dente' durante el transporte", correcta: true }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "corvina-tomate-room",
+            nombre: "Corvina con salsa de tomate a la brasa y cherrys confitados",
+            precio: "32€",
+            descripcion: "Lomo de corvina asado en su punto, acompañado de una salsa de tomates trabajada a la brasa y tomates cherry confitados.",
+            historia: "En este plato, Javier y Juan trasladan la esencia de su parrilla a la habitación. La corvina, un pescado blanco de carne firme y sabor delicado, se cocina respetando su jugosidad. El elemento diferenciador es la salsa: los tomates no se guisan de forma convencional, sino que se asan directamente sobre las brasas para extraer notas ahumadas y dulces que potencian el sabor marino del pescado. Los cherrys confitados aportan explosiones de sabor dulce que equilibran la potencia de la brasa.",
+            trazabilidad: "Corvina fresca de lonja · Tomate de huerta nacional · Aceite de Oliva Virgen Extra selección.",
+            alergenos: ["Pescado"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué técnica de Cañitas Maite define el sabor de la salsa de este plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "El hervido tradicional", correcta: false },
+                            { texto: "El asado de los tomates directamente a la brasa", correcta: true },
+                            { texto: "La fritura a alta temperatura", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cómo se describe la textura y sabor de la corvina?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Carne blanda y sabor muy fuerte", correcta: false },
+                            { texto: "Carne firme, blanca y de sabor delicado", correcta: true },
+                            { texto: "Pescado azul muy graso", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué función tienen los tomates cherry confitados en el plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Aportar notas dulces que equilibran el ahumado de la brasa", correcta: true },
+                            { texto: "Sustituir a la guarnición de patata", correcta: false },
+                            { texto: "Aportar picante", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Por qué se elige la corvina para la carta de Room Service?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Porque es el único pescado disponible", correcta: false },
+                            { texto: "Por su capacidad para mantener una textura óptima y jugosa durante el traslado", correcta: true }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "solomillo-vaca-room",
+            nombre: "Solomillo de vaca madurada con salsa española y patatas chips artesanas",
+            precio: "36€",
+            descripcion: "Corte noble de solomillo de vaca con maduración controlada, servido con una reducción de salsa española tradicional y patatas chips caseras.",
+            historia: "El solomillo en Cañitas Maite representa el respeto por el recetario clásico ejecutado con precisión técnica. Seleccionamos lomos de vaca nacional con una maduración corta que potencia el sabor sin perder la terneza extrema que busca el cliente de Room Service. La salsa española es el alma del plato: se elabora mediante una reducción lenta de huesos asados y hortalizas durante más de 48 horas hasta obtener un glaseado brillante y profundo. Se acompaña de patatas chips que cortamos y freímos nosotros mismos para garantizar un crujiente auténtico.",
+            trazabilidad: "Vaca seleccionada nacional · Patata agria de cultivo nacional · Reducción artesana de 48h.",
+            alergenos: ["Sulfitos"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Cuál es el tiempo de reducción aproximado de nuestra salsa española?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "2 horas", correcta: false },
+                            { texto: "Más de 48 horas para lograr un glaseado profundo", correcta: true },
+                            { texto: "Es una salsa instantánea", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué caracteriza al solomillo seleccionado para este plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Que es carne de importación congelada", correcta: false },
+                            { texto: "Es vaca nacional con maduración controlada para equilibrar sabor y terneza", correcta: true },
+                            { texto: "Que se sirve siempre muy hecho", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué tipo de patata se utiliza para las chips artesanas?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Patata agria, ideal para frituras por su bajo contenido en azúcar", correcta: true },
+                            { texto: "Patata cocida", correcta: false },
+                            { texto: "Chips de bolsa industrial", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cómo se debe describir la salsa española al cliente?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Una salsa ligera y líquida", correcta: false },
+                            { texto: "Una reducción artesana de gran intensidad, brillante y con mucho cuerpo", correcta: true }
+                        ]
+                    }
+                ]
+            }
+        },
+
+        /* --- DULCES HECHOS EN CASA --- */
+        {
+            id: "helado-artesano-room",
+            nombre: "Helado artesano de mango malagueño o de chocolate",
+            precio: "7€",
+            descripcion: "Helados cremosos de elaboración propia utilizando fruta de temporada de Málaga o cacao puro de origen.",
+            historia: "En Cañitas Maite los postres no son un complemento, son el cierre de la experiencia. Nuestro helado de mango se elabora con fruta en su punto óptimo de madurez proveniente de la Axarquía (Málaga), aprovechando su dulzor natural y su textura sedosa. El de chocolate se trabaja con una selección de cacaos de origen que aseguran un sabor profundo y equilibrado, alejándose de los helados industriales excesivamente azucarados.",
+            trazabilidad: "Mango de la Axarquía (Málaga) · Cacao de origen seleccionado · Elaboración propia en obrador.",
+            alergenos: ["Lácteos", "Huevo", "Frutos de cáscara (puede contener trazas)"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué procedencia tiene el mango utilizado en nuestro helado?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Importación de Brasil", correcta: false },
+                            { texto: "Cultivo local de la Axarquía (Málaga)", correcta: true },
+                            { texto: "Mango de Canarias", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué caracteriza a la elaboración de nuestros helados?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Que son industriales de marca externa", correcta: false },
+                            { texto: "Que son de elaboración propia en nuestro obrador artesano", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "¿Por qué el helado de mango de Cañitas Maite tiene ese sabor tan intenso?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Por el uso de saborizantes artificiales", correcta: false },
+                            { texto: "Por el uso de fruta de proximidad en su punto óptimo de maduración", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "¿Cuál es la base del helado de chocolate?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Cacao de origen con sabor profundo y equilibrado", correcta: true },
+                            { texto: "Sirope de chocolate comercial", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "tarta-queso-room",
+            nombre: "Tarta de queso suave y cremosa hecha en casa",
+            precio: "14€",
+            descripcion: "Tarta artesana horneada diariamente, caracterizada por un interior extremadamente cremoso y un sabor equilibrado a queso premium.",
+            historia: "La tarta de queso es el emblema dulce de Cañitas Maite. Javier Sanz y Juan Sahuquillo han perfeccionado esta receta buscando la temperatura de horneado exacta para que el exterior quede sutilmente tostado y el interior mantenga una textura casi líquida (suave y cremosa). Se utiliza una mezcla de quesos que aportan personalidad sin saturar el paladar, siendo el postre más solicitado por los clientes que buscan la esencia del restaurante en su habitación.",
+            trazabilidad: "Mezcla de quesos premium seleccionados · Huevos de granja · Elaboración propia en el día.",
+            alergenos: ["Gluten", "Huevo", "Lácteos"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué adjetivos definen oficialmente nuestra tarta de queso en carta?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Fuerte y compacta", correcta: false },
+                            { texto: "Suave y cremosa", correcta: true },
+                            { texto: "Fría y gelatinosa", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cuál es el secreto de la textura de esta tarta?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "El uso de espesantes artificiales", correcta: false },
+                            { texto: "Un control preciso de la temperatura de horneado para mantener el interior fluido", correcta: true },
+                            { texto: "Servirla directamente del congelador", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Por qué es importante destacar que está 'hecha en casa'?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Porque garantiza que no es un producto industrial y que se hornea diariamente en el obrador", correcta: true },
+                            { texto: "Porque así tarda más en servirse", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        /* --- KIDS / INFANTIL --- */
+        {
+            id: "croqueta-kids-room",
+            nombre: "La mejor croqueta del mundo 2021 (2 unidades)",
+            precio: "12€",
+            descripcion: "Nuestra croqueta premiada de jamón ibérico, ahora en ración adaptada para los más pequeños.",
+            historia: "Es el plato estrella de Cañitas Maite, ganadora del premio a la mejor croqueta en Madrid Fusión 2021. Se caracteriza por su bechamel líquida y un sabor intenso a jamón ibérico de bellota.",
+            trazabilidad: "Jamón Ibérico de Bellota 100% · Leche fresca de vaca · Mantequilla artesana.",
+            alergenos: ["Gluten", "Lácteos", "Huevo"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Cuál es el ingrediente principal que da sabor a nuestra croqueta premiada?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Jamón cocido extra", correcta: false },
+                            { texto: "Jamón Ibérico de Bellota 100%", correcta: true },
+                            { texto: "Mezcla de embutidos ibéricos", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué alérgenos principales contiene la croqueta?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Solo Gluten", correcta: false },
+                            { texto: "Gluten, Lácteos y Huevo", correcta: true },
+                            { texto: "Frutos de cáscara y Gluten", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Por qué decimos que nuestra bechamel es especial?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Porque es muy espesa para que no se rompa", correcta: false },
+                            { texto: "Porque es una bechamel líquida, técnica que nos dio el premio en 2021", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué tipo de leche se utiliza en su elaboración?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Leche en polvo concentrada", correcta: false },
+                            { texto: "Leche fresca de vaca", correcta: true },
+                            { texto: "Bebida vegetal de soja", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "sandwich-club-kids",
+            nombre: "Sandwich Club de pollo versión Cañitas",
+            precio: "19.5€",
+            descripcion: "Sándwich clásico de pollo acompañado de patatas o ensalada.",
+            historia: "Una versión adaptada del club clásico, utilizando pechuga de pollo de alta calidad y pensado para un servicio rápido y reconfortante.",
+            trazabilidad: "Pechuga de pollo seleccionada · Pan de molde artesano · *Acompañado de patatas o ensalada.",
             alergenos: ["Gluten", "Huevo", "Lácteos", "Mostaza"],
             quiz: {
                 preguntas: [
                     {
-                        texto: "¿Qué ingrediente diferencial lleva nuestra mayonesa en el Sandwich Club?",
+                        texto: "Al tomar la comanda del Sandwich Club Kids, ¿qué pregunta es obligatoria?",
                         tipo: "radio",
                         opciones: [
-                            { texto: "Pimentón de la Vera", correcta: false },
-                            { texto: "Trufa negra", correcta: true },
-                            { texto: "Ajo negro", correcta: false }
+                            { texto: "¿Lo quiere con o sin queso?", correcta: false },
+                            { texto: "¿Prefiere guarnición de patatas fritas o ensalada?", correcta: true }
                         ]
                     },
                     {
-                        texto: "¿Cómo es el pan utilizado en este plato?",
+                        texto: "¿Contiene este sándwich algún alérgeno de la familia de las salsas?",
                         tipo: "radio",
                         opciones: [
-                            { texto: "Pan de cristal", correcta: false },
-                            { texto: "Pan de molde artesano de nuestro obrador", correcta: true },
-                            { texto: "Focaccia de romero", correcta: false }
+                            { texto: "No, ninguno", correcta: false },
+                            { texto: "Sí, puede contener Mostaza y Huevo por la mayonesa", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué tipo de pan se utiliza en la versión Kids?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Pan de cristal muy duro", correcta: false },
+                            { texto: "Pan de molde artesano, más tierno para los niños", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "¿Cómo se cocina el pollo del Sandwich Club?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Es pechuga seleccionada cocinada a la plancha/asada", correcta: true },
+                            { texto: "Es pollo frito rebozado", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "pasta-tomate-kids",
+            nombre: "Pasta fresca con tomate",
+            precio: "16€",
+            descripcion: "Pasta fresca elaborada artesanalmente con salsa de tomate natural.",
+            historia: "Pasta de trigo duro con nuestra salsa de tomate casera, un plato sencillo pero con producto de primera calidad.",
+            trazabilidad: "Pasta fresca artesana · Tomate natural de huerta.",
+            alergenos: ["Gluten", "Lácteos (opcional si lleva queso)"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Por qué destacamos que la pasta es 'fresca'?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Porque se sirve fría", correcta: false },
+                            { texto: "Porque es artesana de trigo duro, con mejor textura que la seca industrial", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "Si un niño tiene intolerancia severa al gluten, ¿puede comer esta pasta?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Sí, porque es artesana", correcta: false },
+                            { texto: "No, la pasta fresca de trigo duro contiene Gluten", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué lleva nuestra salsa de tomate casera?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Tomate natural de huerta y AOVE", correcta: true },
+                            { texto: "Ketchup y especias", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Sobre el queso en la pasta: ¿qué debemos saber?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Siempre va mezclado dentro de la salsa", correcta: false },
+                            { texto: "Se puede añadir queso premium rallado, lo que suma el alérgeno Lácteos", correcta: true }
                         ]
                     }
                 ]
@@ -1294,6 +1894,137 @@ export const examenes = {
         {
             texto: "¿Qué madera se utiliza preferentemente para la brasa en Cañitas Maite?",
             opciones: ["Pino", "Encina", "Eucalipto"],
+            correcta: 1
+        }
+    ],
+    roomService: [
+        /* --- BLOQUE: PRODUCTO Y TRAZABILIDAD --- */
+        {
+            texto: "¿De qué región francesa proviene el Queso Comté de 24 meses de nuestro Bikini?",
+            opciones: ["Normandía", "El macizo del Jura", "Provenza"],
+            correcta: 1
+        },
+        {
+            texto: "¿Qué proveedor suministra la carne de la Burger madurada 120 días?",
+            opciones: ["Cárnicas Lyo (León)", "Discarlux (Madrid)", "Ganaderos locales"],
+            correcta: 0
+        },
+        {
+            texto: "El Queso Payoyo de la Ensalada César es una mezcla de leches de:",
+            opciones: ["Vaca y Oveja", "Cabra Payoya y Oveja Merina", "Solo Cabra"],
+            correcta: 1
+        },
+        {
+            texto: "¿De dónde procede el aguacate del Roll Brioche?",
+            opciones: ["Importación de Perú", "La Axarquía malagueña", "Canarias"],
+            correcta: 1
+        },
+        {
+            texto: "¿Por qué utilizamos piñones nacionales en nuestra pasta?",
+            opciones: ["Por marketing", "Porque son más grasos y aromáticos que los de importación", "Porque son más pequeños"],
+            correcta: 1
+        },
+        {
+            texto: "¿Qué tipo de leche se utiliza para la bechamel de nuestra croqueta?",
+            opciones: ["Vaca", "Oveja", "Cabra"],
+            correcta: 1
+        },
+        /* --- BLOQUE: TÉCNICA Y CALIDAD --- */
+        {
+            texto: "¿Cuál es el factor crítico para que el Sandwich Club llegue perfecto?",
+            opciones: ["Que el pan esté frío", "Que el huevo campero se fría al momento para que la yema llegue fluida", "Que lleve mucha salsa"],
+            correcta: 1
+        },
+        {
+            texto: "¿Cómo se consigue el toque ahumado de la salsa de la Corvina?",
+            opciones: ["Con humo líquido", "Asando los tomates directamente a la brasa", "Con pimentón"],
+            correcta: 1
+        },
+        {
+            texto: "¿Cuánto tiempo de reducción lleva la salsa española del Solomillo?",
+            opciones: ["12 horas", "24 horas", "Más de 48 horas"],
+            correcta: 2
+        },
+        {
+            texto: "¿Qué técnica asegura que la lechuga de la César esté crujiente tras el transporte?",
+            opciones: ["Uso de 'lechuga viva' con su raíz hidropónica hasta el último momento", "Se mete en hielo", "Se sirve sin aliñar"],
+            correcta: 0
+        },
+        {
+            texto: "¿Cuál es el secreto de la textura de nuestra Tarta de Queso?",
+            opciones: ["Interior fluido y exterior tostado por control exacto de horneado", "Uso de gelatina", "Mucha harina"],
+            correcta: 0
+        },
+        {
+            texto: "¿Qué tipo de pan se utiliza en el Bikini Mixto Trufado?",
+            opciones: ["Pan de molde industrial", "Pan brioche artesano", "Pan de cristal"],
+            correcta: 1
+        },
+        /* --- BLOQUE: ALÉRGENOS (CRÍTICO) --- */
+        {
+            texto: "Si un cliente es alérgico a los FRUTOS DE CÁSCARA, ¿qué plato NO puede tomar?",
+            opciones: ["La Burger", "La Pasta al pesto (por el piñón)", "El Bikini"],
+            correcta: 1
+        },
+        {
+            texto: "En el Donut de Rabo de Toro o el Bikini, ¿por qué hay SULFITOS?",
+            opciones: ["Por el queso", "Por la reducción de vino tinto o el jamón trufado", "Por el pan"],
+            correcta: 1
+        },
+        {
+            texto: "¿Es apta la Tarta de Queso para un cliente celíaco?",
+            opciones: ["Sí", "No, contiene Gluten", "Depende del día"],
+            correcta: 1
+        },
+        {
+            texto: "¿Qué alérgeno debemos vigilar en la mayonesa del Sandwich Club?",
+            opciones: ["Solo Huevo", "Huevo y Mostaza", "Pescado"],
+            correcta: 1
+        },
+        {
+            texto: "Si un cliente tiene intolerancia a los LÁCTEOS, ¿qué plato de niños lleva queso opcional?",
+            opciones: ["Croquetas", "Pasta fresca con tomate", "Sandwich Club"],
+            correcta: 1
+        },
+        /* --- BLOQUE: OPERATIVA Y SERVICIO --- */
+        {
+            texto: "¿En qué congreso ganó la croqueta de Cañitas Maite el premio en 2021?",
+            opciones: ["Madrid Fusión", "San Sebastián Gastronomika", "Fitur"],
+            correcta: 0
+        },
+        {
+            texto: "¿Qué guarnición puede elegir un niño para su Sandwich Club?",
+            opciones: ["Solo patatas", "Patatas fritas o ensalada", "Arroz"],
+            correcta: 1
+        },
+        {
+            texto: "¿Cuántas unidades de croquetas lleva la ración de Kids?",
+            opciones: ["1 unidad", "2 unidades", "4 unidades"],
+            correcta: 1
+        },
+        {
+            texto: "¿Qué madera alimenta nuestra brasa en Cañitas Maite?",
+            opciones: ["Pino", "Encina", "Eucalipto"],
+            correcta: 1
+        },
+        {
+            texto: "Si un cliente pide el Solomillo 'muy hecho', ¿qué advertimos?",
+            opciones: ["Que perderá la jugosidad y matices de la maduración", "Que tardará una hora", "Que no tenemos fuego"],
+            correcta: 0
+        },
+        {
+            texto: "¿Cuál es el gesto de servicio más importante antes de salir hacia la habitación?",
+            opciones: ["Correr por el pasillo", "Revisar que cubiertos y pan acompañen correctamente al plato", "Llevar la cuenta abierta"],
+            correcta: 1
+        },
+        {
+            texto: "¿Qué representa la Torta de Aceite en nuestra historia?",
+            opciones: ["Un postre cualquiera", "Nuestras raíces y la unión de Albacete y Valencia", "Solo un adorno"],
+            correcta: 1
+        },
+        {
+            texto: "¿Cómo se define la bechamel de nuestra croqueta premiada?",
+            opciones: ["Densa", "Líquida y fundente", "Cojonuda pero compacta"],
             correcta: 1
         }
     ]
