@@ -97,3 +97,75 @@ button:hover {
   background: var(--hover);
   transform: translateY(-1px);
 }
+
+/* ==========================================================
+   MODAL DE ÉXITO (CERTIFICACIÓN)
+   ========================================================== */
+#modal-exito {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  /* Fondo muy oscuro para centrar la atención */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  transition: opacity 0.5s ease;
+}
+
+.modal-oculto {
+  display: none !important;
+}
+
+.modal-contenido {
+  background: var(--card);
+  /* Usa tu color de tarjeta */
+  padding: 40px;
+  border-radius: 20px;
+  border: 2px solid var(--accent);
+  /* Usa tu color azul eléctrico/dorado */
+  text-align: center;
+  max-width: 90%;
+  width: 450px;
+  box-shadow: 0 0 40px rgba(56, 189, 248, 0.2);
+  animation: aparecerModal 0.4s ease-out;
+}
+
+@keyframes aparecerModal {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modal-contenido h2 {
+  color: var(--accent);
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.modal-contenido p {
+  color: var(--text);
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* Reutilizamos el estilo de tus botones pero lo hacemos más grande */
+.modal-contenido button {
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 50px;
+}

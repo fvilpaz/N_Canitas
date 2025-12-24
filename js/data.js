@@ -1,4 +1,710 @@
 export const menuData = {
+    desayunos: [
+        {
+            id: "huevos-rotos-bellota",
+            nombre: "Huevos Rotos con Jamón de Bellota",
+            precio: "Una Opción: 8€ EXTRA \u00A0\u00A0|\u00A0\u00A0 Dos Opciones: 14€ EXTRA",
+            descripcion: "Huevos camperos con puntilla, patata agria y jamón 100% ibérico.",
+            historia: "Este plato representa la obsesión de Javier Sanz y Juan Sahuquillo por el producto puro. La técnica de la 'puntilla' requiere un control exacto de la temperatura del aceite para que el borde de la clara se caramelice y quede crujiente, mientras la yema permanece totalmente líquida para bañar la patata agria frita al momento. El jamón de bellota aporta la elegancia final: su grasa se atempera con el calor del huevo, liberando aromas a fruto seco y una textura fundente que es la seña de identidad de los desayunos en Cañitas.",
+            trazabilidad: "Huevos de granja local · Jamón 100% Ibérico de Bellota · Patata Agria de recolección seleccionada.",
+            alergenos: ["Huevo"], // Alérgenos verificados según receta
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué técnica específica se busca en la clara del huevo para este plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Cocinada al vapor para máxima suavidad", correcta: false },
+                            { texto: "Puntilla crujiente mediante aceite a alta temperatura", correcta: true },
+                            { texto: "Escalfado en agua con vinagre", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Por qué se utiliza específicamente la variedad de Patata Agria?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Porque es más dulce que el resto", correcta: false },
+                            { texto: "Por su bajo contenido en azúcar y resistencia a la fritura crujiente", correcta: true },
+                            { texto: "Porque es la que tiene la piel más fina", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Sobre el Menú ME: ¿Cuál es el suplemento si el cliente elige dos platos de esta sección?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "8€ EXTRA", correcta: false },
+                            { texto: "14€ EXTRA", correcta: true },
+                            { texto: "Es gratuito para clientes ME", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Seguridad Alimentaria: ¿Qué alérgeno principal debemos advertir en este plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Gluten (por las patatas)", correcta: false },
+                            { texto: "Huevo", correcta: true },
+                            { texto: "Lácteos (por el jamón)", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué aporta el jamón de bellota al entrar en contacto con el huevo caliente?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Se endurece y aporta una textura correosa", correcta: false },
+                            { texto: "Su grasa infiltrada se atempera y libera aromas complejos", correcta: true },
+                            { texto: "Pierde todo su sabor por el calor excesivo", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "huevos-fritos-joselito",
+            nombre: "Huevos Fritos con Puntilla y Papada Joselito",
+            precio: "Una Opción: 8€ EXTRA \u00A0\u00A0|\u00A0\u00A0 Dos Opciones: 14€ EXTRA",
+            descripcion: "Huevos fritos de corral acompañados de la mítica papada ibérica de Guijuelo.",
+            historia: "Este plato rinde homenaje a la excelencia cárnica de Joselito. La papada ibérica de bellota, curada de forma natural en Guijuelo, posee una proporción de grasa infiltrada que se vuelve translúcida y sedosa al contacto con el calor residual de los huevos recién fritos. La clave técnica es la armonía entre la potencia del ibérico y la sencillez del huevo frito con puntilla, creando una experiencia donde el producto principal brilla por su pureza aromática y textura fundente.",
+            trazabilidad: "Papada Joselito (Guijuelo, Salamanca) · Huevos camperos de producción local.",
+            alergenos: ["Huevo"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué marca de ibéricos de renombre mundial suministra la papada para este plato?",
+                        tipo: "radio",
+                        options: [
+                            { texto: "Cinco Jotas", correcta: false },
+                            { texto: "Joselito", correcta: true },
+                            { texto: "Sánchez Romero Carvajal", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Dónde se encuentra la sede y el proceso de curación de la papada utilizada?",
+                        tipo: "radio",
+                        options: [
+                            { texto: "Jabugo (Huelva)", correcta: false },
+                            { texto: "Guijuelo (Salamanca)", correcta: true },
+                            { texto: "Valle de los Pedroches (Córdoba)", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué sucede con la textura de la papada al colocarla sobre los huevos calientes?",
+                        tipo: "radio",
+                        options: [
+                            { texto: "Se vuelve rígida y crujiente", correcta: false },
+                            { texto: "Se vuelve translúcida y libera su grasa infiltrada sedosa", correcta: true },
+                            { texto: "No experimenta ningún cambio", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Sobre la operativa ME: ¿Qué precio se aplica si el cliente elige solo ESTA opción?",
+                        tipo: "radio",
+                        options: [
+                            { texto: "6€ EXTRA", correcta: false },
+                            { texto: "8€ EXTRA", correcta: true },
+                            { texto: "14€ EXTRA", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Identifica el alérgeno de declaración obligatoria presente en la ficha técnica:",
+                        tipo: "checkbox",
+                        options: [
+                            { texto: "Huevo", correcta: true },
+                            { texto: "Frutos de cáscara", correcta: false },
+                            { texto: "Sulfitos", correcta: false },
+                            { texto: "Moluscos", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "omelette-payoyo",
+            nombre: "Omelette Cremosa con Queso Payoyo Curado",
+            precio: "Una Opción: 8€ EXTRA \u00A0\u00A0|\u00A0\u00A0 Dos Opciones: 14€ EXTRA",
+            descripcion: "Tortilla francesa de técnica precisa con el corazón fundente de queso Payoyo[cite: 3].",
+            historia: "La omelette de Cañitas Maite es un ejercicio de técnica francesa clásica aplicada al producto andaluz. Buscamos el punto 'baveuse' (baboso), donde el exterior es una lámina amarilla perfecta y lisa, sin rastros de tostado, y el interior fluye como una crema. El Queso Payoyo, producido en la Sierra de Grazalema con leche de cabra payoya y oveja merina, se introduce en el último momento del plegado para que se funda con el calor residual, aportando notas de mantequilla, frutos secos y el carácter animal propio de los quesos de alta montaña gaditana[cite: 3].",
+            trazabilidad: "Queso Payoyo (Villaluenga del Rosario, Cádiz) [cite: 9] · Huevos camperos de proximidad[cite: 3].",
+            alergenos: ["Huevo", "Lácteos"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué término técnico francés define el punto de cocción 'casi líquido' del interior de nuestra omelette?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Bien Cuit", correcta: false },
+                            { texto: "Baveuse", correcta: true },
+                            { texto: "Saignant", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué mezcla de leches hace que el Queso Payoyo sea único en su perfil de sabor?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Vaca y Cabra", correcta: false },
+                            { texto: "Cabra Payoya y Oveja Merina", correcta: true },
+                            { texto: "Búfala y Oveja", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cómo debe ser el aspecto exterior de la tortilla según el estándar de Cañitas Maite?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Muy tostada y crujiente", correcta: false },
+                            { texto: "Lisa, amarilla y sin color de tostado", correcta: true },
+                            { texto: "Rellena de trozos de patata", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Atención al Cliente: ¿Es este plato apto para una persona con intolerancia a la lactosa?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Sí, el queso Payoyo no tiene lactosa", correcta: false },
+                            { texto: "No, contiene el alérgeno Lácteos debido al queso curado", correcta: true },
+                            { texto: "Solo si se pide sin huevo", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿En qué momento se introduce el queso Payoyo en la elaboración?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Se bate junto con los huevos antes de ir a la sartén", correcta: false },
+                            { texto: "Durante el plegado final para que se funda suavemente", correcta: true },
+                            { texto: "Se ralla encima una vez servido el plato", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "benedictinos-malaguenos",
+            nombre: "Benedictinos Malagueños de Cañitas",
+            precio: "Una Opción: 8€ EXTRA \u00A0\u00A0|\u00A0\u00A0 Dos Opciones: 14€ EXTRA",
+            descripcion: "Nuestra versión local del clásico internacional con el sello de Cañitas.",
+            historia: "Los huevos benedictinos se 'malagueñizan' en Cañitas para integrarse en nuestro entorno. El reto técnico reside en el escalfado perfecto del huevo (clara cuajada y yema líquida) y la emulsión de una salsa holandesa estable y aireada. En lugar del muffin inglés tradicional, utilizamos una base que rinde homenaje a la panadería local, transformando un estándar de hotel en una propuesta con alma que habla del territorio malagueño.",
+            trazabilidad: "Huevos de corral de la provincia · Ingredientes seleccionados de la despensa malagueña.",
+            alergenos: ["Huevo", "Gluten", "Lácteos"], // Verificados por la salsa holandesa y la base de pan
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Cuál es el objetivo principal de 'malagueñizar' este plato clásico?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Hacerlo más económico", correcta: false },
+                            { texto: "Integrar el estándar internacional con el producto y alma de Málaga", correcta: true },
+                            { texto: "Sustituir el huevo por otro ingrediente", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué dos elementos técnicos son cruciales en la ejecución de unos Benedictinos?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "El fritura de la patata y el corte del jamón", correcta: false },
+                            { texto: "El escalfado del huevo y la emulsión de la salsa holandesa", correcta: true },
+                            { texto: "El horneado del pan y el licuado de frutas", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Atención al Cliente: ¿Qué alérgenos presentes en este plato debemos considerar?",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Huevo y Lácteos (salsa y base)", correcta: true },
+                            { texto: "Gluten (base de pan)", correcta: true },
+                            { texto: "Frutos de cáscara", correcta: false },
+                            { texto: "Pescado", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cómo se define el estado de la yema en un huevo escalfado correctamente para este plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Totalmente sólida y cocinada", correcta: false },
+                            { texto: "Líquida y fluida para bañar el pan al cortarse", correcta: true },
+                            { texto: "Mezclada con la clara antes de cocer", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cuál es el suplemento máximo si el cliente elige este plato junto a otro del menú ME?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "8€ EXTRA", correcta: false },
+                            { texto: "14€ EXTRA", correcta: true },
+                            { texto: "22€ EXTRA", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "torta-aceite-capresse",
+            nombre: "Torta de Aceite estilo Capresse",
+            precio: "Una Opción: 8€ EXTRA \u00A0\u00A0|\u00A0\u00A0 Dos Opciones: 14€ EXTRA",
+            descripcion: "Nuestra versión vegetal (VEG) sobre base crujiente de torta de aceite.",
+            historia: "Este plato es un homenaje a la Torta de Inés Rosales, un icono de la panadería tradicional andaluza. En Cañitas la transformamos en un bocado salado utilizando la técnica 'Capresse': mozzarella de búfala fresca, tomate de temporada y albahaca. El contraste entre el dulzor sutil y anisado de la torta de aceite y la acidez del tomate crea un equilibrio sorprendente, elevando un bocado tradicional a una propuesta de bocatería fina contemporánea.",
+            trazabilidad: "Torta de Aceite de Castilleja de la Cuesta · Mozzarella de Búfala artesana · Aceite de albahaca fresca.",
+            alergenos: ["Gluten", "Lácteos"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué base tradicional andaluza se utiliza para este plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Pan de Cristal", correcta: false },
+                            { texto: "Torta de Aceite (estilo Inés Rosales)", correcta: true },
+                            { texto: "Focaccia de romero", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cuáles son los ingredientes principales que componen el estilo 'Capresse' de este plato?",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Mozzarella de Búfala", correcta: true },
+                            { texto: "Tomate y Albahaca", correcta: true },
+                            { texto: "Jamón y Queso", correcta: false },
+                            { texto: "Aguacate y Salmón", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Atención al Cliente: ¿Es este plato apto para un cliente vegetariano?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "No, contiene trazas de carne", correcta: false },
+                            { texto: "Sí, es nuestra opción (VEG) de la sección", correcta: true },
+                            { texto: "Solo si se quita el queso", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué matiz de sabor característico aporta la Torta de Aceite a la base?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Sabor picante y ahumado", correcta: false },
+                            { texto: "Sabor crujiente con matices de anís y aceite de oliva", correcta: true },
+                            { texto: "Sabor amargo e intenso", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cuál es el alérgeno principal de la base crujiente de este plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Frutos de cáscara", correcta: false },
+                            { texto: "Gluten (Cereal de trigo)", correcta: true },
+                            { texto: "Pescado", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "roll-salmon-aguacate",
+            nombre: "Roll de Salmón Ahumado y Aguacate",
+            precio: "Una Opción: 8€ EXTRA \u00A0\u00A0|\u00A0\u00A0 Dos Opciones: 14€ EXTRA",
+            descripcion: "Roll tierno de salmón ahumado premium con aguacate en su punto óptimo de maduración.",
+            historia: "El roll de salmón y aguacate es un clásico de la bocatería saludable que en Cañitas elevamos mediante la selección del producto. El salmón se somete a un ahumado ligero con maderas nobles para no tapar el sabor del pescado, y el aguacate, procedente de cultivos de la Axarquía malagueña, aporta la untuosidad necesaria para equilibrar la mordida. El pan de roll, ligeramente tostado, sirve como vehículo tierno para una combinación donde prima la frescura.",
+            trazabilidad: "Salmón ahumado de corte premium · Aguacate de la Axarquía (Málaga) · Pan de brioche tipo roll.",
+            alergenos: ["Pescado", "Gluten", "Lácteos"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿De dónde procede el aguacate utilizado en nuestro Roll para garantizar la sostenibilidad y calidad?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Importado de México", correcta: false },
+                            { texto: "De la Axarquía malagueña", correcta: true },
+                            { texto: "De cultivos hidropónicos del norte", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Identifica los alérgenos principales que un camarero debe comunicar para este plato:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Pescado", correcta: true },
+                            { texto: "Gluten y Lácteos (por el pan)", correcta: true },
+                            { texto: "Moluscos", correcta: false },
+                            { texto: "Frutos de cáscara", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué técnica se utiliza con el pan del roll antes de montarlo?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Se sirve frío directamente", correcta: false },
+                            { texto: "Se tuesta ligeramente para dar temperatura y textura", correcta: true },
+                            { texto: "Se fríe en abundante aceite", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cómo es el ahumado del salmón seleccionado por Cañitas?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Muy intenso para que sepa a humo", correcta: false },
+                            { texto: "Ligero con maderas nobles para respetar el sabor del pescado", correcta: true },
+                            { texto: "Ahumado con carbón activo", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Si un cliente pregunta por el precio en el menú ME, ¿qué debemos responder si elige este plato como única opción?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Tiene un coste de 14€", correcta: false },
+                            { texto: "Tiene un suplemento de 8€ EXTRA", correcta: true },
+                            { texto: "Está incluido sin coste adicional", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "bikini-trufado-comte",
+            nombre: "Bikini Trufado de Jamón Cocido y Comté",
+            precio: "Una Opción: 8€ EXTRA \u00A0\u00A0|\u00A0\u00A0 Dos Opciones: 14€ EXTRA",
+            descripcion: "Sándwich de autor con queso Comté de 12 meses, jamón de alta calidad y esencia de trufa negra.",
+            historia: "Inspirado en los sándwiches de culto, el Bikini de Cañitas eleva un clásico mediante el uso del queso Comté AOC de leche cruda, que aporta notas de frutos secos y una elasticidad perfecta al fundir. La trufa negra se integra para aromatizar el conjunto sin saturar, mientras que el pan se tuesta lentamente con mantequilla noisette hasta alcanzar un dorado uniforme y una textura crujiente que contrasta con el interior fundente.",
+            trazabilidad: "Queso Comté AOC (Francia) con 12 meses de maduración · Jamón cocido extra · Aceite de Trufa Negra premium.",
+            alergenos: ["Gluten", "Lácteos"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué queso francés con Denominación de Origen Protegida (AOC) es el protagonista de este Bikini?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Brie de Meaux", correcta: false },
+                            { texto: "Comté (12 meses de curación)", correcta: true },
+                            { texto: "Roquefort", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué grasa se utiliza para el tostado exterior del pan y lograr su color dorado característico?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Aceite de girasol", correcta: false },
+                            { texto: "Mantequilla", correcta: true },
+                            { texto: "Manteca de cerdo", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cuáles son los alérgenos presentes en este plato?",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Gluten (por el pan)", correcta: true },
+                            { texto: "Lácteos (queso y mantequilla)", correcta: true },
+                            { texto: "Pescado", correcta: false },
+                            { texto: "Sulfitos", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué perfil de sabor aporta el queso Comté a este sándwich?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Sabor muy picante y fuerte", correcta: false },
+                            { texto: "Notas de frutos secos y una textura elástica al fundirse", correcta: true },
+                            { texto: "Sabor dulce y afrutado tipo postre", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Sobre la operativa ME: ¿Qué suplemento tiene si se pide junto a una Omelette Payoyo?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "8€ EXTRA", correcta: false },
+                            { texto: "14€ EXTRA (Precio por 2 opciones)", correcta: true },
+                            { texto: "16€ EXTRA", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "mollete-maximo-joselito",
+            nombre: "Mollete Máximo de Coppa Joselito y Tomate",
+            precio: "Una Opción: 8€ EXTRA \u00A0\u00A0|\u00A0\u00A0 Dos Opciones: 14€ EXTRA",
+            descripcion: "Mollete artesano con la mejor selección de Coppa Joselito y emulsión de tomate natural.",
+            historia: "El Mollete Máximo es nuestra oda al desayuno andaluz elevado. La Coppa Joselito, procedente de la parte superior del lomo del cerdo ibérico, destaca por su intenso veteado de grasa infiltrada y una curación lenta en secaderos naturales. Se sirve en un mollete de fermentación lenta, ligeramente vaporizado y tostado, con un tomate de máxima calidad que aporta frescura y equilibra la potencia del ibérico.",
+            trazabilidad: "Coppa Joselito (Guijuelo) · Mollete artesano · Tomate de temporada y AOVE.",
+            alergenos: ["Gluten"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué parte del cerdo ibérico es la Coppa Joselito?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "La pata trasera", correcta: false },
+                            { texto: "La parte superior del lomo (cabecero)", correcta: true },
+                            { texto: "La zona del vientre", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué tipo de pan se utiliza como base para este embutido premium?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Pan de molde trufado", correcta: false },
+                            { texto: "Mollete artesano de fermentación lenta", correcta: true },
+                            { texto: "Baguette clásica", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Por qué el producto Joselito es fundamental en la trazabilidad de este plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Por ser el embutido más barato del mercado", correcta: false },
+                            { texto: "Por su curación natural en Guijuelo y calidad de bellota reconocida", correcta: true },
+                            { texto: "Porque es un producto local de Málaga", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Identifica el alérgeno principal a declarar en este mollete:",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Gluten", correcta: true },
+                            { texto: "Lácteos", correcta: false },
+                            { texto: "Moluscos", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cuál es el precio extra si el cliente decide que solo quiere este mollete como plato ME?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "6€", correcta: false },
+                            { texto: "8€ EXTRA", correcta: true },
+                            { texto: "10€", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "churritos-chocolate",
+            nombre: "Churritos Fritos con Chocolate Caliente",
+            precio: "Una Opción: 8€ EXTRA \u00A0\u00A0|\u00A0\u00A0 Dos Opciones: 14€ EXTRA",
+            descripcion: "Masa artesana frita al momento, crujiente por fuera y tierna por dentro, con chocolate fundido.",
+            historia: "El churro es el alma del desayuno español. En Cañitas, reivindicamos la churrería tradicional elaborando la masa diariamente con harina de gran fuerza y agua, controlando la temperatura del aceite para que no absorba grasa de más. El resultado es un churrito fino, muy crujiente, que se sirve con un chocolate a la taza de alto porcentaje de cacao, denso y con el punto justo de amargor para equilibrar el azúcar del churro.",
+            trazabilidad: "Harina de trigo de molienda tradicional · Chocolate artesano con 60% cacao.",
+            alergenos: ["Gluten", "Lácteos"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué característica técnica define a nuestros churritos?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Se hornean para que no tengan grasa", correcta: false },
+                            { texto: "Se fríen al momento para garantizar el máximo crujiente", correcta: true },
+                            { texto: "Se sirven congelados", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cómo es el chocolate que acompaña a este plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Chocolate blanco muy dulce", correcta: false },
+                            { texto: "Chocolate a la taza con alto porcentaje de cacao", correcta: true },
+                            { texto: "Batido de chocolate industrial", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cuáles son los alérgenos presentes en este plato?",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Gluten (masa)", correcta: true },
+                            { texto: "Lácteos (chocolate)", correcta: true },
+                            { texto: "Pescado", correcta: false },
+                            { texto: "Frutos de cáscara", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Por qué es importante controlar la temperatura del aceite en la fritura del churro?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Para que el churro quede negro", correcta: false },
+                            { texto: "Para evitar que el churro absorba exceso de grasa y quede pesado", correcta: true },
+                            { texto: "Para que sepa a aceite de girasol", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Se puede pedir este plato dentro de la oferta de 2 platos por 14€?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "No, este plato siempre vale 8€", correcta: false },
+                            { texto: "Sí, forma parte de la oferta combinada del Menú ME", correcta: true },
+                            { texto: "Solo si se pide con café", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "tarta-queso-payoyo",
+            nombre: "Corte Cremoso de Tarta de Queso Payoyo",
+            precio: "Una Opción: 8€ EXTRA \u00A0\u00A0|\u00A0\u00A0 Dos Opciones: 14€ EXTRA",
+            descripcion: "Tarta de queso artesana elaborada con el carácter único del queso de Grazalema.",
+            historia: "Nuestra tarta de queso se aleja de las recetas industriales buscando la potencia del Queso Payoyo curado. La técnica de horneado es precisa: buscamos una base de galleta crujiente y un corazón que, sin llegar a ser líquido, mantenga una cremosidad extrema. El Payoyo aporta ese matiz diferencial, un toque animal y persistente que la convierte en una tarta con mucha personalidad, menos dulce y más gastronómica.",
+            trazabilidad: "Queso Payoyo (Cádiz) · Nata de alta calidad · Huevos de corral.",
+            alergenos: ["Lácteos", "Huevo", "Gluten"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué ingrediente estrella le da el nombre y el sabor diferencial a esta tarta?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Queso Philadelphia", correcta: false },
+                            { texto: "Queso Payoyo curado", correcta: true },
+                            { texto: "Queso Manchego", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cómo es la textura que buscamos en el interior de la tarta?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Seca y compacta como un bizcocho", correcta: false },
+                            { texto: "Cremosa y fundente", correcta: true },
+                            { texto: "Totalmente líquida", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Atención al Cliente: ¿Qué alérgenos debemos comunicar?",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Lácteos y Huevo", correcta: true },
+                            { texto: "Gluten (base de galleta)", correcta: true },
+                            { texto: "Altramuces", correcta: false },
+                            { texto: "Dióxido de azufre", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿De qué zona de España es originario el queso utilizado?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Sierra de Madrid", correcta: false },
+                            { texto: "Sierra de Grazalema (Cádiz)", correcta: true },
+                            { texto: "Pirineos", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cuál es el precio si el cliente pide este plato como segunda opción del menú ME?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Paga 8€ más", correcta: false },
+                            { texto: "El total por los dos platos será de 14€ EXTRA", correcta: true },
+                            { texto: "Es gratis", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "torrija-tostada-cañitas",
+            nombre: "Torrija Tostada con Mantequilla y Nata Fresca Montada",
+            precio: "Una Opción: 8€ EXTRA \u00A0\u00A0|\u00A0\u00A0 Dos Opciones: 14€ EXTRA",
+            descripcion: "Brioche artesano infusionado 24h y caramelizado con mantequilla noisette.",
+            historia: "Nuestra torrija es un emblema de la casa. Utilizamos pan brioche con un alto porcentaje de mantequilla que se infusiona durante un día entero en una mezcla de leche, nata, canela y cítricos. En lugar de freírla, la terminamos en la sartén con mantequilla noisette y azúcar, creando una capa de caramelo crujiente y ambarina (técnica de Maillard) que protege un interior con textura de pudding sedoso. Se acompaña de nata montada al momento para aportar frescura y ligereza.",
+            trazabilidad: "Pan brioche de obrador artesano · Mantequilla de alta calidad · Nata fresca de caserío.",
+            alergenos: ["Gluten", "Lácteos", "Huevo"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué técnica de cocción final se utiliza para lograr el exterior crujiente de la torrija?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Fritura profunda en aceite de girasol", correcta: false },
+                            { texto: "Caramelizado en sartén con mantequilla y azúcar", correcta: true },
+                            { texto: "Cocción al vapor", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cuánto tiempo se infusiona el brioche para conseguir su textura sedosa?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "30 minutos", correcta: false },
+                            { texto: "24 horas", correcta: true },
+                            { texto: "Se sirve directamente sin infusión", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Identifica los alérgenos presentes en este postre:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Gluten y Huevo", correcta: true },
+                            { texto: "Lácteos", correcta: true },
+                            { texto: "Pescado", correcta: false },
+                            { texto: "Frutos de cáscara", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué acompaña a la torrija para equilibrar el dulzor del caramelo?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Crema pastelera densa", correcta: false },
+                            { texto: "Nata fresca montada al momento", correcta: true },
+                            { texto: "Chocolate caliente", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué aporta la técnica de la mantequilla 'noisette' al plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Un color negro quemado", correcta: false },
+                            { texto: "Aromas tostados que recuerdan a la avellana", correcta: true },
+                            { texto: "Sabor amargo intenso", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "torta-ines-rosales-pistacho",
+            nombre: "Torta de Inés Rosales con Crema de Pistacho y Pistacho Tostado",
+            precio: "Una Opción: 8€ EXTRA \u00A0\u00A0|\u00A0\u00A0 Dos Opciones: 14€ EXTRA",
+            descripcion: "Homenaje a la repostería tradicional sevillana con el toque malagueño del pistacho.",
+            historia: "Partimos de la icónica Torta de Aceite de Castilleja de la Cuesta, famosa por su elaboración manual y su toque de anís. La acompañamos de una crema untuosa de pistacho de alta calidad y coronamos con pistachos tostados malagueños. Es un plato que juega con las texturas: el crujiente quebradizo de la torta, la cremosidad de la pasta de pistacho y el punto crocante del fruto seco recién tostado, uniendo tradición andaluza y producto local.",
+            trazabilidad: "Torta de Aceite artesana · Crema de Pistacho 100% pura · Pistacho tostado malagueño.",
+            alergenos: ["Gluten", "Frutos de cáscara", "Lácteos"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Cuál es el fruto seco protagonista que aporta sabor y textura a este plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Almendra", correcta: false },
+                            { texto: "Pistacho (crema y tostado)", correcta: true },
+                            { texto: "Avellana", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué característica hace especial a la Torta de Inés Rosales?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Es una masa de bizcocho blando", correcta: false },
+                            { texto: "Es una elaboración manual tradicional con aceite de oliva y anís", correcta: true },
+                            { texto: "Es un pan de molde frito", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Atención: ¿Qué alérgeno específico debemos destacar por el uso del pistacho?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Frutos de cáscara", correcta: true },
+                            { texto: "Altramuces", correcta: false },
+                            { texto: "Sésamo", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué tres texturas principales se encuentran en este bocado?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Solo blanda y dulce", correcta: false },
+                            { texto: "Quebradiza (torta), cremosa (crema) y crocante (fruto seco)", correcta: true },
+                            { texto: "Líquida, sólida y gaseosa", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Sobre el Menú ME: ¿Es posible pedir esta torta como postre tras un plato de huevos por 14€?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "No, son secciones distintas", correcta: false },
+                            { texto: "Sí, el cliente puede elegir 2 opciones ME por 14€", correcta: true },
+                            { texto: "Solo si paga un tercer suplemento", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+    ],
     restaurant: [
         {
             id: "croqueta-2021-malaga",
@@ -3258,6 +3964,113 @@ export const menuData = {
     ]
 };
 export const examenes = {
+    desayunos: [
+        // PRECIOS Y OPERATIVA
+        {
+            texto: "¿Cuál es el suplemento si un cliente ME elige DOS platos de la carta de selección?",
+            opciones: ["8€", "12€", "14€", "20€"],
+            correcta: 2
+        },
+        {
+            texto: "¿Cuál es el suplemento si el cliente solo desea UNA opción de la carta selección?",
+            opciones: ["5€", "8€", "10€", "Es gratis"],
+            correcta: 1
+        },
+        // HUEVOS AL MOMENTO
+        {
+            texto: "¿Qué técnica define el borde crujiente de la clara en nuestros huevos fritos?",
+            opciones: ["Escalfado", "Puntilla", "Baveuse", "Sous-vide"],
+            correcta: 1
+        },
+        {
+            texto: "¿Qué variedad de patata usamos en los Huevos Rotos por su resistencia a la fritura?",
+            opciones: ["Patata Nueva", "Patata Agria", "Patata Kennebec", "Boniato"],
+            correcta: 1
+        },
+        {
+            texto: "¿De qué marca es la papada ibérica que acompaña a los huevos fritos?",
+            opciones: ["Cinco Jotas", "Joselito", "Sánchez Romero", "Arturo Sánchez"],
+            correcta: 1
+        },
+        {
+            texto: "¿Qué mezcla de leches lleva el Queso Payoyo de nuestra Omelette?",
+            opciones: ["Vaca y Cabra", "Cabra Payoya y Oveja Merina", "Solo Oveja", "Cabra y Búfala"],
+            correcta: 1
+        },
+        {
+            texto: "¿En qué zona de España se produce el Queso Payoyo?",
+            opciones: ["Sierra de Madrid", "Sierra de Grazalema (Cádiz)", "Pirineos", "Sierra Nevada"],
+            correcta: 1
+        },
+        {
+            texto: "¿Cómo llamamos en Cañitas a nuestros huevos Benedictinos?",
+            opciones: ["Benedictinos Clásicos", "Benedictinos Malagueños", "Benedictinos Royal", "Benedictinos de la Casa"],
+            correcta: 1
+        },
+        {
+            texto: "¿Qué punto de cocción buscamos en el interior de la Omelette?",
+            opciones: ["Muy cuajada", "Baveuse (cremosa/líquida)", "Seca", "Tipo tortilla de patata"],
+            correcta: 1
+        },
+        // BOCATERÍA FINA
+        {
+            texto: "¿Qué base tradicional se usa para la opción vegetal estilo Capresse?",
+            opciones: ["Pan de molde", "Torta de Aceite artesana", "Focaccia", "Mollete"],
+            correcta: 1
+        },
+        {
+            texto: "¿De dónde procede el aguacate de nuestro Roll de Salmón?",
+            opciones: ["México", "La Axarquía (Málaga)", "Israel", "Canarias"],
+            correcta: 1
+        },
+        {
+            texto: "¿Qué queso francés de 12 meses de curación lleva el Bikini Trufado?",
+            opciones: ["Brie", "Comté", "Camembert", "Roquefort"],
+            correcta: 1
+        },
+        {
+            texto: "¿De qué parte del cerdo procede la Coppa Joselito del Mollete Máximo?",
+            opciones: ["Pata trasera", "Parte superior del lomo (cabecero)", "Costillar", "Carrillera"],
+            correcta: 1
+        },
+        {
+            texto: "¿Qué grasa se usa para tostar el Bikini Trufado en sartén?",
+            opciones: ["Aceite de coco", "Mantequilla", "Manteca de color", "Aceite de palma"],
+            correcta: 1
+        },
+        // DULCES AL MOMENTO
+        {
+            texto: "¿Con qué acompañamos nuestros Churritos fritos?",
+            opciones: ["Mermelada", "Chocolate caliente de alto % de cacao", "Dulce de leche", "Nata"],
+            correcta: 1
+        },
+        {
+            texto: "¿Qué queso le da personalidad a nuestra Tarta de Queso cremosa?",
+            opciones: ["Queso Crema industrial", "Queso Payoyo", "Queso de Burgos", "Queso Idiazábal"],
+            correcta: 1
+        },
+        {
+            texto: "¿Cuánto tiempo se infusiona el brioche de nuestra Torrija?",
+            opciones: ["1 hora", "12 horas", "24 horas", "No se infusiona"],
+            correcta: 2
+        },
+        {
+            texto: "¿Qué técnica se usa para terminar la Torrija en lugar de freírla?",
+            opciones: ["Hervido", "Caramelizado con mantequilla y azúcar", "Horneado seco", "Microondas"],
+            correcta: 1
+        },
+        {
+            texto: "¿Qué fruto seco acompaña a la Torta de Inés Rosales dulce?",
+            opciones: ["Almendra", "Pistacho (crema y tostado)", "Nuez", "Cacahuete"],
+            correcta: 1
+        },
+        // SEGURIDAD ALIMENTARIA
+        {
+            texto: "¿Cuál de estos platos es apto para VEGETARIANOS (VEG)?",
+            opciones: ["Mollete de Coppa", "Torta de Aceite estilo Capresse", "Roll de Salmón", "Benedictinos"],
+            correcta: 1
+        }
+    ],
     ene: [
         {
             texto: "¿En qué congreso ganó la croqueta de Cañitas Maite el premio a la mejor del mundo?",

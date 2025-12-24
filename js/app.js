@@ -1,10 +1,10 @@
 import { menuData, examenes } from './data.js';
 
 let currentStep = 0;
-let currentSection = 'ene';
+let currentSection = 'desayunos';
 
 /* ==========================================================
-   1. INTERFAZ Y NAVEGACIÓN
+   1. INTERFAZ Y NAVEGACIÓN (Corregida para Desayunos)
    ========================================================== */
 window.toggleTheme = function () {
     const body = document.body;
@@ -27,10 +27,11 @@ window.showSection = function (id, tab) {
     const btnExamen = document.getElementById('btn-examen-final');
     if (btnExamen) {
         const nombresExamen = {
-            'ene': 'EÑE LOBBY',
+            'desayunos': 'DESAYUNOS CAÑITAS',
             'restaurant': 'RESTAURANTE CAÑITAS',
-            'pool': 'POOL SNACK',
             'menus': 'MENÚS DEGUSTACIÓN',
+            'pool': 'POOL SNACK',
+            'ene': 'EÑE LOBBY',
             'room': 'ROOM SERVICE'
         };
         const nombreActual = nombresExamen[id] || id.toUpperCase();
@@ -51,17 +52,16 @@ window.showSection = function (id, tab) {
 }
 
 /* ==========================================================
-   2. LÓGICA DEL QUIZ (ESTO ES LO QUE FALTABA)
+   2. LÓGICA DEL QUIZ DE PLATO
    ========================================================== */
 
-// Esta función hace que el botón de "Poner a prueba mi memoria" funcione
 window.startQuiz = function (infoId, quizId) {
     const infoDiv = document.getElementById(infoId);
     const quizDiv = document.getElementById(quizId);
 
     if (infoDiv && quizDiv) {
-        infoDiv.classList.add('hidden'); // Oculta la info del plato
-        quizDiv.classList.remove('hidden'); // Muestra el test
+        infoDiv.classList.add('hidden');
+        quizDiv.classList.remove('hidden');
     }
 }
 
@@ -115,8 +115,8 @@ function renderApp() {
                         </span>`).join('')
             : `<span style="background: rgba(0, 150, 255, 0.1); border: 1px solid var(--accent); color: var(--accent); padding: 3px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: bold;">${plato.precio}</span>`
         }
+                </div>
             </div>
-        </div>
 
             <div id="info-${plato.id}">
                 <p class="descripcion" style="font-style:italic; opacity:0.8; margin-bottom:15px;">"${plato.descripcion}"</p>
@@ -153,7 +153,6 @@ window.verificarQuiz = function (platoId, isLastPlato) {
         p.opciones.forEach((o, j) => {
             const input = document.getElementById(`opt-${platoId}-${i}-${j}`);
             if (input) {
-                // Para radio y checkbox, comprobamos si el estado "checked" coincide con "correcta"
                 if (o.correcta !== input.checked) todoCorrecto = false;
             }
         });
@@ -183,6 +182,7 @@ window.siguientePlato = function () {
 }
 
 window.onload = renderApp;
+
 /* ==========================================================
    4. EXAMEN GLOBAL DE CERTIFICACIÓN
    ========================================================== */
@@ -196,11 +196,9 @@ document.getElementById('btn-examen-final').addEventListener('click', function (
         return;
     }
 
-    // Ocultamos la zona del botón y mostramos el contenedor del test
     document.getElementById('zona-examen').classList.add('hidden');
     container.classList.remove('hidden');
 
-    // Generamos el HTML del examen (20 preguntas)
     let html = `<h2 style="text-align:center; color:var(--accent); margin-bottom:30px;">EXAMEN OFICIAL: ${currentSection.toUpperCase()}</h2>`;
 
     preguntas.forEach((p, i) => {
@@ -223,7 +221,6 @@ document.getElementById('btn-examen-final').addEventListener('click', function (
     content.innerHTML = html;
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
-    // Lógica para corregir el examen
     document.getElementById('btn-finalizar-certificacion').onclick = function () {
         let aciertos = 0;
         preguntas.forEach((p, i) => {
@@ -237,9 +234,46 @@ document.getElementById('btn-examen-final').addEventListener('click', function (
         const porcentaje = (aciertos / preguntas.length) * 100;
 
         if (porcentaje >= 80) {
-            resultadoDiv.innerHTML = `<div style="color:#4ade80;">🏆 ¡APROBADO! (${aciertos}/${preguntas.length})<br><small>Has demostrado ser un experto en ${currentSection}</small></div>`;
+            // Mantenemos el orden de coherencia aquí también
+            const nombresExamen = {
+                'desayunos': 'DESAYUNOS CAÑITAS',
+                'restaurant': 'RESTAURANTE CAÑITAS',
+                'menus': 'MENÚS DEGUSTACIÓN',
+                'pool': 'POOL SNACK',
+                'ene': 'EÑE LOBBY',
+                'room': 'ROOM SERVICE'
+            };
+            window.mostrarCertificado(nombresExamen[currentSection] || currentSection.toUpperCase());
         } else {
-            resultadoDiv.innerHTML = `<div style="color:#f87171;">❌ NO APTO (${aciertos}/${preguntas.length})<br><small>Necesitas un 80% de aciertos. ¡Repasa y vuelve a intentarlo!</small></div>`;
+            resultadoDiv.innerHTML = `<div style="color:#f87171; margin-top:20px;">❌ NO APTO (${aciertos}/${preguntas.length})<br><small>Necesitas un 80% de aciertos para certificarte. ¡Repasa y vuelve a intentarlo!</small></div>`;
         }
     };
 });
+
+/* ==========================================================
+   5. FUNCIONES GLOBALES DEL CERTIFICADO
+   ========================================================== */
+window.mostrarCertificado = function (nombreMenu) {
+    if (typeof confetti === 'function') {
+        confetti({
+            particleCount: 200,
+            spread: 70,
+            origin: { y: 0.6 },
+            zIndex: 11000
+        });
+    }
+
+    const msgElement = document.getElementById('mensaje-certificacion');
+    if (msgElement) {
+        msgElement.innerText = `Has superado con éxito el examen de ${nombreMenu}. Ya eres oficialmente un experto en nuestra propuesta gastronómica.`;
+    }
+
+    const modal = document.getElementById('modal-exito');
+    if (modal) {
+        modal.classList.remove('modal-oculto');
+    }
+};
+
+window.volverAlMenu = function () {
+    window.location.reload();
+};
