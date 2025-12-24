@@ -175,7 +175,7 @@ export const menuData = {
             precio: "15.5€",
             descripcion: "Gamba blanca de la bahía, jugo de piparras encurtidas y regañás.",
             historia: "Esta ensaladilla es un homenaje directo a la ciudad de Málaga. A diferencia de la versión de Albacete, aquí se utiliza la reina de la lonja local: la gamba blanca. La clave es su equilibrio: una patata cremosa, una mayonesa aireada y el contrapunto eléctrico del jugo de piparras encurtidas, que aporta una acidez necesaria para limpiar el paladar. Se termina con regañás artesanas, el acompañamiento tradicional andaluz que aporta el crujiente perfecto.",
-            trazabilidad: "Gamba blanca de la Bahía de Málaga (Lonja de la Caleta/Vélez) · Piparras de Ibarra (País Vasco) · Regañás de panadería artesana sevillana.",
+            trazabilidad: "Gamba blanca de la Bahía de Málaga (Lonja de la Caleta/Vélez) · Piparras de Ibarra (País Vasco) · Regañás de panadería artesana sevillana · Fumet de pescado para la base.",
             alergenos: ["Pescado", "Crustáceos", "Huevo", "Gluten", "Mostaza", "Sulfitos"],
             quiz: {
                 preguntas: [
@@ -220,7 +220,7 @@ export const menuData = {
                         texto: "Identifica los alérgenos que contiene la ración (incluyendo las regañás):",
                         tipo: "checkbox",
                         opciones: [
-                            { texto: "Gluten (Regañás)", correcta: true },
+                            { texto: "Gluten (Regañás) y Pescado", correcta: true },
                             { texto: "Huevo y Mostaza (Mayonesa/Aderezo)", correcta: true },
                             { texto: "Frutos de cáscara", correcta: false },
                             { texto: "Crustáceos y Sulfitos", correcta: true }
@@ -231,7 +231,7 @@ export const menuData = {
         },
         {
             id: "puerro-asado-malaga",
-            nombre: "Puerro asado lentamente durate horas",
+            nombre: "Puerro asado lentamente durante horas",
             precio: "16.5€",
             descripcion: "Puerro asado con burrata fresca, tomate seco y praliné de almendras.",
             historia: "Este plato es un ejercicio de paciencia. El puerro se somete a una cocción lenta (confitado o asado a baja temperatura) durante horas, lo que permite que sus azúcares naturales se caramelicen sin quemar la fibra. En la sede de Málaga, se busca un contraste de temperaturas y texturas: el calor del puerro frente a la cremosidad fría de la burrata fresca. El praliné de almendras aporta una nota de fruto seco tostado que redondea el carácter terroso de la verdura.",
@@ -824,6 +824,847 @@ export const menuData = {
                             { texto: "Sulfitos (por los encurtidos)", correcta: true },
                             { texto: "Frutos de cáscara", correcta: false },
                             { texto: "Pescado (frecuente en los fondos de salsas marinas)", correcta: true }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "corvina-adobo-malaga",
+            nombre: "Corvina Gorda en Adobo a la parrilla",
+            precio: "28€",
+            descripcion: "Salsa de tomate encominado y tomatitos cherry confitados.",
+            historia: "En Cañitas Maite Málaga, reinterpretamos el adobo tradicional malagueño aplicándolo a una pieza de corvina salvaje de gran calibre. En lugar de freírla, la pasamos por la parrilla para respetar la sedosidad de su carne. La base de tomate encominado es un guiño a los guisos populares de la zona, aportando un frescor que equilibra la potencia del adobo.",
+            trazabilidad: "Corvina salvaje de lonjas andaluzas (Estrecho) · Tomate de huerta local · Comino natural.",
+            alergenos: ["Pescado", "Sulfitos"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué técnica de cocción define este plato de corvina?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Fritura en aceite de oliva", correcta: false },
+                            { texto: "Cocción a la brasa/parrilla", correcta: true },
+                            { texto: "Esmaltado al horno", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿En qué consiste el acompañamiento principal?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Salsa holandesa y espárragos", correcta: false },
+                            { texto: "Salsa de tomate encominado y tomatitos cherry confitados", correcta: true },
+                            { texto: "Puré de patata trufado", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Sobre la procedencia y calidad del producto:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Es una corvina de gran calibre (gorda)", correcta: true },
+                            { texto: "Se utiliza corvina salvaje de caladeros andaluces", correcta: true },
+                            { texto: "Es pescado de piscifactoría", correcta: false },
+                            { texto: "La trazabilidad se centra en el producto del Estrecho", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "Identifica los matices del sabor de este plato:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Toque ahumado de la brasa", correcta: true },
+                            { texto: "Aroma especiado del comino", correcta: true },
+                            { texto: "Acidez y dulzor del tomate confitado", correcta: true },
+                            { texto: "Picante extremo del adobo", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué alérgenos debemos advertir al cliente?",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Pescado", correcta: true },
+                            { texto: "Sulfitos (presentes en el vinagre del adobo)", correcta: true },
+                            { texto: "Moluscos", correcta: false },
+                            { texto: "Gluten", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "pargo-frito-gazpachuelo",
+            nombre: "Pargo del sur entero frito de pellizco",
+            precio: "34€",
+            descripcion: "Acompañado de crema montada de gazpachuelo verde y jalapeño (aprox. 0,5kg).",
+            historia: "Una pieza entera de pargo seleccionada por su tamaño (medio kilo) para asegurar que, al freírla entera, la piel quede extremadamente crujiente mientras el interior se mantiene jugoso. Se denomina 'de pellizco' porque su carne sale en lascas perfectas. El gazpachuelo, un clásico malagueño, se actualiza aquí en versión 'verde' con hierbas frescas y el punto vibrante del jalapeño.",
+            trazabilidad: "Pargo rojo salvaje capturado mediante artes de pesca sostenibles en el litoral andaluz · Aceite de oliva virgen extra para la fritura.",
+            alergenos: ["Pescado", "Lácteos", "Huevo"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Cuál es el peso aproximado de la pieza de pargo que se sirve?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "250g", correcta: false },
+                            { texto: "Alrededor de 0,5kg", correcta: true },
+                            { texto: "Más de 1kg", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cómo se presenta el gazpachuelo en este plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Caldo tradicional caliente", correcta: false },
+                            { texto: "Crema montada verde con jalapeño", correcta: true },
+                            { texto: "Salsa de tomate fría", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Sobre la técnica de fritura y servicio:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Se fríe la pieza entera para mantener los jugos", correcta: true },
+                            { texto: "El término 'pellizco' hace referencia a la facilidad para separar sus lascas", correcta: true },
+                            { texto: "Es un pescado que se sirve exclusivamente hervido", correcta: false },
+                            { texto: "El exterior debe quedar con una textura muy crujiente", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué ingredientes definen el perfil de sabor del acompañamiento?",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Jalapeño (picante sutil)", correcta: true },
+                            { texto: "Gazpachuelo (emulsión)", correcta: true },
+                            { texto: "Hierbas verdes (frescor)", correcta: true },
+                            { texto: "Trufa negra", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Atención a alérgenos: ¿Qué contiene el gazpachuelo montado?",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Pescado (el propio pargo)", correcta: true },
+                            { texto: "Huevo y Lácteos (para la emulsión y textura de la crema)", correcta: true },
+                            { texto: "Frutos de cáscara", correcta: false },
+                            { texto: "Gluten", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "lenguado-estero-menier",
+            nombre: "Lenguado de estero asado al horno",
+            precio: "42€",
+            descripcion: "Terminado con meunière tostada/cítrica y alcaparra frita (aprox. 0,6kg).",
+            historia: "El lenguado de estero se diferencia por su alimentación natural en los esteros, lo que le confiere una grasa y un sabor más potentes que el lenguado de mar abierto. Se asa al horno entero para preservar su hidratación. La clave está en la técnica de la Meunière: tostamos la mantequilla (beurre noisette) para buscar notas de fruto seco, la equilibramos con cítricos y añadimos el punto crujiente y salino de la alcaparra frita.",
+            trazabilidad: "Lenguado de estero de las salinas de Cádiz/Huelva · Mantequilla artesana · Alcaparra de calidad extra.",
+            alergenos: ["Pescado", "Lácteos", "Gluten", "Sulfitos"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué característica hace especial al lenguado de 'estero'?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Su carne es más magra y seca", correcta: false },
+                            { texto: "Su alimentación natural en esteros le aporta mayor infiltración de grasa y sabor", correcta: true },
+                            { texto: "Es un pescado que solo se encuentra en el Mediterráneo", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cómo se termina la salsa Meunière en este plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Con nata y champiñones", correcta: false },
+                            { texto: "Con mantequilla tostada, cítricos y alcaparras fritas", correcta: true },
+                            { texto: "Con una base de vino tinto y chalotas", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Sobre el peso y el servicio del plato:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "La pieza tiene un peso aproximado de 0,6kg", correcta: true },
+                            { texto: "Se sirve asado al horno para mantener la jugosidad", correcta: true },
+                            { texto: "Es una ración individual de lomo limpio de 100g", correcta: false },
+                            { texto: "La alcaparra frita aporta una textura crujiente al conjunto", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué matices aromáticos buscamos al tostar la mantequilla de la salsa?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Aroma a hierbabuena", correcta: false },
+                            { texto: "Notas de frutos secos (avellana)", correcta: true },
+                            { texto: "Sabor a vainilla", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Gestión de alérgenos: ¿Por qué marcamos Gluten en este plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Por la harina utilizada para encamisar el pescado", correcta: true },
+                            { texto: "Por los lácteos de la mantequilla", correcta: false },
+                            { texto: "Por el propio pescado", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "lubina-sin-trabajo",
+            nombre: "Lubina del Atlántico entera a la parrilla 'sin trabajo'",
+            precio: "49€",
+            descripcion: "Con pil-pil de su propio colágeno y aceite de oliva de perejil (aprox. 0,8kg).",
+            historia: "La Lubina del Atlántico, seleccionada por su firmeza y porcentaje de grasa, se cocina entera a la parrilla de encina. El término 'sin trabajo' hace referencia a nuestro servicio de sala y cocina, donde la pieza se desespinas y limpia completamente para que el cliente no encuentre ninguna dificultad. La salsa es un pil-pil emulsionado utilizando los propios jugos y colágeno de la cabeza y espinas de la lubina, potenciado con un aceite de perejil que aporta frescor y color.",
+            trazabilidad: "Lubina salvaje del Atlántico Norte · Aceite de oliva virgen extra monovarietal · Perejil fresco de huerta.",
+            alergenos: ["Pescado"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué significa el concepto 'sin trabajo' en este plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Que el cliente debe limpiarse el pescado él mismo", correcta: false },
+                            { texto: "Que la pieza se sirve limpia de espinas y lista para comer", correcta: true },
+                            { texto: "Que es un plato que se cocina muy rápido", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cómo se elabora el pil-pil que acompaña a la lubina?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Con nata y mantequilla", correcta: false },
+                            { texto: "Emulsionando el colágeno natural del pescado con aceite", correcta: true },
+                            { texto: "Con una base de mayonesa y ajo", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Sobre las características de la pieza:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Tiene un peso aproximado de 0,8kg", correcta: true },
+                            { texto: "Procede del Atlántico, lo que garantiza una carne firme", correcta: true },
+                            { texto: "Se cocina en fritura profunda", correcta: false },
+                            { texto: "Se utiliza aceite de perejil para aportar notas herbáceas", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué técnica de cocción principal se utiliza?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Vapor", correcta: false },
+                            { texto: "Parrilla", correcta: true },
+                            { texto: "Sal", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Respecto a los alérgenos, ¿cuál es el único obligatorio a declarar según la ficha técnica?",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Pescado", correcta: true },
+                            { texto: "Moluscos", correcta: false },
+                            { texto: "Gluten", correcta: false },
+                            { texto: "Crustáceos", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "pollito-coquelette-cazuela",
+            nombre: "Pollito Coquelette a la cazuela",
+            precio: "26€",
+            descripcion: "Con verduritas mini, papitas baby rustidas y juguito de asado.",
+            historia: "El Coquelette es un pollo joven de pequeño tamaño (picantón), apreciado por tener una carne mucho más tierna, fina y con menos grasa que un pollo adulto. Se cocina a la cazuela para que el ave se ase en sus propios jugos, manteniendo una humedad perfecta. Se acompaña de una guarnición de huerta en formato 'mini' y papas baby que recogen todo el sabor del fondo del asado, terminado con un jugo de carne reducido durante horas.",
+            trazabilidad: "Pollito Coquelette de crianza seleccionada · Verduritas de huerta de proximidad · Patata joven de temporada.",
+            alergenos: ["Sulfitos", "Lacteos"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué define principalmente a un pollito 'Coquelette'?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Que es un pollo de corral de gran tamaño", correcta: false },
+                            { texto: "Que es un ave joven de pequeño calibre con carne muy tierna", correcta: true },
+                            { texto: "Que es un tipo de ave de caza silvestre", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cómo se elabora la guarnición de este plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Verduritas mini y papitas baby rustidas", correcta: true },
+                            { texto: "Puré de patata y ensalada mixta", correcta: false },
+                            { texto: "Arroz blanco y pimientos fritos", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Sobre la técnica de cocción y el acabado:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Se cocina a la cazuela para preservar jugosidad", correcta: true },
+                            { texto: "Se termina con un jugo de asado concentrado", correcta: true },
+                            { texto: "Es un plato que se sirve exclusivamente frío", correcta: false },
+                            { texto: "El proceso de rustido de las patatas busca una textura exterior firme", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "¿Por qué el jugo de asado es clave en este plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Porque ayuda a que el pollo no parezca pequeño", correcta: false },
+                            { texto: "Porque aporta la potencia de sabor y el brillo de la reducción", correcta: true },
+                            { texto: "Porque es una salsa picante", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Gestión de alérgenos: ¿Qué debemos tener en cuenta en las reducciones de jugos de carne?",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "La presencia de sulfitos por el uso de vino en la elaboración del jugo", correcta: true },
+                            { texto: "Que el pollo es apto para dietas sin pescado", correcta: true },
+                            { texto: "Que no contiene mariscos", correcta: true },
+                            { texto: "Que los lácteos podrían estar presentes si se termina con mantequilla (consultar ficha)", correcta: true }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "falda-cordero-crujiente",
+            nombre: "Falda de cordero crujiente y melosa",
+            precio: "26€",
+            descripcion: "Con jugo reducido, aceite de hierbabuena y berros de agua.",
+            historia: "La falda es un corte con una infiltración de grasa excepcional que, cocinada a baja temperatura durante horas, adquiere una textura melosa que se deshace en la boca. El toque final en plancha o salamandra le otorga ese exterior crujiente tan característico. La hierbabuena aporta el frescor necesario para limpiar la grasa del cordero, mientras que los berros de agua suman una nota picante y herbácea que equilibra el plato.",
+            trazabilidad: "Cordero lechal nacional de pastoreo · Hierbabuena fresca de cultivo local · Berros de agua seleccionados.",
+            alergenos: ["Sulfitos", "Gluten"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué dos texturas definen la preparación de este corte de cordero?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Seca y fibrosa", correcta: false },
+                            { texto: "Crujiente por fuera y melosa por dentro", correcta: true },
+                            { texto: "Exclusivamente hervida", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cuál es la función principal del aceite de hierbabuena en el plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Aportar picante", correcta: false },
+                            { texto: "Aportar frescor para equilibrar la grasa del cordero", correcta: true },
+                            { texto: "Espesar el jugo de asado", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Sobre el acompañamiento y el equilibrio de sabores:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Los berros de agua aportan una nota herbácea y ligeramente picante", correcta: true },
+                            { texto: "El jugo reducido aporta potencia y profundidad de sabor", correcta: true },
+                            { texto: "Se acompaña de puré de manzana dulce", correcta: false },
+                            { texto: "La técnica busca el aprovechamiento de la grasa infiltrada de la falda", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué corte del cordero estamos utilizando?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Paletilla", correcta: false },
+                            { texto: "Falda", correcta: true },
+                            { texto: "Solomillo", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Seguridad Alimentaria: ¿Qué alérgeno suele estar presente en los jugos de carne reducidos?",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Sulfitos (por el uso de vino para desglasar y reducir)", correcta: true },
+                            { texto: "Pescado", correcta: false },
+                            { texto: "Gluten (en caso de usar harinas para ligar, aunque aquí es por reducción)", correcta: true },
+                            { texto: "Frutos de cáscara", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "molleja-ternera-fricando",
+            nombre: "Molleja de ternera de leche",
+            precio: "26.5€",
+            descripcion: "Con parmentier de patata ahumada y fricandó de setas silvestres.",
+            historia: "La molleja de corazón es la más valorada por su textura. La cocinamos primero a baja temperatura y la terminamos a fuego fuerte para lograr un contraste radical. Se acompaña de un parmentier (puré fino y sedoso) con un toque de humo de encina y un fricandó de setas, una técnica catalana de guiso de setas que aporta un umami profundo y otoñal al conjunto.",
+            trazabilidad: "Molleja de ternera de leche nacional · Patata agria seleccionada · Setas silvestres de temporada (boletus, angula de monte, etc.).",
+            alergenos: ["Lácteos", "Sulfitos"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué tipo de molleja se utiliza por su calidad superior en este plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Molleja de garganta", correcta: false },
+                            { texto: "Molleja de corazón (ternera de leche)", correcta: true },
+                            { texto: "Molleja de cordero", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué técnica de la cocina catalana se aplica a las setas?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Confitado", correcta: false },
+                            { texto: "Fricandó (guiso tradicional)", correcta: true },
+                            { texto: "Escabeche", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Sobre la guarnición de patata:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Es un parmentier de textura sedosa", correcta: true },
+                            { texto: "Tiene un matiz ahumado", correcta: true },
+                            { texto: "Son patatas fritas en gajos", correcta: false },
+                            { texto: "Se elabora con patata agria seleccionada", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué textura debemos destacar al explicar la molleja al cliente?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Textura firme y fibrosa", correcta: false },
+                            { texto: "Exterior crujiente e interior muy tierno y cremoso", correcta: true },
+                            { texto: "Textura elástica", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Identifica los elementos que aportan el sabor 'umami' al plato:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Las setas silvestres", correcta: true },
+                            { texto: "El jugo del fricandó", correcta: true },
+                            { texto: "El toque ahumado de la patata", correcta: true },
+                            { texto: "El frescor de la menta", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "tomahawk-cerdo-iberico",
+            nombre: "Tomahawk de cerdo ibérico a la parrilla",
+            precio: "34€",
+            descripcion: "Con salsa gravy de mantequilla tostada y alcaparras fritas.",
+            historia: "El corte Tomahawk, que incluye el hueso de la costilla totalmente limpio, permite que la carne se cocine de forma más uniforme y mantenga toda su infiltración grasa. Al ser cerdo ibérico, la jugosidad es máxima. Lo acompañamos de una salsa gravy donde sustituimos la base tradicional por una 'beurre noisette' (mantequilla tostada) que aporta notas de avellana, terminando con alcaparras fritas que explotan en la boca aportando un contraste ácido y crujiente.",
+            trazabilidad: "Cerdo ibérico de bellota nacional · Mantequilla artesana · Alcaparras seleccionadas.",
+            alergenos: ["Lácteos", "Sulfitos", "Gluten"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué característica visual define el corte 'Tomahawk'?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Que es un lomo sin grasa", correcta: false },
+                            { texto: "El hueso de la costilla largo y limpio que acompaña a la carne", correcta: true },
+                            { texto: "Que se sirve en trozos pequeños", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué matiz de sabor aporta la mantequilla tostada (beurre noisette) a la salsa?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Notas dulces a vainilla", correcta: false },
+                            { texto: "Notas tostadas que recuerdan a la avellana", correcta: true },
+                            { texto: "Sabor picante", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Sobre la técnica y acompañamiento:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Se utiliza cerdo ibérico por su gran infiltración grasa", correcta: true },
+                            { texto: "La cocción principal es a la parrilla de encina", correcta: true },
+                            { texto: "Las alcaparras se sirven crudas", correcta: false },
+                            { texto: "El conjunto busca un equilibrio entre la grasa y la acidez de la alcaparra", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "¿Por qué el hueso es importante en este tipo de cortes?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Solo por estética", correcta: false },
+                            { texto: "Ayuda a la transmisión del calor y protege la jugosidad de la carne", correcta: true },
+                            { texto: "Indica que es un animal joven", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Identifica los ingredientes que forman la base de este plato:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Cerdo Ibérico", correcta: true },
+                            { texto: "Mantequilla tostada", correcta: true },
+                            { texto: "Alcaparras fritas", correcta: true },
+                            { texto: "Pimientos del padrón", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "sorbete-mango-albahaca",
+            nombre: "Sorbete de mango malagueño y albahaca fresca",
+            precio: "9€",
+            descripcion: "Sorbete artesano de mango de la Axarquía con infusión de albahaca fresca.",
+            historia: "En este postre rendimos homenaje al producto de nuestra tierra. El mango malagueño, cultivado en el clima tropical de la Axarquía, destaca por su dulzor natural y su textura sin hebras. Lo transformamos en un sorbete ligero y lo acompañamos de albahaca fresca, que aporta una nota cítrica y balsámica, rompiendo la densidad del mango y ofreciendo un final de boca muy limpio.",
+            trazabilidad: "Mango de la Axarquía (Málaga) · Albahaca fresca de huerta local.",
+            alergenos: ["unknown"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿De qué zona de Málaga procede principalmente el mango que utilizamos?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Serranía de Ronda", correcta: false },
+                            { texto: "La Axarquía", correcta: true },
+                            { texto: "Valle del Guadalhorce", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué función cumple la albahaca en este postre?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Aportar dulzor extra", correcta: false },
+                            { texto: "Aportar un matiz herbáceo y refrescante", correcta: true },
+                            { texto: "Darle un color rojo al sorbete", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Sobre las propiedades del mango malagueño:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Es famoso por su sabor intenso y dulzor equilibrado", correcta: true },
+                            { texto: "Es un producto de proximidad (kilómetro 0)", correcta: true },
+                            { texto: "Es una fruta de clima continental frío", correcta: false },
+                            { texto: "Su textura en punto óptimo es sedosa", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué diferencia principal hay entre un sorbete y un helado cremoso?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "El sorbete no tiene base láctea (leche/nata)", correcta: true },
+                            { texto: "El sorbete se sirve caliente", correcta: false },
+                            { texto: "El helado no lleva azúcar", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Identifica los elementos clave de este postre:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Mango de calidad extra", correcta: true },
+                            { texto: "Albahaca fresca", correcta: true },
+                            { texto: "Notas tropicales", correcta: true },
+                            { texto: "Chocolate amargo", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "flan-oveja-canitas",
+            nombre: "Flan de nata fresca de oveja de Cañitas",
+            precio: "9,5€",
+            descripcion: "Con chantilly de vainilla y lima rallada.",
+            historia: "Este flan es una de las señas de identidad de nuestra casa. Se elabora con nata fresca de oveja, mucho más rica en grasa y matices que la de vaca, lo que le confiere una textura untuosa casi de crema. Se cocina a baja temperatura para que no tenga 'ojos' y sea perfectamente liso. Lo acompañamos de un chantilly ligero de vainilla natural y ralladura de lima para aportar un contraste cítrico y fresco que limpie el paladar.",
+            trazabilidad: "Nata fresca de oveja de pequeños productores nacionales · Vainilla Bourbon · Lima fresca.",
+            alergenos: ["Lácteos", "Huevo"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué ingrediente hace que este flan sea más cremoso y potente que uno tradicional?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "El uso de leche desnatada", correcta: false },
+                            { texto: "La nata fresca de oveja por su alto contenido graso", correcta: true },
+                            { texto: "El uso de gelatina", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cómo se consigue la textura sedosa y sin burbujas (ojos) en el flan?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Batiendo mucho la mezcla", correcta: false },
+                            { texto: "Cocinándolo a baja temperatura de forma controlada", correcta: true },
+                            { texto: "Congelándolo después de hornear", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Sobre los acompañamientos del postre:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "El chantilly está infusionado con vainilla", correcta: true },
+                            { texto: "La lima rallada aporta frescor y rompe la grasa", correcta: true },
+                            { texto: "Se sirve con una bola de helado de fresa", correcta: false },
+                            { texto: "El conjunto busca un equilibrio entre lácteo, dulce y cítrico", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué tipo de vainilla se utiliza habitualmente en nuestra alta repostería?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Aroma artificial", correcta: false },
+                            { texto: "Vainilla natural (vainas)", correcta: true },
+                            { texto: "Canela en polvo", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Identifica los alérgenos presentes en este plato:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Lácteos (nata)", correcta: true },
+                            { texto: "Huevo (base del flan)", correcta: true },
+                            { texto: "Frutos de cáscara", correcta: false },
+                            { texto: "Pescado", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "texturas-cacao-px",
+            nombre: "Cacao de texturas",
+            precio: "9.5€",
+            descripcion: "Con Pedro Ximénez y Shichimi picantito.",
+            historia: "Este postre es una exploración del cacao en diferentes estados (cremoso, crujiente, bizcocho) para mostrar su versatilidad. La profundidad la aporta una reducción de Pedro Ximénez, que suma notas de pasas y regaliz. El toque disruptivo es el Shichimi Togarashi (mezcla de especias japonesa), que aporta un picante sutil y cítrico que potencia el sabor del chocolate y alarga el postre en boca.",
+            trazabilidad: "Cacao de origen (mínimo 70%) · Vino D.O.P. Montilla-Moriles (Pedro Ximénez) · Mezcla Shichimi artesanal.",
+            alergenos: ["Lácteos", "Gluten", "Huevo", "Sésamo"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué aporta el Shichimi Togarashi a este postre de chocolate?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Solo color rojo", correcta: false },
+                            { texto: "Un toque picante y especiado que potencia el cacao", correcta: true },
+                            { texto: "Sabor a vainilla", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué tipo de vino se utiliza para la reducción que acompaña al cacao?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Vino blanco seco", correcta: false },
+                            { texto: "Pedro Ximénez (PX)", correcta: true },
+                            { texto: "Cava", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Sobre las texturas de este plato:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Se presentan diferentes formas y estados del cacao", correcta: true },
+                            { texto: "El objetivo es que el cliente experimente varios contrastes en boca", correcta: true },
+                            { texto: "Es un postre plano y de una sola textura", correcta: false },
+                            { texto: "Combina cremosidad con elementos crujientes", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué notas de sabor aporta el Pedro Ximénez al conjunto?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Notas de frutas frescas como la manzana", correcta: false },
+                            { texto: "Notas de pasas, higos y melaza", correcta: true },
+                            { texto: "Notas amargas de café", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Identifica ingredientes que podrían estar presentes en el Shichimi (atención alérgenos):",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Sésamo (alérgeno común en esta mezcla)", correcta: true },
+                            { texto: "Chile o guindilla", correcta: true },
+                            { texto: "Piel de mandarina o cítricos", correcta: true },
+                            { texto: "Pescado azul", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "tarta-queso-limon",
+            nombre: "Tarta de queso cremosa y suave",
+            precio: "10€",
+            descripcion: "Con galletitas crujientes de limón.",
+            historia: "Nuestra tarta de queso se aleja de las versiones compactas; buscamos un corazón extremadamente cremoso que casi se funda al corte. Utilizamos una mezcla de quesos que equilibra la potencia del lácteo con la suavidad de la nata fresca. Para romper la hegemonía del queso, la acompañamos de galletitas artesanas con un toque intenso de limón, que aportan el crujiente necesario y la acidez para limpiar el paladar entre bocado y bocado.",
+            trazabilidad: "Selección de quesos nacionales · Nata de alta montaña · Limones de la huerta malagueña.",
+            alergenos: ["Lácteos", "Huevo", "Gluten"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Cómo describirías la textura principal de esta tarta de queso?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Seca y esponjosa tipo bizcocho", correcta: false },
+                            { texto: "Extremadamente cremosa y suave", correcta: true },
+                            { texto: "Compacta y densa", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué elemento aporta el contraste de textura y acidez al plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Una mermelada de fresa", correcta: false },
+                            { texto: "Galletitas crujientes de limón", correcta: true },
+                            { texto: "Salsa de chocolate", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Sobre la elaboración de la tarta:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Se busca un equilibrio entre distintos tipos de queso", correcta: true },
+                            { texto: "El horneado es preciso para mantener el centro fundente", correcta: true },
+                            { texto: "Se sirve congelada", correcta: false },
+                            { texto: "Es una receta de estilo tradicional con un toque moderno en sala", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "¿Cuál es el objetivo de utilizar limón en la galleta?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Hacer que la tarta sea más dulce", correcta: false },
+                            { texto: "Aportar una nota cítrica que equilibre la grasa del queso", correcta: true },
+                            { texto: "Cambiar el color del postre", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Identifica los alérgenos que el equipo debe comunicar:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Lácteos (queso y nata)", correcta: true },
+                            { texto: "Gluten (en la galleta)", correcta: true },
+                            { texto: "Huevo (en la base de la tarta)", correcta: true },
+                            { texto: "Pescado", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "souffle-gianduja-cacao",
+            nombre: "Soufflé líquido de gianduja y cacao",
+            precio: "12€",
+            descripcion: "Con nata fresca montada (para 2 personas).",
+            historia: "El término 'soufflé líquido' hace referencia a un postre que se hornea al momento para conseguir una capa exterior firme y un corazón completamente fundente de gianduja (chocolate con pasta de avellana). Se sirve caliente para que la mezcla de cacao y frutos secos potencie sus aromas. Se acompaña de nata fresca montada al momento, sin apenas azúcar, para que el contraste térmico y de texturas sea el protagonista.",
+            trazabilidad: "Chocolate de origen seleccionado · Avellana del Piamonte (Gianduja) · Nata fresca de granja.",
+            alergenos: ["Lácteos", "Frutos de cáscara", "Huevo", "Gluten"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué ingrediente define el sabor principal de la Gianduja?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Chocolate blanco y coco", correcta: false },
+                            { texto: "Mezcla de chocolate y pasta de avellana", correcta: true },
+                            { texto: "Cacao puro y licor de naranja", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cómo se presenta la nata en este postre?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Nata fresca montada", correcta: true },
+                            { texto: "Helado de nata", correcta: false },
+                            { texto: "Crema inglesa caliente", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Sobre la preparación y el servicio:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Es un postre diseñado para compartir (2 pax)", correcta: true },
+                            { texto: "Se hornea al momento para mantener el centro líquido", correcta: true },
+                            { texto: "Se sirve frío para apreciar el chocolate", correcta: false },
+                            { texto: "Busca un contraste térmico entre el soufflé caliente y la nata", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "¿Cuál es la característica principal de un soufflé 'líquido'?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Que se sirve en un vaso como una bebida", correcta: false },
+                            { texto: "Que el interior fluye al romper la primera capa", correcta: true },
+                            { texto: "Que lleva mucho licor", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Identifica los alérgenos presentes debido a la Gianduja y la base del postre:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Frutos de cáscara (avellanas)", correcta: true },
+                            { texto: "Lácteos", correcta: true },
+                            { texto: "Huevo", correcta: true },
+                            { texto: "Pescado", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "brioche-mantequilla-crema",
+            nombre: "Brioche de mantequilla",
+            precio: "13€",
+            descripcion: "Con crema inglesa y helado de mantequilla (para 2 personas).",
+            historia: "Este postre es un viaje a la pastelería más reconfortante. Utilizamos un pan brioche artesano con un alto porcentaje de mantequilla que se tuesta al momento para caramelizar sus azúcares exteriores. Se acompaña de una crema inglesa clásica, sedosa y con aroma a vainilla, y un helado de mantequilla que potencia el sabor lácteo del conjunto. Es un postre de contrastes térmicos y texturas aéreas diseñado para compartir.",
+            trazabilidad: "Brioche artesano de masa madre · Mantequilla de alta calidad · Vainilla natural para la crema.",
+            alergenos: ["Lácteos", "Gluten", "Huevo"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Cuál es el hilo conductor de sabor en este postre?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "El chocolate amargo", correcta: false },
+                            { texto: "La mantequilla en distintas texturas", correcta: true },
+                            { texto: "Las frutas del bosque", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué tipo de crema acompaña al brioche?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Crema pastelera densa", correcta: false },
+                            { texto: "Crema inglesa sedosa y ligera", correcta: true },
+                            { texto: "Crema de queso", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Sobre el servicio y formato del postre:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Está pensado para ser compartido por 2 personas", correcta: true },
+                            { texto: "El brioche se tuesta para caramelizar el exterior", correcta: true },
+                            { texto: "Se sirve totalmente frío", correcta: false },
+                            { texto: "Combina un helado artesano de mantequilla", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué aporta la crema inglesa al conjunto?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Crujiente", correcta: false },
+                            { texto: "Humedad, suavidad y aroma de vainilla", correcta: true },
+                            { texto: "Un toque salado", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Identifica los alérgenos presentes en los ingredientes del brioche y la crema:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Lácteos (mantequilla, leche, nata)", correcta: true },
+                            { texto: "Gluten (harina del brioche)", correcta: true },
+                            { texto: "Huevo (en la masa y en la crema inglesa)", correcta: true },
+                            { texto: "Altramuces", correcta: false }
                         ]
                     }
                 ]
@@ -2857,6 +3698,140 @@ export const examenes = {
         {
             texto: "¿Cómo se define la bechamel de nuestra croqueta premiada?",
             opciones: ["Densa", "Líquida y fundente", "Cojonuda pero compacta"],
+            correcta: 1
+        }
+    ],
+    restaurante: [
+        /* --- BLOQUE: PRODUCTO Y TRAZABILIDAD --- */
+        {
+            texto: "¿De qué zona de Málaga procede el mango de nuestro sorbete?",
+            opciones: ["Valle del Guadalhorce", "La Axarquía", "Serranía de Ronda"],
+            correcta: 1
+        },
+        {
+            texto: "¿Qué característica define a la Lubina del Atlántico en nuestra parrilla?",
+            opciones: ["Es de piscifactoría", "Es una pieza salvaje de aproximadamente 0,8kg", "Es un pescado de roca pequeño"],
+            correcta: 1
+        },
+        {
+            texto: "¿Qué tipo de cordero utilizamos para nuestra falda crujiente?",
+            opciones: ["Cordero lechal nacional de pastoreo", "Cordero recental", "Cordero importado"],
+            correcta: 0
+        },
+        {
+            texto: "El Pargo del sur que servimos en adobo es de calibre:",
+            opciones: ["Pequeño (200g)", "Gordo (aprox. 0,5kg)", "Gigante (más de 2kg)"],
+            correcta: 1
+        },
+        {
+            texto: "¿Qué tipo de setas acompañan a la Molleja de ternera?",
+            opciones: ["Champiñones", "Setas silvestres de temporada", "Setas de cultivo"],
+            correcta: 1
+        },
+        {
+            texto: "¿Qué tipo de patata usamos para el parmentier ahumado?",
+            opciones: ["Patata nueva", "Patata agria seleccionada", "Patata cocida de bote"],
+            correcta: 1
+        },
+        {
+            texto: "La Corvina gorda se prepara con un adobo de estilo:",
+            opciones: ["Clásico gaditano", "Adobo malagueño con un toque de comino y pimentón", "Oriental"],
+            correcta: 1
+        },
+
+        /* --- BLOQUE: TÉCNICA Y CALIDAD --- */
+        {
+            texto: "¿Qué técnica aplicamos a las setas de la Molleja?",
+            opciones: ["Fritura", "Fricandó (guiso tradicional)", "Escabeche"],
+            correcta: 1
+        },
+        {
+            texto: "¿Cuál es el componente principal del pil-pil de la Lubina?",
+            opciones: ["Nata y ajos", "El propio colágeno del pescado y aceite de oliva", "Mantequilla"],
+            correcta: 1
+        },
+        {
+            texto: "¿Cómo se termina el Tomahawk de Cerdo Ibérico?",
+            opciones: ["Al horno", "A la parrilla con salsa gravy de mantequilla tostada", "Frito"],
+            correcta: 1
+        },
+        {
+            texto: "¿Qué proceso sigue el Soufflé de Gianduja?",
+            opciones: ["Se sirve frío", "Se hornea al momento para mantener el centro líquido", "Es una mousse"],
+            correcta: 1
+        },
+        {
+            texto: "¿Qué técnica asegura la textura de la Falda de Cordero?",
+            opciones: ["Cocción rápida a fuego fuerte", "Baja temperatura prolongada y acabado crujiente", "Solo plancha"],
+            correcta: 1
+        },
+        {
+            texto: "¿Qué ingrediente de lujo completa la Meunière de nuestro Lenguado?",
+            opciones: ["Trufa negra", "Dados de Jamón Ibérico de Bellota", "Caviar"],
+            correcta: 1
+        },
+        {
+            texto: "¿Cómo se presenta el Pargo del sur para facilitar el consumo?",
+            opciones: ["En filetes", "Frito 'de pellizco' (en trozos fáciles de coger)", "Entero a la sal"],
+            correcta: 1
+        },
+
+        /* --- BLOQUE: ALÉRGENOS (CRÍTICO) --- */
+        {
+            texto: "Un cliente alérgico a los FRUTOS DE CÁSCARA no puede tomar:",
+            opciones: ["El Flan de oveja", "El Soufflé de Gianduja (lleva avellana)", "La Lubina"],
+            correcta: 1
+        },
+        {
+            texto: "¿Qué alérgenos contiene el Flan de nata de oveja?",
+            opciones: ["Solo lácteos", "Lácteos y Huevo", "Gluten"],
+            correcta: 1
+        },
+        {
+            texto: "¿Contiene Gluten el Brioche de mantequilla?",
+            opciones: ["No", "Sí, en la masa del pan", "Solo si lleva salsa"],
+            correcta: 1
+        },
+        {
+            texto: "En el Cacao de Texturas, ¿qué debemos vigilar por el Shichimi?",
+            opciones: ["El sésamo", "El gluten", "El marisco"],
+            correcta: 0
+        },
+
+        /* --- BLOQUE: OPERATIVA Y SERVICIO --- */
+        {
+            texto: "¿Qué significa el término 'Sin Trabajo' al vender la Lubina?",
+            opciones: ["Que el cliente debe limpiarla", "Que se sirve desespinada y limpia desde cocina", "Que no lleva guarnición"],
+            correcta: 1
+        },
+        {
+            texto: "¿Para cuántas personas están diseñados el Brioche y el Soufflé?",
+            opciones: ["Individual", "Para compartir entre 2 personas", "Para toda la mesa"],
+            correcta: 1
+        },
+        {
+            texto: "¿Qué aporta la lima rallada al Flan de Oveja?",
+            opciones: ["Color", "Equilibrio cítrico para cortar la grasa de la nata de oveja", "Amargor"],
+            correcta: 1
+        },
+        {
+            texto: "¿Por qué es importante el aceite de albahaca en el sorbete de mango?",
+            opciones: ["Para que brille", "Para aportar un contraste herbáceo y frescor", "Para que no se derrita"],
+            correcta: 1
+        },
+        {
+            texto: "¿Qué aporta el Shichimi al postre de Cacao?",
+            opciones: ["Dulzor", "Un final picante y cítrico que alarga el sabor", "Textura crujiente"],
+            correcta: 1
+        },
+        {
+            texto: "¿Cuál es el factor crítico en el servicio del Pollito Coquelette?",
+            opciones: ["Que llegue frío", "Que el jugo de asado se vierta caliente para mantener la jugosidad", "Que se sirva sin cubiertos"],
+            correcta: 1
+        },
+        {
+            texto: "En el postre de Texturas de Cacao, el vino utilizado es:",
+            opciones: ["Fino", "Pedro Ximénez (de Jerez)", "Moscato de Canadá"],
             correcta: 1
         }
     ]
