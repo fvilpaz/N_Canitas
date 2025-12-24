@@ -1,4 +1,835 @@
 export const menuData = {
+    restaurant: [
+        {
+            id: "croqueta-2021-malaga",
+            nombre: "La Mejor Croqueta del Mundo 2021",
+            precio: "7.5€ (2 ud)",
+            descripcion: "Bechamel ultrafina de leche de oveja y jamón Joselito.",
+            historia: "Este icono de Javier Sanz y Juan Sahuquillo llega a Málaga tras haber hecho historia en Madrid Fusión 2021. La receta se basa en una técnica de bechamel casi líquida donde la leche de oveja aporta una cremosidad y una potencia grasa única. El rebozado se realiza con panko para garantizar un crujiente aireado que contrasta con el corazón fundente. Se finaliza con una fina lámina de jamón Joselito y una 'palomita' de tocino ibérico que potencia el sabor curado.",
+            trazabilidad: "Jamón Joselito (Guijuelo, Salamanca) · Leche de oveja fresca de ganaderías seleccionadas de Castilla-La Mancha.",
+            alergenos: ["Gluten", "Lácteos", "Huevo", "Sulfitos"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué ingrediente diferencial aporta la potencia grasa y elegancia a la bechamel?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Mantequilla de cabra", correcta: false },
+                            { texto: "Leche de oveja", correcta: true },
+                            { texto: "Nata de vaca 35% MG", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cuáles de estos elementos forman parte del acabado y textura del plato?",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Panko japonés para el crujiente", correcta: true },
+                            { texto: "Lámina de jamón Joselito", correcta: true },
+                            { texto: "Polvo de quicos", correcta: false },
+                            { texto: "Palomita de tocino ibérico", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "Seguridad Alimentaria: ¿Por qué esta croqueta NO es apta para celíacos?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Por la leche de oveja", correcta: false },
+                            { texto: "Por el uso de harina de trigo y panko (Gluten)", correcta: true },
+                            { texto: "Solo por la contaminación cruzada", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Identifica los alérgenos presentes en este plato según su ficha técnica:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Gluten y Lácteos", correcta: true },
+                            { texto: "Huevo", correcta: true },
+                            { texto: "Frutos de cáscara", correcta: false },
+                            { texto: "Sulfitos", correcta: true }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "torta-aceite-malaga",
+            nombre: "Torta de aceite horneada al momento",
+            precio: "7€ (2 pax)",
+            descripcion: "AOVE Castillo de Canena y alioli de ajo asado.",
+            historia: "Este plato es una oda a la sencillez del producto mediterráneo. La torta se hornea al momento para que llegue al cliente con una textura quebradiza y una temperatura tibia que ayuda a volatilizar los aromas del aceite Castillo de Canena. El alioli no es una salsa brava, sino una emulsión delicada donde los ajos se asan previamente para perder su fuerza y ganar notas dulces y tostadas, permitiendo que el AOVE sea el verdadero protagonista del bocado.",
+            trazabilidad: "AOVE Reserva Familiar Picual Castillo de Canena (Jaén) · Ajo morado de Las Pedroñeras (Cuenca) · Harina de trigo artesana.",
+            alergenos: ["Gluten", "Huevo", "Sulfitos"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Cuál es el AOVE (Aceite de Oliva Virgen Extra) protagonista en este plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Castillo de Canena", correcta: true },
+                            { texto: "Carbonell", correcta: false },
+                            { texto: "Aceite local de la Axarquía", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Por qué el alioli de este plato tiene un sabor dulce y suave en lugar de picante?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Porque lleva azúcar añadido", correcta: false },
+                            { texto: "Porque los ajos se asan previamente antes de emulsionar", correcta: true },
+                            { texto: "Porque se mezcla con miel de caña", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Sobre el servicio y concepto de la torta:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Se hornea al momento de recibir la comanda", correcta: true },
+                            { texto: "Es una torta fría pre-cocinada", correcta: false },
+                            { texto: "Se recomienda para compartir entre 2 personas", correcta: true },
+                            { texto: "Busca resaltar los aromas del aceite de alta gama", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "Seguridad Alimentaria: ¿Qué alérgenos debemos comunicar obligatoriamente?",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Gluten (por la masa de la torta)", correcta: true },
+                            { texto: "Lácteos", correcta: false },
+                            { texto: "Huevo (por la emulsión del alioli)", correcta: true },
+                            { texto: "Sulfitos (presentes de forma natural en el ajo/aceite)", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "¿Este plato es apto para un cliente con intolerancia severa al Gluten?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Sí, la torta es de maíz", correcta: false },
+                            { texto: "No, la torta se elabora con harina de trigo y contiene gluten", correcta: true }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "tomate-mela-malaga",
+            nombre: "El tomate más caro (y mejor) del mundo",
+            precio: "14€",
+            descripcion: "Variedad Mela de origen japonés cultivada en Granada, AOVE y orégano fresco.",
+            historia: "En Cañitas Málaga, este plato sube de nivel utilizando el tomate 'Mela'. Es una variedad de origen japonés que ha encontrado en el clima de Granada (Motril/Carchuna) el lugar perfecto para su cultivo. Se caracteriza por una piel casi inexistente y un dulzor natural excepcional. El nombre del plato hace justicia al alto coste de producción de esta joya botánica, que se recolecta en su punto exacto de maduración para que el cliente deguste la esencia pura de la huerta andaluza.",
+            trazabilidad: "Tomate Variedad Mela (Cultivado en Granada por agricultores especializados) · AOVE de cosecha temprana · Sal de manantial.",
+            alergenos: ["Sulfitos"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿De qué origen es la variedad de tomate 'Mela' que se sirve en Málaga?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Origen italiano (San Marzano)", correcta: false },
+                            { texto: "Origen japonés, aunque cultivado actualmente en Granada", correcta: true },
+                            { texto: "Origen local de Albacete exclusivamente", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué característica física hace tan especial al tomate Mela en boca?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Su piel es muy gruesa y crujiente", correcta: false },
+                            { texto: "Su piel es extremadamente fina y su textura es muy carnosa", correcta: true },
+                            { texto: "Es un tomate que siempre se sirve frito", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Sobre la trazabilidad y el producto:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Se cultiva en la provincia de Granada para asegurar frescura", correcta: true },
+                            { texto: "Es una de las variedades de tomate más valoradas en la alta cocina", correcta: true },
+                            { texto: "Se acompaña de orégano seco de bote", correcta: false },
+                            { texto: "El aliño busca potenciar, no enmascarar, el sabor del fruto", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "Seguridad Alimentaria: ¿Por qué marcamos Sulfitos en este plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Porque el tomate lleva una salsa de vino", correcta: false },
+                            { texto: "Por los antioxidantes naturales y posibles tratamientos del aceite/fruto", correcta: true },
+                            { texto: "Porque contiene trazas de marisco", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cuál es el principal 'secreto' para disfrutar al máximo de este tomate?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Servirlo directamente de la nevera a 2°C", correcta: false },
+                            { texto: "Respetar la temperatura ambiente y la calidad del AOVE", correcta: true },
+                            { texto: "Añadirle mucho vinagre de Módena", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "ensaladilla-gamba-malaga",
+            nombre: "Ensaladilla de gamba blanca malagueña",
+            precio: "15.5€",
+            descripcion: "Gamba blanca de la bahía, jugo de piparras encurtidas y regañás.",
+            historia: "Esta ensaladilla es un homenaje directo a la ciudad de Málaga. A diferencia de la versión de Albacete, aquí se utiliza la reina de la lonja local: la gamba blanca. La clave es su equilibrio: una patata cremosa, una mayonesa aireada y el contrapunto eléctrico del jugo de piparras encurtidas, que aporta una acidez necesaria para limpiar el paladar. Se termina con regañás artesanas, el acompañamiento tradicional andaluz que aporta el crujiente perfecto.",
+            trazabilidad: "Gamba blanca de la Bahía de Málaga (Lonja de la Caleta/Vélez) · Piparras de Ibarra (País Vasco) · Regañás de panadería artesana sevillana.",
+            alergenos: ["Pescado", "Crustáceos", "Huevo", "Gluten", "Mostaza", "Sulfitos"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Cuál es el producto local de Málaga que protagoniza esta ensaladilla?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Quisquilla de Motril", correcta: false },
+                            { texto: "Gamba blanca de la bahía", correcta: true },
+                            { texto: "Langostino de Sanlúcar", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué ingrediente aporta la acidez característica que equilibra la grasa de la mayonesa?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Vinagre de Jerez", correcta: false },
+                            { texto: "Jugo de piparras encurtidas", correcta: true },
+                            { texto: "Zumo de limón natural", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Sobre los acompañamientos y texturas:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Se sirve con regañás crujientes", correcta: true },
+                            { texto: "La gamba se cocina en exceso para que esté dura", correcta: false },
+                            { texto: "Busca un equilibrio entre cremosidad y acidez", correcta: true },
+                            { texto: "Es una receta adaptada específicamente para el ME Málaga", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "Seguridad Alimentaria: ¿Por qué este plato marca alérgeno de PESCADO?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Porque la gamba es un pescado", correcta: false },
+                            { texto: "Por el uso de fumet, caldos de pescado o trazas en la base de la ensaladilla", correcta: true },
+                            { texto: "Es un error, solo lleva crustáceos", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Identifica los alérgenos que contiene la ración (incluyendo las regañás):",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Gluten (Regañás)", correcta: true },
+                            { texto: "Huevo y Mostaza (Mayonesa/Aderezo)", correcta: true },
+                            { texto: "Frutos de cáscara", correcta: false },
+                            { texto: "Crustáceos y Sulfitos", correcta: true }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "puerro-asado-malaga",
+            nombre: "Puerro asado lentamente durate horas",
+            precio: "16.5€",
+            descripcion: "Puerro asado con burrata fresca, tomate seco y praliné de almendras.",
+            historia: "Este plato es un ejercicio de paciencia. El puerro se somete a una cocción lenta (confitado o asado a baja temperatura) durante horas, lo que permite que sus azúcares naturales se caramelicen sin quemar la fibra. En la sede de Málaga, se busca un contraste de temperaturas y texturas: el calor del puerro frente a la cremosidad fría de la burrata fresca. El praliné de almendras aporta una nota de fruto seco tostado que redondea el carácter terroso de la verdura.",
+            trazabilidad: "Puerros de huerta nacional (Navarra/Castilla-La Mancha) · Burrata de producción artesana italiana · Almendras de la variedad Marcona.",
+            alergenos: ["Lácteos", "Frutos de cáscara", "Sulfitos"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Cuál es la técnica principal que define la textura de este plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Fritura en tempura", correcta: false },
+                            { texto: "Cocción lenta durante horas para caramelizar azúcares", correcta: true },
+                            { texto: "Hervido rápido en agua con sal", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué elemento aporta el contraste cremoso y frío a la base del puerro?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Queso manchego curado", correcta: false },
+                            { texto: "Burrata fresca", correcta: true },
+                            { texto: "Helado de queso de cabra", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Sobre el praliné y los frutos secos:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Se elabora con almendras (normalmente Marcona)", correcta: true },
+                            { texto: "Aporta una nota tostada y dulce al conjunto", correcta: true },
+                            { texto: "Es una salsa picante a base de nueces", correcta: false },
+                            { texto: "Es el ingrediente que marca el alérgeno 'Frutos de cáscara'", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "Seguridad Alimentaria: Un cliente alérgico a la proteína de la leche de vaca, ¿puede consumir este plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Sí, la burrata es de soja", correcta: false },
+                            { texto: "No, la burrata es un derivado lácteo", correcta: true },
+                            { texto: "Sí, si se le quita el tomate seco", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Identifica los alérgenos presentes en esta elaboración:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Lácteos (Burrata)", correcta: true },
+                            { texto: "Frutos de cáscara (Praliné de almendras)", correcta: true },
+                            { texto: "Gluten", correcta: false },
+                            { texto: "Sulfitos (por el tratamiento del tomate seco)", correcta: true }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "berenjena-umami-malaga",
+            nombre: "Berenjena ahumada en parrilla",
+            precio: "17.5€",
+            descripcion: "Crema de parmesano picante, salsa umami y pan crujiente.",
+            historia: "En esta versión, la berenjena se somete a un asado intenso en parrilla hasta que su interior adquiere una textura de mantequilla y un aroma ahumado. La clave del plato es la crema de parmesano (añejado 24 meses) que aporta salinidad y un toque picante que despierta el paladar. Se rocía con una salsa umami (posiblemente a base de reducciones de soja, setas o caldos concentrados) para potenciar el sabor profundo, y se termina con migas de pan crujiente para añadir el contraste mecánico necesario en cada bocado.",
+            trazabilidad: "Berenjena de huerta nacional · Queso Parmigiano Reggiano DOP (Italia) · Pan artesano de masa madre para el crujiente.",
+            alergenos: ["Lácteos", "Gluten", "Soja", "Sulfitos"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué componente aporta el matiz de 'quinto sabor' y profundidad a este plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "El pan crujiente", correcta: false },
+                            { texto: "La salsa umami", correcta: true },
+                            { texto: "La berenjena cruda", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cómo se describe la base de queso que acompaña a la berenjena?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Crema de queso fresco sin sabor", correcta: false },
+                            { texto: "Crema de parmesano con un toque picante", correcta: true },
+                            { texto: "Salsa holandesa", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Sobre las texturas y la técnica:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "La berenjena se ahúma en parrilla", correcta: true },
+                            { texto: "El pan crujiente aporta el contraste de textura", correcta: true },
+                            { texto: "Es un plato dulce de postre", correcta: false },
+                            { texto: "Busca un equilibrio entre ahumado, picante y salino", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "Seguridad Alimentaria: ¿Es este plato apto para un cliente con celiaquía?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Sí, es solo verdura", correcta: false },
+                            { texto: "No, contiene pan crujiente (Gluten) y posiblemente soja en la salsa umami", correcta: true },
+                            { texto: "Sí, si se le quita el parmesano", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Identifica los alérgenos que debemos tener en cuenta:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Lácteos (Crema de parmesano)", correcta: true },
+                            { texto: "Gluten (Pan crujiente)", correcta: true },
+                            { texto: "Soja (frecuente en salsas umami)", correcta: true },
+                            { texto: "Pescado", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "alcachofas-carbonara-malaga",
+            nombre: "Alcachofas mini confitadas y fritas",
+            precio: "18€",
+            descripcion: "Carbonara ibérica, pimienta fresca y lascas de queso Payoyo curado.",
+            historia: "En esta receta, la alcachofa se trabaja en dos texturas: primero un confitado suave para asegurar un corazón mantecoso y luego una fritura rápida que le otorga un crujiente exterior único. El plato se termina con una interpretación de la carbonara donde el guanciale se sustituye por la grasa del cerdo ibérico de bellota, creando una emulsión profunda y sedosa. El toque final lo aporta el queso Payoyo de Cádiz, un queso de cabra y oveja curado que añade una intensidad salina y picante que eleva el plato por encima de una carbonara tradicional.",
+            trazabilidad: "Alcachofa mini de temporada · Queso Payoyo (Grazalema/Villaluenga del Rosario, Cádiz) · Grasa de jamón ibérico de bellota · Pimienta negra de molino.",
+            alergenos: ["Lácteos", "Huevo", "Sulfitos"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué variedad de queso local se utiliza para terminar estas alcachofas en Málaga?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Manchego viejo", correcta: false },
+                            { texto: "Queso Payoyo curado", correcta: true },
+                            { texto: "Parmesano Reggiano", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Sobre la técnica de cocinado de la alcachofa:",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Se sirven crudas en carpaccio", correcta: false },
+                            { texto: "Se confitan primero y se terminan con una fritura crujiente", correcta: true },
+                            { texto: "Son alcachofas solo hervidas", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué ingredientes definen el carácter 'Ibérico' de esta carbonara?",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "El uso de grasa o recortes de cerdo ibérico de bellota", correcta: true },
+                            { texto: "La sustitución del guanciale por producto nacional", correcta: true },
+                            { texto: "El uso de crema de leche espesa", correcta: false },
+                            { texto: "La pimienta fresca recién molida", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "Seguridad Alimentaria: ¿Por qué este plato contiene el alérgeno HUEVO?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Por el rebozado de la alcachofa", correcta: false },
+                            { texto: "Porque la base de la salsa carbonara auténtica se elabora con yema de huevo", correcta: true },
+                            { texto: "Es una traza del queso", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Identifica los alérgenos presentes en este plato:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Lácteos (Queso Payoyo)", correcta: true },
+                            { texto: "Huevo (Salsa carbonara)", correcta: true },
+                            { texto: "Gluten (posibles trazas en fritura)", correcta: false },
+                            { texto: "Sulfitos", correcta: true }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "setas-temporada-malaga",
+            nombre: "Setas silvestres de temporada con patata cremosa",
+            precio: "19,5€",
+            descripcion: "Patata cremosa, yema de campo y trufa negra rallada al momento.",
+            historia: "Este plato celebra la temporalidad pura. Las setas se saltean a fuego vivo para mantener su textura carnosa y su agua de vegetación. Reposan sobre una base de patata trabajada con mantequilla noisette para lograr una textura de seda. El corazón del plato es una yema de huevo de campo que, al romperse, actúa como salsa ligando todos los elementos. El toque final lo aporta la trufa negra (Tuber Melanosporum), que se ralla frente al cliente para que los aceites esenciales del hongo se liberen con el calor residual del plato.",
+            trazabilidad: "Setas silvestres seleccionadas (según temporada) · Huevos de gallinas criadas en libertad (Km 0) · Trufa negra nacional (Sarrion/Soria) · Patata agria de cultivo tradicional.",
+            alergenos: ["Huevo", "Lácteos", "Sulfitos"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Cuál es la función de la yema de campo en este plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Es un elemento puramente decorativo", correcta: false },
+                            { texto: "Actúa como salsa ligante al romperse y mezclarse con las setas y la patata", correcta: true },
+                            { texto: "Se sirve cocida y rallada", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cómo se finaliza el plato para potenciar su aroma?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Con un chorro de aceite de trufa sintético", correcta: false },
+                            { texto: "Rallando trufa negra natural (Tuber Melanosporum) al momento", correcta: true },
+                            { texto: "Con abundante perejil seco", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Sobre la base de patata y su textura:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Es una patata cremosa y sedosa", correcta: true },
+                            { texto: "Lleva mantequilla o crema (marca alérgeno Lácteo)", correcta: true },
+                            { texto: "Son patatas fritas tipo chip", correcta: false },
+                            { texto: "Busca un contraste suave con la carnosidad de la seta", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "Seguridad Alimentaria: ¿Qué precaución se debe tener con la yema?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Ninguna, el huevo no es un alérgeno", correcta: false },
+                            { texto: "Informar siempre en caso de alergia al huevo, ya que se sirve prácticamente cruda", correcta: true },
+                            { texto: "Es apta para veganos", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Identifica los alérgenos presentes en esta elaboración:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Huevo (Yema de campo)", correcta: true },
+                            { texto: "Lácteos (Mantequilla en la patata)", correcta: true },
+                            { texto: "Gluten", correcta: false },
+                            { texto: "Sulfitos", correcta: true }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "mejillon-bouchot-sobrasada",
+            nombre: "Mejillones Bouchot abiertos en brasa",
+            precio: "17.5€",
+            descripcion: "Abiertos al fuego con americana picantita de sobrasada ibérica de bellota.",
+            historia: "El mejillón Bouchot es una joya de la mitilicultura: pequeño, de color amarillo intenso y sabor concentrado. En Cañitas Málaga, rompemos la tradición de cocerlos al vapor y los abrimos directamente sobre la brasa para que absorban el aroma del sarmiento. El plato se eleva con una salsa americana (base de marisco) infusionada con sobrasada ibérica de bellota, creando un contraste entre el yodo del mar y la grasa picante y ahumada del embutido.",
+            trazabilidad: "Mejillón de roca variedad Bouchot (Certificación de origen) · Sobrasada Ibérica de Bellota (Mallorca/Salamanca) · Base de sofrito de galeras y cangrejos para la americana.",
+            alergenos: ["Moluscos", "Crustáceos", "Pescado", "Sulfitos"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué característica principal define al mejillón de la variedad Bouchot?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Es un mejillón gigante de Galicia", correcta: false },
+                            { texto: "Es un mejillón de tamaño pequeño, muy carnoso y de color intenso", correcta: true },
+                            { texto: "Es un mejillón que solo se come crudo", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cómo se cocinan estos mejillones para aportarles ese aroma característico?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Hervidos en agua con sal", correcta: false },
+                            { texto: "Abiertos directamente en las brasas", correcta: true },
+                            { texto: "Al microondas", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Sobre la salsa americana de sobrasada:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Utiliza sobrasada ibérica de bellota", correcta: true },
+                            { texto: "Tiene un punto picante para estimular el paladar", correcta: true },
+                            { texto: "Es una salsa ligera de nata", correcta: false },
+                            { texto: "Se elabora a partir de un fondo de marisco", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "Seguridad Alimentaria: ¿Qué alérgeno es el principal protagonista por el producto base?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Gluten", correcta: false },
+                            { texto: "Moluscos (por el propio mejillón)", correcta: true },
+                            { texto: "Frutos de cáscara", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Identifica los alérgenos presentes en este plato mar y montaña:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Moluscos (Mejillón)", correcta: true },
+                            { texto: "Crustáceos y Pescado (por la salsa americana)", correcta: true },
+                            { texto: "Lácteos", correcta: false },
+                            { texto: "Sulfitos", correcta: true }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "navajas-buceo-malaga",
+            nombre: "Navajas de buceo a la parrilla",
+            precio: "19€",
+            descripcion: "Escabeche frío de limón asado y ralladura de limas frescas.",
+            historia: "La navaja de buceo se captura a mano, una a una, lo que garantiza un producto libre de impurezas y de un calibre superior. En Cañitas Málaga, se pasan brevemente por la parrilla para que la carne se rice y absorba el aroma del fuego. El plato se termina con un escabeche técnico: primero asamos los limones para endulzar sus jugos y luego creamos un escabeche frío que respeta la textura de la navaja. La ralladura de lima fresca al momento aporta los aceites esenciales que disparan el aroma cítrico en la mesa.",
+            trazabilidad: "Navaja de buceo (Galicia / Huelva) · Limones de la huerta del Guadalhorce · Limas seleccionadas.",
+            alergenos: ["Moluscos", "Sulfitos"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué ventaja principal ofrece la navaja de 'buceo' frente a la de arrastre?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Es más barata", correcta: false },
+                            { texto: "Está libre de arena y tiene una carne más firme al capturarse a mano", correcta: true },
+                            { texto: "Se puede comer congelada", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cuál es el secreto del escabeche que acompaña a este plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Es un escabeche de vinagre blanco común", correcta: false },
+                            { texto: "Es un escabeche frío basado en limones previamente asados", correcta: true },
+                            { texto: "Es una salsa espesa de tomate", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Sobre el acabado cítrico del plato:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Lleva ralladura de lima fresca añadida al momento", correcta: true },
+                            { texto: "El limón asado aporta una acidez más dulce y compleja", correcta: true },
+                            { texto: "Se sirve con gajos de naranja", correcta: false },
+                            { texto: "Busca un equilibrio refrescante con el toque de parrilla", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "Seguridad Alimentaria: ¿Cuál es el alérgeno principal de este plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Pescado", correcta: false },
+                            { texto: "Moluscos", correcta: true },
+                            { texto: "Crustáceos", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Identifica los alérgenos presentes según la ficha técnica:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Moluscos (Navaja)", correcta: true },
+                            { texto: "Sulfitos (presentes en el escabeche/vinagre)", correcta: true },
+                            { texto: "Altramuces", correcta: false },
+                            { texto: "Gluten", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "langostinos-mariposa-pollo",
+            nombre: "Langostinos del sur abiertos en mariposa",
+            precio: "21€",
+            descripcion: "Asados a la parrilla con jugo de pollo al ast.",
+            historia: "Este plato es un juego de contrastes y recuerdos. El langostino del sur, de carne dulce y firme, se abre en mariposa para exponer la mayor superficie posible al fuego de la parrilla. El toque maestro es el aliño: una reducción de jugo de pollo al ast (asado tradicional) que aporta notas de romero, tomillo, grasa de ave y piel tostada. Es una combinación de 'mar y montaña' que busca el umami más absoluto, uniendo el yodo del marisco con el sabor reconfortante de la cocina de domingo.",
+            trazabilidad: "Langostino blanco del sur (Huelva/Sanlúcar/Málaga) · Jugo de pollo asado artesanal · Hierbas mediterráneas.",
+            alergenos: ["Crustáceos", "Sulfitos", "Apio"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué significa que los langostinos se abran en 'mariposa'?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Que se sirven vivos", correcta: false },
+                            { texto: "Que se cortan longitudinalmente para que queden planos en la parrilla", correcta: true },
+                            { texto: "Que se les quitan las antenas", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cuál es el componente del plato que aporta el sabor a 'cocina de recuerdo'?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "La salsa de soja", correcta: false },
+                            { texto: "El jugo de pollo al ast", correcta: true },
+                            { texto: "Un chorro de coñac", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Sobre el sabor y la técnica de este plato:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Es una versión de 'mar y montaña'", correcta: true },
+                            { texto: "Se asan a la parrilla para buscar notas ahumadas", correcta: true },
+                            { texto: "Lleva trozos de carne de pollo por encima", correcta: false },
+                            { texto: "El jugo de pollo busca potenciar el umami del marisco", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "Seguridad Alimentaria: ¿Cuál es el alérgeno principal que debe conocer el cliente?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Pescado", correcta: false },
+                            { texto: "Crustáceos (Langostino)", correcta: true },
+                            { texto: "Moluscos", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Identifica posibles alérgenos ocultos en el jugo de pollo al ast:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Apio (común en el sofrito del caldo)", correcta: true },
+                            { texto: "Sulfitos (del vino de la reducción)", correcta: true },
+                            { texto: "Mostaza", correcta: false },
+                            { texto: "Crustáceos", correcta: true }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "almejas-brasa-amarillo",
+            nombre: "Almejas abiertas en brasas",
+            precio: "22€",
+            descripcion: "Salsita de amarillo manchego-malagueño y aceitito de adobo.",
+            historia: "Este plato es el puente perfecto entre la tierra de Javier y Juan y su nueva casa en Málaga. Las almejas se abren al calor de la brasa, capturando el punto justo de humo. La salsa 'amarillo' es una interpretación de los guisos tradicionales de azafrán manchegos, pero refinada con un toque malagueño. El plato se finaliza con un aceite de adobo que evoca los sabores del 'pescaíto' frito local (vinagre, orégano, comino), convirtiendo cada almeja en una explosión de cultura gastronómica cruzada.",
+            trazabilidad: "Almeja fina de carril o malagueña según mercado · Azafrán con D.O. Mancha · Aceite de oliva virgen extra infusionado con especias de adobo malagueño.",
+            alergenos: ["Moluscos", "Pescado", "Sulfitos"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué dos culturas gastronómicas se unen en la salsa 'amarillo' de este plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "La japonesa y la andaluza", correcta: false },
+                            { texto: "La manchega (azafrán) y la malagueña", correcta: true },
+                            { texto: "La gallega y la vasca", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Qué sabores evoca el 'aceitito de adobo' que termina el plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Sabor a curry indio", correcta: false },
+                            { texto: "Sabores de orégano, comino y vinagre típicos del adobo local", correcta: true },
+                            { texto: "Sabor a trufa blanca", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Sobre la cocción de las almejas:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Se abren directamente en la brasa", correcta: true },
+                            { texto: "Se abren al vapor de agua", correcta: false },
+                            { texto: "Absorben notas ahumadas durante el proceso", correcta: true },
+                            { texto: "El jugo que sueltan forma parte de la salsa", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "Seguridad Alimentaria: ¿Qué alérgenos son obligatorios declarar aquí?",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Moluscos (Almeja)", correcta: true },
+                            { texto: "Pescado (si la base de la salsa lleva fondo de pescado)", correcta: true },
+                            { texto: "Frutos de cáscara", correcta: false },
+                            { texto: "Sulfitos (del vinagre del adobo)", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "¿Contiene este plato algún ingrediente que aporte el color amarillo intenso?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Colorante alimentario artificial", correcta: false },
+                            { texto: "Azafrán de calidad (D.O. Mancha)", correcta: true },
+                            { texto: "Mostaza americana", correcta: false }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "gambitas-rojas-ajillo-malaga",
+            nombre: "Gambitas rojas al ajillo",
+            precio: "24.5€",
+            descripcion: "Patatitas chips súper crujientes y huevos fritos al momento con puntilla.",
+            historia: "Este plato es una oda al hedonismo. En lugar del ajillo tradicional en cazuela de barro, aquí la gamba roja (famosa por su cabeza dulce y coralina) se convierte en la protagonista de unos huevos rotos de lujo. Las patatas chips se cortan finísimas y se fríen para que mantengan un crujiente extremo que soporte el peso de la yema y el aceite del ajillo. El huevo se fríe a alta temperatura para conseguir esa 'puntilla' dorada que aporta sabor tostado y textura.",
+            trazabilidad: "Gamba roja del Mediterráneo (Garrucha / Almería) · Huevos de granja seleccionados · Patata agria de recolección tardía · AOVE infusionado con ajo morado.",
+            alergenos: ["Crustáceos", "Huevo", "Sulfitos"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué elemento aporta el contraste crujiente principal en este plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Pan tostado", correcta: false },
+                            { texto: "Patatitas chips artesanas súper crujientes", correcta: true },
+                            { texto: "Frutos secos", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cómo se preparan los huevos para este plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Pasados por agua", correcta: false },
+                            { texto: "Fritos al momento buscando la característica 'puntilla'", correcta: true },
+                            { texto: "En tortilla francesa", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Sobre la gamba roja y el ajillo:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Se utiliza gamba roja, valorada por su sabor yodado e intenso", correcta: true },
+                            { texto: "El ajillo impregna las chips y la yema de huevo", correcta: true },
+                            { texto: "La gamba se sirve cruda tipo carpaccio", correcta: false },
+                            { texto: "Es una reinterpretación de lujo de los huevos con patatas", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "Seguridad Alimentaria: ¿Cuál es el alérgeno principal del marisco en este plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Moluscos", correcta: false },
+                            { texto: "Crustáceos (Gamba roja)", correcta: true },
+                            { texto: "Pescado", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Identifica los alérgenos presentes en este plato:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Huevo (por el huevo frito)", correcta: true },
+                            { texto: "Crustáceos (por la gamba)", correcta: true },
+                            { texto: "Gluten", correcta: false },
+                            { texto: "Sulfitos", correcta: true }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            id: "calamar-despiece-jabugo",
+            nombre: "Calamar de anzuelo en despiece a la brasa",
+            precio: "26.5€",
+            descripcion: "Meunière de Jabugo, ajito frito y encurtidos.",
+            historia: "El calamar de anzuelo (o potera) se pesca de forma individual, lo que garantiza que la piel esté intacta y la carne tersa. Se cocina a la brasa separando sus partes para dar a cada una el punto exacto. La salsa es una reinterpretación de la Meunière clásica: sustituimos la mantequilla tradicional por una grasa de jamón de Jabugo infusionada, que aporta un sabor cárnico y profundo. Los encurtidos y el ajo frito rompen esa densidad, aportando acidez y un crujiente que limpia el paladar.",
+            trazabilidad: "Calamar de potera nacional · Jamón de Jabugo (Huelva) D.O.P. · Ajo morado de Las Pedroñeras.",
+            alergenos: ["Moluscos", "Lácteos", "Sulfitos", "Pescado"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Qué significa que el calamar sea de 'anzuelo' o 'potera'?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Que se pesca con redes masivas", correcta: false },
+                            { texto: "Que se captura uno a uno, manteniendo la máxima calidad de su carne", correcta: true },
+                            { texto: "Que es un calamar de piscifactoría", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "¿Cuál es el ingrediente diferencial de la salsa Meunière en este plato?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Zumo de naranja", correcta: false },
+                            { texto: "Grasa de jamón de Jabugo", correcta: true },
+                            { texto: "Vino tinto", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Sobre el servicio 'en despiece':",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Se busca que el cliente aprecie las distintas texturas del calamar", correcta: true },
+                            { texto: "Cada parte del calamar recibe un punto de brasa específico", correcta: true },
+                            { texto: "Se sirve el calamar entero y relleno", correcta: false },
+                            { texto: "Se acompaña de encurtidos para equilibrar la grasa del Jabugo", correcta: true }
+                        ]
+                    },
+                    {
+                        texto: "Seguridad Alimentaria: ¿Qué alérgeno principal presenta el calamar?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "Crustáceos", correcta: false },
+                            { texto: "Moluscos", correcta: true },
+                            { texto: "Gluten", correcta: false }
+                        ]
+                    },
+                    {
+                        texto: "Identifica los alérgenos que podrían estar presentes en la salsa y acompañamiento:",
+                        tipo: "checkbox",
+                        opciones: [
+                            { texto: "Lácteos (base de la Meunière)", correcta: true },
+                            { texto: "Sulfitos (por los encurtidos)", correcta: true },
+                            { texto: "Frutos de cáscara", correcta: false },
+                            { texto: "Pescado (frecuente en los fondos de salsas marinas)", correcta: true }
+                        ]
+                    }
+                ]
+            }
+        }
+    ],
     ene: [
         {
             id: "croqueta",
@@ -565,8 +1396,9 @@ export const menuData = {
             }
         }
     ],
-    restaurant: [],
-    pool: [],
+    pool: [
+
+    ],
     menus: [
         {
             id: "menu-torta-aceite",

@@ -111,12 +111,12 @@ function renderApp() {
                     ${plato.precio.includes('|')
             ? plato.precio.split('|').map(p => `
                             <span style="background: rgba(0, 150, 255, 0.1); border: 1px solid var(--accent); color: var(--accent); padding: 3px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: bold; white-space: nowrap;">
-                                ${p.trim()}
-                            </span>`).join('')
+                            ${p.trim()}
+                        </span>`).join('')
             : `<span style="background: rgba(0, 150, 255, 0.1); border: 1px solid var(--accent); color: var(--accent); padding: 3px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: bold;">${plato.precio}</span>`
         }
-                </div>
             </div>
+        </div>
 
             <div id="info-${plato.id}">
                 <p class="descripcion" style="font-style:italic; opacity:0.8; margin-bottom:15px;">"${plato.descripcion}"</p>
