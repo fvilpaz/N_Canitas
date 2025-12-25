@@ -2944,7 +2944,27 @@ export const menuData = {
         }
     ],
     pool: [
-
+        {
+            id: "test-fuegos-artificiales",
+            nombre: "🚀 TEST DE FUEGOS ARTIFICIALES",
+            precio: "GRATIS",
+            descripcion: "Este es un plato de prueba para ver el efecto visual de aprobación.",
+            historia: "En Cañitas Maite celebramos el éxito. Este plato no existe en carta, solo sirve para que el equipo vea qué ocurre cuando se convierte en un experto certificado.",
+            trazabilidad: "Código fuente de Cañitas Maite.",
+            alergenos: ["Ninguno"],
+            quiz: {
+                preguntas: [
+                    {
+                        texto: "¿Quieres ver los fuegos artificiales?",
+                        tipo: "radio",
+                        opciones: [
+                            { texto: "No", correcta: false },
+                            { texto: "¡SÍ, POR FAVOR!", correcta: true }
+                        ]
+                    }
+                ]
+            }
+        }
     ],
     menus: [
         {
@@ -4646,6 +4666,13 @@ export const examenes = {
             texto: "En el postre de Texturas de Cacao, el vino utilizado es:",
             opciones: ["Fino", "Pedro Ximénez (de Jerez)", "Moscato de Canadá"],
             correcta: 1
+        }
+    ],
+    pool: [
+        {
+            texto: "¿Está el equipo de Cañitas Maite listo para el éxito?",
+            opciones: ["No", "Estamos listos", "¡SIEMPRE LISTOS!"],
+            correcta: 2
         }
     ]
 };
