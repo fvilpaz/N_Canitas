@@ -136,7 +136,7 @@ h1 {
   display: inline-flex;
   align-items: center;
   font-weight: 700;
-  text-transform: uppercase;
+  text-transform: none;
   color: white;
   /* Color de texto por defecto para destacar sobre los colores */
   transition: transform 0.2s ease;
