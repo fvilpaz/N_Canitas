@@ -127,112 +127,104 @@ h1 {
   justify-content: flex-start;
 }
 
-/* ESTILO BASE PARA CHIPS (Estilo Ghost/Precio) */
+/* ESTILO BASE PARA CHIPS (Combinado) */
 .chip {
-  padding: 4px 12px;
-  font-size: .70rem;
-  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: .75em;
+  border-radius: 14px;
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
-  margin: 3px;
-  border: 1px solid;
-  /* El color lo define cada clase */
-  transition: all 0.2s ease;
+  color: white;
+  /* Color de texto por defecto para destacar sobre los colores */
+  transition: transform 0.2s ease;
 }
 
-/* Colores estilo Ghost: Fondo suave (10% opacidad), borde y texto sólidos */
+/* Estilo por defecto cuando NO tiene color específico (Modo Dark) */
+.chip.bg-default {
+  background: rgba(255, 255, 255, .08);
+  border: 1px solid rgba(255, 255, 255, .2);
+}
+
+/* Ajuste para modo Light cuando no tiene color específico */
+body.light .chip.bg-default {
+  background: rgba(0, 0, 0, .05);
+  border-color: rgba(0, 0, 0, .15);
+  color: #333;
+}
+
+/* COLORES OFICIALES DE ALÉRGENOS */
 .bg-gluten {
-  background-color: rgba(226, 146, 77, 0.1) !important;
-  color: #e2924d !important;
-  border-color: #e2924d !important;
+  background-color: #e2924d !important;
+  border: none;
 }
 
 .bg-lacteos {
-  background-color: rgba(166, 116, 78, 0.1) !important;
-  color: #a6744e !important;
-  border-color: #a6744e !important;
+  background-color: #835634 !important;
+  border: none;
 }
 
 .bg-sulfitos {
-  background-color: rgba(186, 45, 115, 0.1) !important;
-  color: #ba2d73 !important;
-  border-color: #ba2d73 !important;
+  background-color: #921d56 !important;
+  border: none;
 }
 
 .bg-soja {
-  background-color: rgba(0, 132, 61, 0.1) !important;
-  color: #00843d !important;
-  border-color: #00843d !important;
+  background-color: #00843d !important;
+  border: none;
 }
 
 .bg-pescado {
-  background-color: rgba(46, 115, 212, 0.1) !important;
-  color: #2e73d4 !important;
-  border-color: #2e73d4 !important;
+  background-color: #003a8c !important;
+  border: none;
 }
 
 .bg-cacahuete {
-  background-color: rgba(179, 107, 53, 0.1) !important;
-  color: #b36b35 !important;
-  border-color: #b36b35 !important;
+  background-color: #b36b35 !important;
+  border: none;
 }
 
 .bg-sesamo {
-  background-color: rgba(144, 132, 101, 0.1) !important;
-  color: #908465 !important;
-  border-color: #908465 !important;
+  background-color: #908465 !important;
+  border: none;
 }
 
 .bg-mostaza {
-  background-color: rgba(204, 172, 65, 0.1) !important;
-  color: #ccac41 !important;
-  border-color: #ccac41 !important;
+  background-color: #ccac41 !important;
+  border: none;
 }
 
 .bg-frutos-secos {
-  background-color: rgba(196, 109, 85, 0.1) !important;
-  color: #c46d55 !important;
-  border-color: #c46d55 !important;
+  background-color: #c46d55 !important;
+  border: none;
 }
 
 .bg-huevo {
-  background-color: rgba(247, 181, 44, 0.1) !important;
-  color: #f7b52c !important;
-  border-color: #f7b52c !important;
+  background-color: #f7b52c !important;
+  border: none;
 }
 
 .bg-crustaceos {
-  background-color: rgba(0, 155, 219, 0.1) !important;
-  color: #009bdb !important;
-  border-color: #009bdb !important;
+  background-color: #009bdb !important;
+  border: none;
 }
 
 .bg-moluscos {
-  background-color: rgba(110, 183, 205, 0.1) !important;
-  color: #6eb7cd !important;
-  border-color: #6eb7cd !important;
+  background-color: #6eb7cd !important;
+  border: none;
 }
 
 .bg-apio {
-  background-color: rgba(85, 184, 72, 0.1) !important;
-  color: #55b848 !important;
-  border-color: #55b848 !important;
+  background-color: #55b848 !important;
+  border: none;
 }
 
 .bg-altramuz {
-  background-color: rgba(255, 237, 0, 0.1) !important;
-  color: #ffed00 !important;
-  border-color: #ffed00 !important;
-}
-
-/* Estilo por defecto */
-.bg-default {
-  background: rgba(255, 255, 255, .05) !important;
-  color: #888 !important;
-  border: 1px solid rgba(255, 255, 255, .1) !important;
+  background-color: #ffed00 !important;
+  color: #333 !important;
+  border: none;
 }
 
 /* ==========================================================
