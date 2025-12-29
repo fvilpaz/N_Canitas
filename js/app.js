@@ -4,7 +4,7 @@ let currentStep = 0;
 let currentSection = 'desayunos';
 
 /* ==========================================================
-   1. INTERFAZ Y NAVEGACIÓN (Corregida para Desayunos)
+   1. INTERFAZ Y NAVEGACIÓN 
    ========================================================== */
 window.toggleTheme = function () {
     const body = document.body;
@@ -82,6 +82,26 @@ function generarQuizHTML(plato, isLastPlato) {
         <div id="res-${plato.id}" style="margin-top:20px; text-align:center; font-weight:bold;"></div>
     `;
 }
+function obtenerClaseColor(alergeno) {
+    const a = alergeno.toLowerCase().trim();
+
+    if (a.includes("gluten") || a.includes("trigo")) return "bg-gluten";
+    if (a.includes("lácteos") || a.includes("leche") || a.includes("lactosa")) return "bg-lacteos";
+    if (a.includes("sulfitos")) return "bg-sulfitos";
+    if (a.includes("soja")) return "bg-soja";
+    if (a.includes("pescado")) return "bg-pescado";
+    if (a.includes("cacahuete")) return "bg-cacahuete";
+    if (a.includes("sésamo") || a.includes("ajonjolí")) return "bg-sesamo";
+    if (a.includes("mostaza")) return "bg-mostaza";
+    if (a.includes("frutos secos") || a.includes("nuez") || a.includes("almendra")) return "bg-frutos-secos";
+    if (a.includes("huevo")) return "bg-huevo";
+    if (a.includes("crustáceos") || a.includes("gamba") || a.includes("cangrejo")) return "bg-crustaceos";
+    if (a.includes("moluscos") || a.includes("mejillón")) return "bg-moluscos";
+    if (a.includes("apio")) return "bg-apio";
+    if (a.includes("altramuz")) return "bg-altramuz";
+
+    return "bg-default"; // Si no encuentra nada, usa el estilo gris
+}
 
 /* ==========================================================
    3. RENDERIZADO Y VERIFICACIÓN
@@ -128,9 +148,12 @@ function renderApp() {
 
                 <p style="font-size:0.9rem; margin-bottom:10px;"><strong>Trazabilidad:</strong> ${plato.trazabilidad}</p>
                 
-                <div class="alergenos" style="margin-top:15px;">
-                    ${plato.alergenos.map(a => `<span class="chip">${a}</span>`).join('')}
-                </div>
+<div class="alergenos" style="margin-top:15px;">
+    ${plato.alergenos.map(a => {
+            const claseColor = obtenerClaseColor(a);
+            return `<span class="chip ${claseColor}">${a}</span>`;
+        }).join('')}
+</div>
 
                 <button onclick="startQuiz('info-${plato.id}', 'quiz-${plato.id}')" style="width:100%; margin-top:25px; padding:15px;">
                     🧠 PONER A PRUEBA MI MEMORIA

@@ -83,7 +83,7 @@ h1 {
 }
 
 /* ==========================================================
-   4. TARJETAS Y CONTENIDO (CORREGIDO)
+   4. TARJETAS Y CONTENIDO (UNIFICADO Y OPTIMIZADO)
    ========================================================== */
 .card {
   background: var(--card);
@@ -94,7 +94,7 @@ h1 {
   box-sizing: border-box;
 }
 
-/* ESTA ES LA REGLA PARA EL PRECIO AZUL */
+/* REGLA PARA EL PRECIO AZUL */
 .price {
   color: var(--accent);
   font-weight: 700;
@@ -105,7 +105,7 @@ h1 {
   margin-bottom: 12px;
 }
 
-/* ESTO DA EL BORDE AZUL A LA IZQUIERDA EN HISTORIA */
+/* BORDE AZUL A LA IZQUIERDA EN HISTORIA */
 .formacion-extra {
   border-left: 4px solid var(--accent);
   padding-left: 15px;
@@ -118,7 +118,7 @@ h1 {
   margin-bottom: 15px;
 }
 
-/* CHIPS ALÉRGENOS */
+/* CONTENEDOR DE CHIPS */
 .alergenos {
   display: flex;
   flex-wrap: wrap;
@@ -127,20 +127,104 @@ h1 {
   justify-content: flex-start;
 }
 
+/* ESTILO BASE PARA CHIPS (Combinado) */
 .chip {
   padding: 5px 12px;
   font-size: .75em;
   border-radius: 14px;
-  background: rgba(255, 255, 255, .08);
-  border: 1px solid rgba(255, 255, 255, .2);
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+  /* Color de texto por defecto para destacar sobre los colores */
+  transition: transform 0.2s ease;
 }
 
-body.light .chip {
+/* Estilo por defecto cuando NO tiene color específico (Modo Dark) */
+.chip.bg-default {
+  background: rgba(255, 255, 255, .08);
+  border: 1px solid rgba(255, 255, 255, .2);
+}
+
+/* Ajuste para modo Light cuando no tiene color específico */
+body.light .chip.bg-default {
   background: rgba(0, 0, 0, .05);
   border-color: rgba(0, 0, 0, .15);
+  color: #333;
+}
+
+/* COLORES OFICIALES DE ALÉRGENOS */
+.bg-gluten {
+  background-color: #e2924d !important;
+  border: none;
+}
+
+.bg-lacteos {
+  background-color: #835634 !important;
+  border: none;
+}
+
+.bg-sulfitos {
+  background-color: #921d56 !important;
+  border: none;
+}
+
+.bg-soja {
+  background-color: #00843d !important;
+  border: none;
+}
+
+.bg-pescado {
+  background-color: #003a8c !important;
+  border: none;
+}
+
+.bg-cacahuete {
+  background-color: #b36b35 !important;
+  border: none;
+}
+
+.bg-sesamo {
+  background-color: #908465 !important;
+  border: none;
+}
+
+.bg-mostaza {
+  background-color: #ccac41 !important;
+  border: none;
+}
+
+.bg-frutos-secos {
+  background-color: #c46d55 !important;
+  border: none;
+}
+
+.bg-huevo {
+  background-color: #f7b52c !important;
+  border: none;
+}
+
+.bg-crustaceos {
+  background-color: #009bdb !important;
+  border: none;
+}
+
+.bg-moluscos {
+  background-color: #6eb7cd !important;
+  border: none;
+}
+
+.bg-apio {
+  background-color: #55b848 !important;
+  border: none;
+}
+
+.bg-altramuz {
+  background-color: #ffed00 !important;
+  color: #333 !important;
+  border: none;
 }
 
 /* ==========================================================
