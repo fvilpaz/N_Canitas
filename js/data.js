@@ -7,7 +7,7 @@ export const menuData = {
             descripcion: "Huevos camperos con puntilla, patata agria y jamón 100% ibérico.",
             historia: "Este plato representa la obsesión de Javier Sanz y Juan Sahuquillo por el producto puro. La técnica de la 'puntilla' requiere un control exacto de la temperatura del aceite para que el borde de la clara se caramelice y quede crujiente, mientras la yema permanece totalmente líquida para bañar la patata agria frita al momento. El jamón de bellota aporta la elegancia final: su grasa se atempera con el calor del huevo, liberando aromas a fruto seco y una textura fundente que es la seña de identidad de los desayunos en Cañitas.",
             trazabilidad: "Huevos de granja local · Jamón 100% Ibérico de Bellota · Patata Agria de recolección seleccionada.",
-            alergenos: ["Huevo"], // Alérgenos verificados según receta
+            alergenos: ["Huevo"],
             quiz: {
                 preguntas: [
                     {
@@ -182,7 +182,7 @@ export const menuData = {
             descripcion: "Nuestra versión local del clásico internacional con el sello de Cañitas.",
             historia: "Los huevos benedictinos se 'malagueñizan' en Cañitas para integrarse en nuestro entorno. El reto técnico reside en el escalfado perfecto del huevo (clara cuajada y yema líquida) y la emulsión de una salsa holandesa estable y aireada. En lugar del muffin inglés tradicional, utilizamos una base que rinde homenaje a la panadería local, transformando un estándar de hotel en una propuesta con alma que habla del territorio malagueño.",
             trazabilidad: "Huevos de corral de la provincia · Ingredientes seleccionados de la despensa malagueña.",
-            alergenos: ["Huevo", "Gluten", "Lácteos"], // Verificados por la salsa holandesa y la base de pan
+            alergenos: ["Huevo", "Gluten"],
             quiz: {
                 preguntas: [
                     {
@@ -300,7 +300,7 @@ export const menuData = {
             descripcion: "Roll tierno de salmón ahumado premium con aguacate en su punto óptimo de maduración.",
             historia: "El roll de salmón y aguacate es un clásico de la bocatería saludable que en Cañitas elevamos mediante la selección del producto. El salmón se somete a un ahumado ligero con maderas nobles para no tapar el sabor del pescado, y el aguacate, procedente de cultivos de la Axarquía malagueña, aporta la untuosidad necesaria para equilibrar la mordida. El pan de roll, ligeramente tostado, sirve como vehículo tierno para una combinación donde prima la frescura.",
             trazabilidad: "Salmón ahumado de corte premium · Aguacate de la Axarquía (Málaga) · Pan de brioche tipo roll.",
-            alergenos: ["Pescado", "Gluten", "Lácteos"],
+            alergenos: ["Pescado", "Marisco", "Moluscos", "Gluten", "Lácteos", "Mostaza", "Frutos Secos", "Soja", "Huevo", "Sulfitos"],
             quiz: {
                 preguntas: [
                     {
@@ -359,7 +359,7 @@ export const menuData = {
             descripcion: "Sándwich de autor con queso Comté de 12 meses, jamón de alta calidad y esencia de trufa negra.",
             historia: "Inspirado en los sándwiches de culto, el Bikini de Cañitas eleva un clásico mediante el uso del queso Comté AOC de leche cruda, que aporta notas de frutos secos y una elasticidad perfecta al fundir. La trufa negra se integra para aromatizar el conjunto sin saturar, mientras que el pan se tuesta lentamente con mantequilla noisette hasta alcanzar un dorado uniforme y una textura crujiente que contrasta con el interior fundente.",
             trazabilidad: "Queso Comté AOC (Francia) con 12 meses de maduración · Jamón cocido extra · Aceite de Trufa Negra premium.",
-            alergenos: ["Gluten", "Lácteos"],
+            alergenos: ["Gluten", "Lácteos", "Huevo"],
             quiz: {
                 preguntas: [
                     {
@@ -476,7 +476,7 @@ export const menuData = {
             descripcion: "Masa artesana frita al momento, crujiente por fuera y tierna por dentro, con chocolate fundido.",
             historia: "El churro es el alma del desayuno español. En Cañitas, reivindicamos la churrería tradicional elaborando la masa diariamente con harina de gran fuerza y agua, controlando la temperatura del aceite para que no absorba grasa de más. El resultado es un churrito fino, muy crujiente, que se sirve con un chocolate a la taza de alto porcentaje de cacao, denso y con el punto justo de amargor para equilibrar el azúcar del churro.",
             trazabilidad: "Harina de trigo de molienda tradicional · Chocolate artesano con 60% cacao.",
-            alergenos: ["Gluten", "Lácteos"],
+            alergenos: ["Gluten", "Lácteos",],
             quiz: {
                 preguntas: [
                     {
@@ -882,7 +882,7 @@ export const menuData = {
             descripcion: "Gamba blanca de la bahía, jugo de piparras encurtidas y regañás.",
             historia: "Esta ensaladilla es un homenaje directo a la ciudad de Málaga. A diferencia de la versión de Albacete, aquí se utiliza la reina de la lonja local: la gamba blanca. La clave es su equilibrio: una patata cremosa, una mayonesa aireada y el contrapunto eléctrico del jugo de piparras encurtidas, que aporta una acidez necesaria para limpiar el paladar. Se termina con regañás artesanas, el acompañamiento tradicional andaluz que aporta el crujiente perfecto.",
             trazabilidad: "Gamba blanca de la Bahía de Málaga (Lonja de la Caleta/Vélez) · Piparras de Ibarra (País Vasco) · Regañás de panadería artesana sevillana · Fumet de pescado para la base.",
-            alergenos: ["Pescado", "Crustáceos", "Huevo", "Gluten", "Mostaza", "Sulfitos"],
+            alergenos: ["Pescado", "Huevo", "Crustáceos", "Molusco", "Mostaza", "Sulfitos"],
             quiz: {
                 preguntas: [
                     {
@@ -942,7 +942,7 @@ export const menuData = {
             descripcion: "Puerro asado con burrata fresca, tomate seco y praliné de almendras.",
             historia: "Este plato es un ejercicio de paciencia. El puerro se somete a una cocción lenta (confitado o asado a baja temperatura) durante horas, lo que permite que sus azúcares naturales se caramelicen sin quemar la fibra. En la sede de Málaga, se busca un contraste de temperaturas y texturas: el calor del puerro frente a la cremosidad fría de la burrata fresca. El praliné de almendras aporta una nota de fruto seco tostado que redondea el carácter terroso de la verdura.",
             trazabilidad: "Puerros de huerta nacional (Navarra/Castilla-La Mancha) · Burrata de producción artesana italiana · Almendras de la variedad Marcona.",
-            alergenos: ["Lácteos", "Frutos de cáscara", "Sulfitos"],
+            alergenos: ["Lácteos", "Frutos de cáscara"],
             quiz: {
                 preguntas: [
                     {
@@ -1062,7 +1062,7 @@ export const menuData = {
             descripcion: "Carbonara ibérica, pimienta fresca y lascas de queso Payoyo curado.",
             historia: "En esta receta, la alcachofa se trabaja en dos texturas: primero un confitado suave para asegurar un corazón mantecoso y luego una fritura rápida que le otorga un crujiente exterior único. El plato se termina con una interpretación de la carbonara donde el guanciale se sustituye por la grasa del cerdo ibérico de bellota, creando una emulsión profunda y sedosa. El toque final lo aporta el queso Payoyo de Cádiz, un queso de cabra y oveja curado que añade una intensidad salina y picante que eleva el plato por encima de una carbonara tradicional.",
             trazabilidad: "Alcachofa mini de temporada · Queso Payoyo (Grazalema/Villaluenga del Rosario, Cádiz) · Grasa de jamón ibérico de bellota · Pimienta negra de molino.",
-            alergenos: ["Lácteos", "Huevo", "Sulfitos"],
+            alergenos: ["Lácteos", "Huevo"],
             quiz: {
                 preguntas: [
                     {
@@ -1122,7 +1122,7 @@ export const menuData = {
             descripcion: "Patata cremosa, yema de campo y trufa negra rallada al momento.",
             historia: "Este plato celebra la temporalidad pura. Las setas se saltean a fuego vivo para mantener su textura carnosa y su agua de vegetación. Reposan sobre una base de patata trabajada con mantequilla noisette para lograr una textura de seda. El corazón del plato es una yema de huevo de campo que, al romperse, actúa como salsa ligando todos los elementos. El toque final lo aporta la trufa negra (Tuber Melanosporum), que se ralla frente al cliente para que los aceites esenciales del hongo se liberen con el calor residual del plato.",
             trazabilidad: "Setas silvestres seleccionadas (según temporada) · Huevos de gallinas criadas en libertad (Km 0) · Trufa negra nacional (Sarrion/Soria) · Patata agria de cultivo tradicional.",
-            alergenos: ["Huevo", "Lácteos", "Sulfitos"],
+            alergenos: ["Huevo", "Lácteos"],
             quiz: {
                 preguntas: [
                     {
@@ -1242,7 +1242,7 @@ export const menuData = {
             descripcion: "Escabeche frío de limón asado y ralladura de limas frescas.",
             historia: "La navaja de buceo se captura a mano, una a una, lo que garantiza un producto libre de impurezas y de un calibre superior. En Cañitas Málaga, se pasan brevemente por la parrilla para que la carne se rice y absorba el aroma del fuego. El plato se termina con un escabeche técnico: primero asamos los limones para endulzar sus jugos y luego creamos un escabeche frío que respeta la textura de la navaja. La ralladura de lima fresca al momento aporta los aceites esenciales que disparan el aroma cítrico en la mesa.",
             trazabilidad: "Navaja de buceo (Galicia / Huelva) · Limones de la huerta del Guadalhorce · Limas seleccionadas.",
-            alergenos: ["Moluscos", "Sulfitos"],
+            alergenos: ["Moluscos", "Crustáceos", "Pescado", "Sulfitos"],
             quiz: {
                 preguntas: [
                     {
@@ -1302,7 +1302,7 @@ export const menuData = {
             descripcion: "Asados a la parrilla con jugo de pollo al ast.",
             historia: "Este plato es un juego de contrastes y recuerdos. El langostino del sur, de carne dulce y firme, se abre en mariposa para exponer la mayor superficie posible al fuego de la parrilla. El toque maestro es el aliño: una reducción de jugo de pollo al ast (asado tradicional) que aporta notas de romero, tomillo, grasa de ave y piel tostada. Es una combinación de 'mar y montaña' que busca el umami más absoluto, uniendo el yodo del marisco con el sabor reconfortante de la cocina de domingo.",
             trazabilidad: "Langostino blanco del sur (Huelva/Sanlúcar/Málaga) · Jugo de pollo asado artesanal · Hierbas mediterráneas.",
-            alergenos: ["Crustáceos", "Sulfitos", "Apio"],
+            alergenos: ["Crustáceos", "Moluscos", "Pescado", "Sulfitos"],
             quiz: {
                 preguntas: [
                     {
@@ -1482,7 +1482,7 @@ export const menuData = {
             descripcion: "Meunière de Jabugo, ajito frito y encurtidos.",
             historia: "El calamar de anzuelo (o potera) se pesca de forma individual, lo que garantiza que la piel esté intacta y la carne tersa. Se cocina a la brasa separando sus partes para dar a cada una el punto exacto. La salsa es una reinterpretación de la Meunière clásica: sustituimos la mantequilla tradicional por una grasa de jamón de Jabugo infusionada, que aporta un sabor cárnico y profundo. Los encurtidos y el ajo frito rompen esa densidad, aportando acidez y un crujiente que limpia el paladar.",
             trazabilidad: "Calamar de potera nacional · Jamón de Jabugo (Huelva) D.O.P. · Ajo morado de Las Pedroñeras.",
-            alergenos: ["Moluscos", "Lácteos", "Sulfitos", "Pescado"],
+            alergenos: ["Moluscos", "Crustáceos", "Lácteos", "Pescado"],
             quiz: {
                 preguntas: [
                     {
@@ -1542,7 +1542,7 @@ export const menuData = {
             descripcion: "Salsa de tomate encominado y tomatitos cherry confitados.",
             historia: "En Cañitas Maite Málaga, reinterpretamos el adobo tradicional malagueño aplicándolo a una pieza de corvina salvaje de gran calibre. En lugar de freírla, la pasamos por la parrilla para respetar la sedosidad de su carne. La base de tomate encominado es un guiño a los guisos populares de la zona, aportando un frescor que equilibra la potencia del adobo.",
             trazabilidad: "Corvina salvaje de lonjas andaluzas (Estrecho) · Tomate de huerta local · Comino natural.",
-            alergenos: ["Pescado", "Sulfitos"],
+            alergenos: ["Crustáceos", "Moluscos", "Pescado", "Soja", "Sulfitos"],
             quiz: {
                 preguntas: [
                     {
@@ -1664,7 +1664,7 @@ export const menuData = {
             descripcion: "Terminado con meunière tostada/cítrica y alcaparra frita (aprox. 0,6kg).",
             historia: "El lenguado de estero se diferencia por su alimentación natural en los esteros, lo que le confiere una grasa y un sabor más potentes que el lenguado de mar abierto. Se asa al horno entero para preservar su hidratación. La clave está en la técnica de la Meunière: tostamos la mantequilla (beurre noisette) para buscar notas de fruto seco, la equilibramos con cítricos y añadimos el punto crujiente y salino de la alcaparra frita.",
             trazabilidad: "Lenguado de estero de las salinas de Cádiz/Huelva · Mantequilla artesana · Alcaparra de calidad extra.",
-            alergenos: ["Pescado", "Lácteos", "Gluten", "Sulfitos"],
+            alergenos: ["Crustáceos", "Moluscos", "Pescado", "Lácteos"],
             quiz: {
                 preguntas: [
                     {
@@ -1723,7 +1723,7 @@ export const menuData = {
             descripcion: "Con pil-pil de su propio colágeno y aceite de oliva de perejil (aprox. 0,8kg).",
             historia: "La Lubina del Atlántico, seleccionada por su firmeza y porcentaje de grasa, se cocina entera a la parrilla de encina. El término 'sin trabajo' hace referencia a nuestro servicio de sala y cocina, donde la pieza se desespinas y limpia completamente para que el cliente no encuentre ninguna dificultad. La salsa es un pil-pil emulsionado utilizando los propios jugos y colágeno de la cabeza y espinas de la lubina, potenciado con un aceite de perejil que aporta frescor y color.",
             trazabilidad: "Lubina salvaje del Atlántico Norte · Aceite de oliva virgen extra monovarietal · Perejil fresco de huerta.",
-            alergenos: ["Pescado"],
+            alergenos: ["Crustáceos", "Moluscos", "Pescado"],
             quiz: {
                 preguntas: [
                     {
@@ -1783,7 +1783,7 @@ export const menuData = {
             descripcion: "Con verduritas mini, papitas baby rustidas y juguito de asado.",
             historia: "El Coquelette es un pollo joven de pequeño tamaño (picantón), apreciado por tener una carne mucho más tierna, fina y con menos grasa que un pollo adulto. Se cocina a la cazuela para que el ave se ase en sus propios jugos, manteniendo una humedad perfecta. Se acompaña de una guarnición de huerta en formato 'mini' y papas baby que recogen todo el sabor del fondo del asado, terminado con un jugo de carne reducido durante horas.",
             trazabilidad: "Pollito Coquelette de crianza seleccionada · Verduritas de huerta de proximidad · Patata joven de temporada.",
-            alergenos: ["Sulfitos", "Lacteos"],
+            alergenos: ["Lácteos"],
             quiz: {
                 preguntas: [
                     {
@@ -1843,7 +1843,7 @@ export const menuData = {
             descripcion: "Con jugo reducido, aceite de hierbabuena y berros de agua.",
             historia: "La falda es un corte con una infiltración de grasa excepcional que, cocinada a baja temperatura durante horas, adquiere una textura melosa que se deshace en la boca. El toque final en plancha o salamandra le otorga ese exterior crujiente tan característico. La hierbabuena aporta el frescor necesario para limpiar la grasa del cordero, mientras que los berros de agua suman una nota picante y herbácea que equilibra el plato.",
             trazabilidad: "Cordero lechal nacional de pastoreo · Hierbabuena fresca de cultivo local · Berros de agua seleccionados.",
-            alergenos: ["Sulfitos", "Gluten"],
+            alergenos: ["Sulfitos", "Apio"],
             quiz: {
                 preguntas: [
                     {
@@ -1903,7 +1903,7 @@ export const menuData = {
             descripcion: "Con parmentier de patata ahumada y fricandó de setas silvestres.",
             historia: "La molleja de corazón es la más valorada por su textura. La cocinamos primero a baja temperatura y la terminamos a fuego fuerte para lograr un contraste radical. Se acompaña de un parmentier (puré fino y sedoso) con un toque de humo de encina y un fricandó de setas, una técnica catalana de guiso de setas que aporta un umami profundo y otoñal al conjunto.",
             trazabilidad: "Molleja de ternera de leche nacional · Patata agria seleccionada · Setas silvestres de temporada (boletus, angula de monte, etc.).",
-            alergenos: ["Lácteos", "Sulfitos"],
+            alergenos: ["Lácteos"],
             quiz: {
                 preguntas: [
                     {
@@ -1963,7 +1963,7 @@ export const menuData = {
             descripcion: "Con salsa gravy de mantequilla tostada y alcaparras fritas.",
             historia: "El corte Tomahawk, que incluye el hueso de la costilla totalmente limpio, permite que la carne se cocine de forma más uniforme y mantenga toda su infiltración grasa. Al ser cerdo ibérico, la jugosidad es máxima. Lo acompañamos de una salsa gravy donde sustituimos la base tradicional por una 'beurre noisette' (mantequilla tostada) que aporta notas de avellana, terminando con alcaparras fritas que explotan en la boca aportando un contraste ácido y crujiente.",
             trazabilidad: "Cerdo ibérico de bellota nacional · Mantequilla artesana · Alcaparras seleccionadas.",
-            alergenos: ["Lácteos", "Sulfitos", "Gluten"],
+            alergenos: ["Lácteos", "Sulfitos", "Pescado", "Mostaza", "Apio"],
             quiz: {
                 preguntas: [
                     {
@@ -2023,7 +2023,7 @@ export const menuData = {
             descripcion: "Sorbete artesano de mango de la Axarquía con infusión de albahaca fresca.",
             historia: "En este postre rendimos homenaje al producto de nuestra tierra. El mango malagueño, cultivado en el clima tropical de la Axarquía, destaca por su dulzor natural y su textura sin hebras. Lo transformamos en un sorbete ligero y lo acompañamos de albahaca fresca, que aporta una nota cítrica y balsámica, rompiendo la densidad del mango y ofreciendo un final de boca muy limpio.",
             trazabilidad: "Mango de la Axarquía (Málaga) · Albahaca fresca de huerta local.",
-            alergenos: ["unknown"],
+            alergenos: ["Lácteos"],
             quiz: {
                 preguntas: [
                     {
@@ -2143,7 +2143,7 @@ export const menuData = {
             descripcion: "Con Pedro Ximénez y Shichimi picantito.",
             historia: "Este postre es una exploración del cacao en diferentes estados (cremoso, crujiente, bizcocho) para mostrar su versatilidad. La profundidad la aporta una reducción de Pedro Ximénez, que suma notas de pasas y regaliz. El toque disruptivo es el Shichimi Togarashi (mezcla de especias japonesa), que aporta un picante sutil y cítrico que potencia el sabor del chocolate y alarga el postre en boca.",
             trazabilidad: "Cacao de origen (mínimo 70%) · Vino D.O.P. Montilla-Moriles (Pedro Ximénez) · Mezcla Shichimi artesanal.",
-            alergenos: ["Lácteos", "Gluten", "Huevo", "Sésamo"],
+            alergenos: ["Lácteos", "Sulfitos"],
             quiz: {
                 preguntas: [
                     {
@@ -2263,7 +2263,7 @@ export const menuData = {
             descripcion: "Con nata fresca montada (para 2 personas).",
             historia: "El término 'soufflé líquido' hace referencia a un postre que se hornea al momento para conseguir una capa exterior firme y un corazón completamente fundente de gianduja (chocolate con pasta de avellana). Se sirve caliente para que la mezcla de cacao y frutos secos potencie sus aromas. Se acompaña de nata fresca montada al momento, sin apenas azúcar, para que el contraste térmico y de texturas sea el protagonista.",
             trazabilidad: "Chocolate de origen seleccionado · Avellana del Piamonte (Gianduja) · Nata fresca de granja.",
-            alergenos: ["Lácteos", "Frutos de cáscara", "Huevo", "Gluten"],
+            alergenos: ["Lácteos", "Frutos de cáscara", "Gluten"],
             quiz: {
                 preguntas: [
                     {
@@ -2385,7 +2385,7 @@ export const menuData = {
             descripcion: "Bechamel ultrafina de leche de oveja y jamón Joselito.",
             historia: "Esta croqueta marcó un antes y un después en la historia de Cañitas Maite al ganar el campeonato en Madrid Fusión 2021. El secreto reside en el equilibrio térmico: una bechamel que se trabaja casi al límite de su fluidez, utilizando leche de oveja que aporta una potencia grasa y elegante. El rebozado es de panko japonés para asegurar un crujiente seco y nada aceitoso. Se corona con una lámina de jamón Joselito y una 'palomita' de tocino para realzar el umami del cerdo ibérico.",
             trazabilidad: "Jamón Joselito (Guijuelo) · Leche de oveja de productores de Castilla-La Mancha.",
-            alergenos: ["Gluten", "Lácteos", "Huevo", "Sulfitos (E-X)"],
+            alergenos: ["Gluten", "Lácteos", "Huevo", "Sulfitos"],
             quiz: {
                 preguntas: [
                     {
@@ -2475,7 +2475,7 @@ export const menuData = {
             descripcion: "Esfera crujiente de queso de cabra fundido con esencia de trufa negra.",
             historia: "Este bocado es un prodigio de la ingeniería culinaria de Javier Sanz y Juan Sahuquillo. Se diseña para ser una 'bomba' de sabor que estalla en el paladar. La base es un queso de cabra artesano de la Sierra de Alcaraz, elegido por su acidez equilibrada, que se infusiona durante horas con Trufa Negra (Tuber Melanosporum). El exterior se reboza en una mezcla técnica que incluye sésamo y frutos secos para aportar un matiz tostado y una textura terrosa que replica visualmente a una trufa recién sacada de la tierra. Es fundamental advertir al cliente que debe comerse de un solo bocado para disfrutar de la explosión del corazón fluido.",
             trazabilidad: "Queso de cabra artesano (Albacete) · Trufa negra de invierno · Mix de frutos secos seleccionados.",
-            alergenos: ["Gluten", "Huevo", "Lácteos", "Sésamo", "Frutos de cáscara"],
+            alergenos: ["Gluten", "Lácteos"],
             quiz: {
                 preguntas: [
                     {
@@ -2500,8 +2500,8 @@ export const menuData = {
                         texto: "Selecciona los alérgenos críticos de este plato según el manual:",
                         tipo: "checkbox",
                         opciones: [
-                            { texto: "Sésamo", correcta: true },
-                            { texto: "Frutos de cáscara", correcta: true },
+                            { texto: "Gluten", correcta: true },
+                            { texto: "Lácteos", correcta: true },
                             { texto: "Pescado", correcta: false },
                             { texto: "Huevo", correcta: true }
                         ]
@@ -2557,7 +2557,7 @@ export const menuData = {
             descripcion: "Pescado de lonja marinado en leche de tigre cítrica con contrastes de frutos secos y soja.",
             historia: "Este plato rinde homenaje al producto de las costas malagueñas pero bajo la mirada de Cañitas Maite. Se utiliza pescado de roca de máxima frescura, cuya carne firme es ideal para el marinado corto en una leche de tigre que, a diferencia de la tradicional, incorpora soja para aportar profundidad y color. Los frutos secos añaden un crujiente inesperado que rompe la textura sedosa del pescado. Es una propuesta vibrante que limpia el paladar y aporta notas salinas y cítricas muy marcadas.",
             trazabilidad: "Pescado de roca de lonja local (Málaga) · Cítricos seleccionados · Base de soja fermentada.",
-            alergenos: ["Gluten", "Huevo", "Pescado", "Frutos secos", "Soja"],
+            alergenos: ["Gluten", "Huevo", "Pescado", "Moluscos", "Crustáceos", "Mostaza", "Soja"],
             quiz: {
                 preguntas: [
                     {
@@ -2583,9 +2583,10 @@ export const menuData = {
                         tipo: "checkbox",
                         opciones: [
                             { texto: "Pescado", correcta: true },
-                            { texto: "Frutos secos", correcta: true },
+                            { texto: "Frutos secos", correcta: false },
+                            { texto: "Apio", correcta: false },
                             { texto: "Soja", correcta: true },
-                            { texto: "Moluscos", correcta: false }
+                            { texto: "Moluscos", correcta: true }
                         ]
                     }
                 ]
@@ -2598,7 +2599,7 @@ export const menuData = {
             descripcion: "Corazón de cogollo a la brasa con pollo en escabeche tradicional, salsa César artesana y frutos secos.",
             historia: "En Cañitas Maite reinterpretamos la ensalada más famosa del mundo uniendo el Mediterráneo con la tradición de Albacete. En lugar de pollo asado común, utilizamos un pollo escabechado siguiendo la receta de las matanzas manchegas, aportando una acidez elegante. El cogollo se pasa brevemente por la brasa para obtener notas ahumadas sin perder su textura crujiente. La salsa se emulsiona con anchoas de primera calidad y se termina con una lluvia de frutos secos que sustituyen al clásico 'crouton', aportando un sabor más noble.",
             trazabilidad: "Cogollos de huerta nacional · Pollo de corral escabechado en casa · Anchoas del Cantábrico.",
-            alergenos: ["Soja", "Pescado", "Frutos secos", "Lácteos", "Sulfitos"],
+            alergenos: ["Huevo", "Gluten", "Lácteos", "Frutos de cáscara", "Sulfitos"],
             quiz: {
                 preguntas: [
                     {
@@ -2638,7 +2639,7 @@ export const menuData = {
             descripcion: "Oreja de cochinillo seleccionada, cocinada a baja temperatura y terminada con un toque crujiente.",
             historia: "Este plato es un tributo a la casquería fina. Seleccionamos orejas de cochinillo por su delicadeza y las confitamos en su propia grasa durante horas hasta que el colágeno se vuelve pura mantequilla. Posteriormente, se fríen a alta temperatura para conseguir esa capa exterior que estalla en la boca. Es un bocado que juega con la dualidad: la fuerza de la tradición manchega y la elegancia de la técnica de vanguardia. Un imprescindible para los amantes de las texturas intensas.",
             trazabilidad: "Cochinillo segoviano de origen certificado · Aceite de oliva virgen extra.",
-            alergenos: ["Gluten", "Huevo"],
+            alergenos: ["Lácteo"],
             quiz: {
                 preguntas: [
                     {
@@ -2669,7 +2670,7 @@ export const menuData = {
             descripcion: "Brioche artesano relleno de tartar de atún rojo Fuentes marinado y toques cítricos.",
             historia: "Este plato eleva el concepto popular del 'bollito preñado' a la categoría de joya gastronómica. El protagonista absoluto es el Atún Rojo Fuentes, pescado mediante la técnica del almadraba y seleccionado por su infiltración grasa. El atún se pica a cuchillo y se aliña con una base de soja y matices cítricos que realzan su sabor sin enmascararlo. Se sirve dentro de un bollito de pan brioche tierno, creando un contraste espectacular entre la esponjosidad del pan y la untuosidad del atún rojo. Es, sin duda, un bocado de puro lujo asiático con alma nacional.",
             trazabilidad: "Atún Rojo de almadraba (Ricardo Fuentes, Cartagena) · Pan brioche artesano.",
-            alergenos: ["Gluten", "Soja", "Sulfitos", "Pescado"],
+            alergenos: ["Moluscos", "Crustáceos", "Pescado", "Gluten", "Lácteos", "Huevo"],
             quiz: {
                 preguntas: [
                     {
@@ -2709,7 +2710,7 @@ export const menuData = {
             descripcion: "Interpretación de vanguardia del clásico madrileño con calamar de potera y alioli cítrico.",
             historia: "Este plato es un juego visual y gustativo. Partimos del concepto del bocadillo madrileño pero lo refinamos al máximo. Utilizamos calamar de potera, cuya carne es mucho más dulce y delicada, cortado en finísimas tiras o 'tallarines'. El pan se trabaja de forma artesanal para que sea una lámina crujiente que casi desaparece en la boca, dejando todo el protagonismo al calamar y a una emulsión ligera que aporta frescura y acidez. Es un bocado elegante que dignifica la cultura del 'finger food'.",
             trazabilidad: "Calamar de potera nacional · Pan artesano de larga fermentación · Cítricos del Guadalhorce.",
-            alergenos: ["Gluten", "Sulfitos", "Lácteos", "Pescado", "Huevo", "Moluscos"],
+            alergenos: ["Moluscos", "Crustáceos", "Pescado", "Gluten", "Mostaza", "Huevos", "Sulfitos"],
             quiz: {
                 preguntas: [
                     {
@@ -2749,7 +2750,7 @@ export const menuData = {
             descripcion: "Bocado coreano en hoja de lechuga con alita deshuesada, langostino y glaseado umami.",
             historia: "El Saam representa la cocina viajera de Javier y Juan. Es un bocado diseñado para comerse con las manos, donde una hoja de lechuga fresca envuelve una alita de pollo que ha sido previamente deshuesada y confitada hasta quedar extremadamente tierna. Se acompaña con un langostino de costa y se baña en un glaseado intenso de estilo oriental. El resultado es una explosión de contrastes: el frío de la lechuga frente al calor del pollo, y el crujiente vegetal frente a la melosidad del glaseado.",
             trazabilidad: "Alitas de pollo de corral · Langostino de costa · Salsa de ostras artesanal.",
-            alergenos: ["Gluten", "Huevo", "Moluscos", "Sulfitos"],
+            alergenos: ["Gluten", "Huevo", "Moluscos", "Crustáceos", "Pescado", "Soja", "Lácteos", "Apio", "Mostaza", "Cacahuete", "Frutos de cáscara"],
             quiz: {
                 preguntas: [
                     {
@@ -2789,7 +2790,7 @@ export const menuData = {
             descripcion: "Sándwich de hojaldre artesano con pastrami curado, queso fundido y mostaza antigua.",
             historia: "Nuestra versión del 'Bikini' es un homenaje a la charcutería fina y a la pastelería salada. En lugar de pan convencional, utilizamos un hojaldre de mantequilla que se prensa y se tuesta hasta quedar extremadamente crujiente. Lo rellenamos con pastrami ahumado de alta calidad, que aporta notas de pimienta y humo, y lo fundimos con una selección de quesos que le dan untuosidad. El toque final de la mostaza antigua limpia el paladar y realza los matices de la carne curada.",
             trazabilidad: "Pastrami artesano de ternera seleccionada · Hojaldre de mantequilla · Mostaza en grano.",
-            alergenos: ["Gluten", "Huevo", "Lácteos", "Mostaza", "Sulfitos"],
+            alergenos: ["Gluten", "Huevo", "Lácteos"],
             quiz: {
                 preguntas: [
                     {
@@ -2829,7 +2830,7 @@ export const menuData = {
             descripcion: "Donut artesano relleno de rabo de toro estofado tradicional con lluvia de parmesano de 24 meses.",
             historia: "Este plato juega con la memoria visual del comensal. Lo que parece un dulce es, en realidad, un bocado salado de una intensidad arrolladora. El rabo de toro se estofa a fuego lento siguiendo la receta tradicional manchega, con su bresa de verduras y vino tinto, hasta que la carne se desprende sola del hueso. Con ese guiso súper concentrado rellenamos un donut de masa brioche que se termina con una montaña de queso parmesano rallado al momento. Es el equilibrio perfecto entre la cocina de la abuela y la vanguardia más atrevida.",
             trazabilidad: "Rabo de vaca seleccionada · Queso Parmigiano Reggiano 24 meses · Masa artesana.",
-            alergenos: ["Gluten", "Huevo", "Lácteos", "Sulfitos"],
+            alergenos: ["Gluten", "Lácteos", "Mostaza", "Frutos de cáscara", "Cacahuete", "Apio", "Soja", "Huevo", "Sulfitos"],
             quiz: {
                 preguntas: [
                     {
@@ -2868,7 +2869,7 @@ export const menuData = {
             descripcion: "Texturas cremosas de vainilla Bourbon combinadas con la frescura ácida de las fresas naturales.",
             historia: "Este postre es una oda a la sencillez y a la memoria gustativa. Busca recrear esa sensación dulce y fresca de los sabores de la infancia. Utilizamos vainilla Bourbon, reconocida por su aroma floral e intenso, para crear una base sedosa que se rompe con la intensidad de un coulis artesano de fresas rojas. El toque de frutos de cáscara aporta un contraste crujiente que redondea la experiencia. Es un final ligero, elegante y muy romántico para culminar la experiencia en Eñe.",
             trazabilidad: "Vainilla Bourbon de Madagascar · Fresas de temporada · Frutos secos seleccionados.",
-            alergenos: ["Lácteos", "Pescado", "Frutos de cáscara"],
+            alergenos: ["Lácteos", "Sulfito", "Frutos de cáscara", "Pescado"],
             quiz: {
                 preguntas: [
                     {
@@ -2908,7 +2909,7 @@ export const menuData = {
             descripcion: "Nuestra versión de la famosa barrita: capas de tres chocolates, caramelo salado y cacahuetes.",
             historia: "El Cañickers es el postre más gamberro de nuestra carta. Es una reinterpretación de alta pastelería de la barrita Snickers. Jugamos con tres intensidades de chocolate para dar complejidad, un toffee de caramelo salado que potencia el sabor y un praliné de frutos secos que aporta el crujiente característico. Es un postre intenso, cremoso y pensado para los amantes del chocolate que buscan un final divertido y contundente.",
             trazabilidad: "Cacao de origen seleccionado · Frutos secos nacionales · Caramelo artesano.",
-            alergenos: ["Gluten", "Lácteos", "Pescado", "Soja", "Frutos de cáscara"],
+            alergenos: ["Huevo", "Lácteos", "Soja", "Frutos de cáscara"],
             quiz: {
                 preguntas: [
                     {
@@ -3103,7 +3104,7 @@ export const menuData = {
             descripcion: "Base cremosa de patata y ventresca con tartar de gamba blanca malagueña y aceite al ajillo.",
             historia: "Es uno de los platos que mejor conecta Albacete con el Mediterráneo. La base es una ensaladilla clásica muy cremosa, pero el protagonismo lo tiene el tartar de gamba blanca de la bahía de Málaga que la corona. El momento clave es el servicio: se termina en mesa vertiendo un aceite infusionado al ajillo (estilo 'gamba al ajillo' tradicional) que cocina ligeramente el marisco y desprende un aroma irresistible.",
             trazabilidad: "Gamba blanca de la bahía de Málaga · Patata nueva · Aceite de oliva virgen.",
-            alergenos: ["Crustáceos", "Huevo", "Pescado", "Sulfitos"],
+            alergenos: ["Pescado", "Huevo", "Crustáceos", "Molusco", "Mostaza", "Sulfitos"],
             quiz: {
                 preguntas: [
                     {
@@ -3262,7 +3263,7 @@ export const menuData = {
             descripcion: "Lubina de estero asada a la brasa, servida con una emulsión de su propio colágeno (pil-pil).",
             historia: "La lubina de estero es un producto de una calidad excepcional, criada en un entorno natural que le otorga una grasa infiltrada única. En Cañitas Maite se trata con el máximo respeto: se asila a la parrilla abierta para conseguir una piel crujiente y un corazón jugoso. El plato se termina con un pil-pil elaborado con los jugos y el colágeno del propio pescado, demostrando que no hace falta más que técnica y producto para alcanzar la excelencia.",
             trazabilidad: "Lubina de estero de proximidad (Andalucía) · Aceite de oliva virgen extra.",
-            alergenos: ["Pescado"],
+            alergenos: ["Crustáceos", "Moluscos", "Pescado"],
             quiz: {
                 preguntas: [
                     {
@@ -3358,7 +3359,7 @@ export const menuData = {
             descripcion: "Sándwich de corte fino con jamón cocido premium, queso Comté de alta maduración y aroma de trufa negra.",
             historia: "En Cañitas Maite, un bocado clásico se transforma mediante la selección de proveedores excepcionales. El uso del Queso Comté con 24 meses de maduración (AOC) marca la diferencia: un queso de leche cruda de vaca de las montañas del Jura (Francia), que al fundirse libera notas de mantequilla tostada y avellana. La trufa negra aporta esa dimensión sensorial que caracteriza la cocina de Javier y Juan.",
             trazabilidad: "Queso Comté 24 meses (AOC Francia) · Jamón cocido selección extra · Mantequilla artesana para el tostado.",
-            alergenos: ["Gluten", "Lácteos", "Sulfitos"],
+            alergenos: ["Gluten", "Lácteos", "Huevo"],
             quiz: {
                 preguntas: [
                     {
@@ -3406,7 +3407,7 @@ export const menuData = {
             descripcion: "Sándwich de tres pisos con pollo, huevo campero frito, bacon artesano crujiente, lechuga, tomate y mayonesa.",
             historia: "El Sandwich Club es un icono mundial del Room Service, pero en Cañitas Maite lo tratamos como un plato de alta cocina. La clave absoluta es el punto del huevo: usamos huevos camperos que se fríen justo antes de que el carro salga hacia la habitación, asegurando que la yema llegue fluida para bañar el resto de ingredientes. El bacon se cocina a baja temperatura y se termina a alta para que sea una lámina de cristal crujiente, no una tira de grasa.",
             trazabilidad: "Huevos camperos de granja nacional · Pan brioche de molde artesano · Bacon ahumado de selección.",
-            alergenos: ["Gluten", "Huevo", "Lácteos", "Mostaza", "Soja"],
+            alergenos: ["Gluten", "Huevo", "Lácteos", "Mostaza"],
             quiz: {
                 preguntas: [
                     {
@@ -3454,7 +3455,7 @@ export const menuData = {
             descripcion: "Pan brioche artesano relleno de finas láminas de salmón ahumado, aguacate de la Axarquía y una base de crema fresca acidulada.",
             historia: "Este plato es un tributo a la frescura del Mediterráneo. El brioche, con un alto contenido en mantequilla, se tuesta ligeramente para que contraste con la temperatura del salmón y el aguacate. La importancia del origen es clave: el aguacate proviene de la Axarquía malagueña, donde el microclima permite obtener una fruta con una textura mantecosa excepcional que se funde con la crema fresca de queso.",
             trazabilidad: "Aguacate de la Axarquía (Málaga) · Salmón ahumado de selección superior · Brioche artesano de mantequilla.",
-            alergenos: ["Gluten", "Pescado", "Lácteos", "Huevo"],
+            alergenos: ["Gluten", "Pescado", "Moluscos", "Crustáceos", "Lácteos", "Huevo", "Mostaza", "Frutos de cáscara", "Soja", "Sulfitos"],
             quiz: {
                 preguntas: [
                     {
@@ -3503,7 +3504,7 @@ export const menuData = {
             descripcion: "Carne de vaca vieja seleccionada con 4 meses de maduración, acompañada de papada ibérica para aportar jugosidad y yema de huevo campero.",
             historia: "Cárnicas Lyo (León) es mundialmente reconocida por seleccionar las mejores vacas de España y llevar las maduraciones al límite. Para Cañitas Maite, seleccionan piezas con 120 días de maduración, un punto donde la carne desarrolla notas de frutos secos, queso azul y una intensidad animal inigualable. La papada ibérica se añade para equilibrar la estructura de la carne madurada, que tiende a ser más magra, aportando una grasa infiltrada que se funde con la yema campera.",
             trazabilidad: "Vaca Gallega con 120 días de maduración (Cárnicas Lyo, León) · Papada de cerdo ibérico puro · Yema de huevo campero de granja.",
-            alergenos: ["Gluten", "Huevo", "Lácteos", "Soja", "Sulfitos"],
+            alergenos: ["Gluten", "Huevo", "Lácteos"],
             quiz: {
                 preguntas: [
                     {
@@ -3561,7 +3562,7 @@ export const menuData = {
             descripcion: "Hojas de lechuga viva, salsa césar artesana con anchoas del Cantábrico, croutones de pan brioche y lascas de queso Payoyo de la Sierra de Cádiz.",
             historia: "Nuestra ensalada césar huye de los ingredientes industriales. Utilizamos 'lechuga viva', que llega a la cocina con su raíz hidropónica, garantizando un crujiente máximo que aguanta perfectamente el servicio en habitación. El toque maestro es la sustitución del parmesano por Queso Payoyo (Grazalema/Ubrique), un queso de cabra y oveja premiado internacionalmente que aporta una salinidad y elegancia únicas a la salsa artesana.",
             trazabilidad: "Queso Payoyo (Sierra de Grazalema, Cádiz) · Lechuga viva de cultivo hidropónico · Anchoas del Cantábrico para la salsa.",
-            alergenos: ["Gluten", "Pescado", "Lácteos", "Huevo", "Mostaza"],
+            alergenos: ["Gluten", "Lácteos", "Huevo", "Sulfito"],
             quiz: {
                 preguntas: [
                     {
@@ -3618,7 +3619,7 @@ export const menuData = {
             descripcion: "Pasta de trigo duro elaborada artesanalmente, ligada con un pesto de albahaca fresca, piñones nacionales y tomates secos hidratados en AOVE.",
             historia: "La pasta fresca es uno de los pilares de la cocina reconfortante en el Room Service de Cañitas Maite. Nuestra pasta se elabora diariamente para garantizar una textura elástica que absorba perfectamente la salsa. El pesto se diferencia por el uso exclusivo de piñones nacionales; a diferencia del piñón de importación, el nuestro es más graso y aromático, lo que proporciona una untuosidad natural sin necesidad de añadir excesiva grasa externa. El tomate seco aporta el contrapunto de acidez y dulzor necesario para equilibrar el conjunto.",
             trazabilidad: "Piñones nacionales de selección · Pasta elaborada a diario en obrador artesano · Tomate seco de origen nacional.",
-            alergenos: ["Gluten", "Lácteos", "Frutos de cáscara"],
+            alergenos: ["Gluten", "Lácteos", "Frutos de cáscara", "Cacahuete", "Soja"],
             quiz: {
                 preguntas: [
                     {
@@ -3666,7 +3667,7 @@ export const menuData = {
             descripcion: "Lomo de corvina asado en su punto, acompañado de una salsa de tomates trabajada a la brasa y tomates cherry confitados.",
             historia: "En este plato, Javier y Juan trasladan la esencia de su parrilla a la habitación. La corvina, un pescado blanco de carne firme y sabor delicado, se cocina respetando su jugosidad. El elemento diferenciador es la salsa: los tomates no se guisan de forma convencional, sino que se asan directamente sobre las brasas para extraer notas ahumadas y dulces que potencian el sabor marino del pescado. Los cherrys confitados aportan explosiones de sabor dulce que equilibran la potencia de la brasa.",
             trazabilidad: "Corvina fresca de lonja · Tomate de huerta nacional · Aceite de Oliva Virgen Extra selección.",
-            alergenos: ["Pescado"],
+            alergenos: ["Crustáceos", "Moluscos", "Pescado", "Soja", "Sulfitos"],
             quiz: {
                 preguntas: [
                     {
@@ -3714,7 +3715,7 @@ export const menuData = {
             descripcion: "Corte noble de solomillo de vaca con maduración controlada, servido con una reducción de salsa española tradicional y patatas chips caseras.",
             historia: "El solomillo en Cañitas Maite representa el respeto por el recetario clásico ejecutado con precisión técnica. Seleccionamos lomos de vaca nacional con una maduración corta que potencia el sabor sin perder la terneza extrema que busca el cliente de Room Service. La salsa española es el alma del plato: se elabora mediante una reducción lenta de huesos asados y hortalizas durante más de 48 horas hasta obtener un glaseado brillante y profundo. Se acompaña de patatas chips que cortamos y freímos nosotros mismos para garantizar un crujiente auténtico.",
             trazabilidad: "Vaca seleccionada nacional · Patata agria de cultivo nacional · Reducción artesana de 48h.",
-            alergenos: ["Sulfitos"],
+            alergenos: ["Sulfitos", "Apio"],
             quiz: {
                 preguntas: [
                     {
@@ -3764,7 +3765,7 @@ export const menuData = {
             descripcion: "Helados cremosos de elaboración propia utilizando fruta de temporada de Málaga o cacao puro de origen.",
             historia: "En Cañitas Maite los postres no son un complemento, son el cierre de la experiencia. Nuestro helado de mango se elabora con fruta en su punto óptimo de madurez proveniente de la Axarquía (Málaga), aprovechando su dulzor natural y su textura sedosa. El de chocolate se trabaja con una selección de cacaos de origen que aseguran un sabor profundo y equilibrado, alejándose de los helados industriales excesivamente azucarados.",
             trazabilidad: "Mango de la Axarquía (Málaga) · Cacao de origen seleccionado · Elaboración propia en obrador.",
-            alergenos: ["Lácteos", "Huevo", "Frutos de cáscara (puede contener trazas)"],
+            alergenos: ["Lácteos"],
             quiz: {
                 preguntas: [
                     {
@@ -3850,7 +3851,7 @@ export const menuData = {
             descripcion: "Nuestra croqueta premiada de jamón ibérico, ahora en ración adaptada para los más pequeños.",
             historia: "Es el plato estrella de Cañitas Maite, ganadora del premio a la mejor croqueta en Madrid Fusión 2021. Se caracteriza por su bechamel líquida y un sabor intenso a jamón ibérico de bellota.",
             trazabilidad: "Jamón Ibérico de Bellota 100% · Leche fresca de vaca · Mantequilla artesana.",
-            alergenos: ["Gluten", "Lácteos", "Huevo"],
+            alergenos: ["Gluten", "Lácteos", "Huevo", "Sulfitos"],
             quiz: {
                 preguntas: [
                     {

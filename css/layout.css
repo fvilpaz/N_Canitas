@@ -136,7 +136,7 @@ h1 {
   display: inline-flex;
   align-items: center;
   font-weight: 800;
-  text-transform: uppercase;
+  text-transform: none;
   margin: 3px;
   border: 1px solid;
   /* El color lo define cada clase */
@@ -151,9 +151,9 @@ h1 {
 }
 
 .bg-lacteos {
-  background-color: rgba(166, 116, 78, 0.1) !important;
-  color: #a6744e !important;
-  border-color: #a6744e !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #f0f0f0 !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
 }
 
 .bg-sulfitos {

@@ -1,4 +1,4 @@
-import { menuData, examenes } from './data.js';
+import { menuData, examenes } from '../data.js';
 
 let currentStep = 0;
 let currentSection = 'desayunos';
@@ -82,9 +82,9 @@ function generarQuizHTML(plato, isLastPlato) {
         <div id="res-${plato.id}" style="margin-top:20px; text-align:center; font-weight:bold;"></div>
     `;
 }
+
 function obtenerClaseColor(alergeno) {
     const a = alergeno.toLowerCase().trim();
-
     if (a.includes("gluten") || a.includes("trigo")) return "bg-gluten";
     if (a.includes("lácteos") || a.includes("leche") || a.includes("lactosa")) return "bg-lacteos";
     if (a.includes("sulfitos")) return "bg-sulfitos";
@@ -99,8 +99,7 @@ function obtenerClaseColor(alergeno) {
     if (a.includes("moluscos") || a.includes("mejillón")) return "bg-moluscos";
     if (a.includes("apio")) return "bg-apio";
     if (a.includes("altramuz")) return "bg-altramuz";
-
-    return "bg-default"; // Si no encuentra nada, usa el estilo gris
+    return "bg-default";
 }
 
 /* ==========================================================

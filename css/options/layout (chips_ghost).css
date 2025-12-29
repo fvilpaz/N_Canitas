@@ -151,9 +151,9 @@ h1 {
 }
 
 .bg-lacteos {
-  background-color: rgba(166, 116, 78, 0.1) !important;
-  color: #a6744e !important;
-  border-color: #a6744e !important;
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  color: #f0f0f0 !important;
+  border-color: rgba(255, 255, 255, 0.4) !important;
 }
 
 .bg-sulfitos {
