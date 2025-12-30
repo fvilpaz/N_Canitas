@@ -307,12 +307,15 @@ window.mostrarCertificado = function (nombreMenu) {
             contenidoFisico.classList.add('animar-brillo');
             animacionHTML = `<div class="icono-flotante" style="font-size: 3.5rem; margin-bottom: 15px;">💎</div>`;
         } else if (seleccion === 2) {
-            // OPCIÓN 3: LAS MEDALLAS DE HONOR (Despegue + Brillo)
-            contenidoFisico.classList.add('animar-brillo'); // <--- El "toque mágico" que te gustó
+            // OPCIÓN 3: LAS MEDALLAS DE HONOR (Despegue + Brillo + Resplandor Dorado)
+            contenidoFisico.classList.add('animar-brillo');
             animacionHTML = `
-        <div style="height: 120px; display: flex; align-items: center; justify-content: center; overflow: visible; width: 100%;">
-            <div class="cohete-despegue" style="font-size: 4.5rem; display: flex; gap: 10px; filter: drop-shadow(0 10px 15px rgba(250, 204, 21, 0.4));">
-                🥇<span>🏅</span>
+        <div style="height: 120px; display: flex; align-items: center; justify-content: center; gap: 40px; overflow: visible; width: 100%;">
+            <div class="cohete-despegue" style="font-size: 4.5rem; filter: drop-shadow(0 0 15px rgba(250, 204, 21, 0.6));">
+                🥇
+            </div>
+            <div class="cohete-despegue" style="font-size: 4.5rem; animation-delay: 0.3s; filter: drop-shadow(0 0 15px rgba(250, 204, 21, 0.6));">
+                🏅
             </div>
         </div>`;
         } else {
@@ -326,13 +329,13 @@ window.mostrarCertificado = function (nombreMenu) {
                     zIndex: 11000
                 });
             }
-            animacionHTML = `<div style="font-size: 3.5rem; margin-bottom: 15px;">🔥</div>`;
+            animacionHTML = `<div style="font-size: 3.5rem; margin-bottom: 15px;">🎊🔥🎊</div>`;
         }
 
         // 5. INYECTAR TODO EL CONTENIDO
         contenidoFisico.innerHTML = `
             <div id="contenedor-animacion">${animacionHTML}</div>
-            <h2 id="titulo-exito">🎊¡ENHORABUENA!🎊</h2>
+            <h2 id="titulo-exito">¡ENHORABUENA!</h2>
             <h3>¡LOGRO CONSEGUIDO!</h3>
             <p id="mensaje-certificacion">Has superado con éxito el examen de <strong>${nombreMenu}</strong>.</p>
             <button class="btn-volver" onclick="volverAlMenu()">Volver al Inicio</button>
