@@ -256,7 +256,6 @@ document.getElementById('btn-examen-final').addEventListener('click', function (
         const porcentaje = (aciertos / preguntas.length) * 100;
 
         if (porcentaje >= 80) {
-            // Mantenemos el orden de coherencia aquí también
             const nombresExamen = {
                 'desayunos': 'DESAYUNOS CAÑITAS',
                 'restaurant': 'RESTAURANTE CAÑITAS',
@@ -273,29 +272,84 @@ document.getElementById('btn-examen-final').addEventListener('click', function (
 });
 
 /* ==========================================================
-   5. FUNCIONES GLOBALES DEL CERTIFICADO
+   5. FUNCIONES GLOBALES DEL CERTIFICADO (CON MEMORIA PERSISTENTE)
    ========================================================== */
+
 window.mostrarCertificado = function (nombreMenu) {
-    if (typeof confetti === 'function') {
-        confetti({
-            particleCount: 200,
-            spread: 70,
-            origin: { y: 0.6 },
-            zIndex: 11000
-        });
-    }
-
-    const msgElement = document.getElementById('mensaje-certificacion');
-    if (msgElement) {
-        msgElement.innerText = `Has superado con éxito el examen de ${nombreMenu}. Ya eres oficialmente un experto en nuestra propuesta gastronómica.`;
-    }
-
     const modal = document.getElementById('modal-exito');
-    if (modal) {
+    const contenidoFisico = modal?.querySelector('.modal-contenido');
+
+    if (modal && contenidoFisico) {
+        // 1. LEER MEMORIA
+        let contador = parseInt(localStorage.getItem('contadorExitos')) || 0;
+
+        // 2. DETERMINAR SELECCIÓN (Ahora 4 opciones: 0, 1, 2, 3)
+        const seleccion = contador % 4;
+
+        // 3. ACTUALIZAR MEMORIA (Solo una vez)
+        localStorage.setItem('contadorExitos', contador + 1);
+
+        // Limpiamos brillo previo
+        contenidoFisico.classList.remove('animar-brillo');
+
+        // 4. PREPARAR EL HTML DE LA ANIMACIÓN
+        let animacionHTML = '';
+
+        if (seleccion === 0) {
+            // OPCIÓN 1: EL CHECK AZUL
+            animacionHTML = `
+                <div class="checkmark-circle">
+                    <div class="checkmark-kick"></div>
+                    <div class="checkmark-stem"></div>
+                </div>`;
+        } else if (seleccion === 1) {
+            // OPCIÓN 2: EL DIAMANTE BRILLANTE
+            contenidoFisico.classList.add('animar-brillo');
+            animacionHTML = `<div class="icono-flotante" style="font-size: 3.5rem; margin-bottom: 15px;">💎</div>`;
+        } else if (seleccion === 2) {
+            // OPCIÓN 3: LAS MEDALLAS DE HONOR (Despegue + Brillo)
+            contenidoFisico.classList.add('animar-brillo'); // <--- El "toque mágico" que te gustó
+            animacionHTML = `
+        <div style="height: 120px; display: flex; align-items: center; justify-content: center; overflow: visible; width: 100%;">
+            <div class="cohete-despegue" style="font-size: 4.5rem; display: flex; gap: 10px; filter: drop-shadow(0 10px 15px rgba(250, 204, 21, 0.4));">
+                🥇<span>🏅</span>
+            </div>
+        </div>`;
+        } else {
+            // OPCIÓN 4: LOS FUEGOS DE GOOGLE (Fuego 🔥 + Confetti)
+            if (typeof confetti === 'function') {
+                confetti({
+                    particleCount: 200,
+                    spread: 100,
+                    origin: { y: 0.6 },
+                    colors: ['#4285F4', '#EA4335', '#FBBC05', '#34A853'],
+                    zIndex: 11000
+                });
+            }
+            animacionHTML = `<div style="font-size: 3.5rem; margin-bottom: 15px;">🔥</div>`;
+        }
+
+        // 5. INYECTAR TODO EL CONTENIDO
+        contenidoFisico.innerHTML = `
+            <div id="contenedor-animacion">${animacionHTML}</div>
+            <h2 id="titulo-exito">🎊¡ENHORABUENA!🎊</h2>
+            <h3>¡LOGRO CONSEGUIDO!</h3>
+            <p id="mensaje-certificacion">Has superado con éxito el examen de <strong>${nombreMenu}</strong>.</p>
+            <button class="btn-volver" onclick="volverAlMenu()">Volver al Inicio</button>
+        `;
+
         modal.classList.remove('modal-oculto');
+
+        // Truco para reiniciar la animación del brillo si es el diamante
+        if (seleccion === 1) void contenidoFisico.offsetWidth;
     }
 };
 
+/* ==========================================================
+   6. FUNCIÓN PARA VOLVER AL MENÚ
+   ========================================================== */
 window.volverAlMenu = function () {
+    const modal = document.getElementById('modal-exito');
+    if (modal) modal.classList.add('modal-oculto');
     window.location.reload();
 };

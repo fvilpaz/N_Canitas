@@ -45,6 +45,28 @@ body.light {
   --text-dim: #64748b;
 }
 
+/* --- Mejora de Pestañas en Modo Claro --- */
+body.light .tabs {
+  border-bottom: 1px solid rgba(2, 132, 199, 0.1);
+  /* Borde azul muy suave en la base */
+}
+
+body.light .tab {
+  background: #ffffff;
+  border: 1px solid rgba(2, 132, 199, 0.2);
+  /* Borde azul suave para dar forma */
+  color: var(--text-dim);
+}
+
+body.light .tab.active {
+  background: var(--accent);
+  /* Azul eléctrico para la pestaña seleccionada */
+  color: white;
+  /* Texto en blanco para resaltar */
+  border-color: var(--accent);
+  box-shadow: 0 4px 10px rgba(2, 132, 199, 0.2);
+}
+
 /* --- APLICACIÓN GENERAL DE ESTILOS --- */
 body {
   background-color: var(--bg);

@@ -47,15 +47,19 @@ h1 {
 }
 
 /* ==========================================================
-   3. PESTAÑAS (DISEÑO 3 ARRIBA Y 3 ABAJO)
+   3. PESTAÑAS 
    ========================================================== */
+
 .tabs {
   display: grid !important;
   grid-template-columns: repeat(3, 1fr) !important;
-  gap: 10px !important;
-  margin-bottom: 25px !important;
-  padding: 0 5px !important;
+  gap: 15px !important;
+  margin-bottom: 15px !important;
+  padding: 5px 0 !important;
   width: 100% !important;
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
 }
 
 .tab {
@@ -66,7 +70,7 @@ h1 {
   justify-content: center !important;
   padding: 15px 5px !important;
   background: var(--card);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(0, 155, 219, 1) !important;
   border-radius: 12px;
   font-size: 0.8rem;
   font-weight: 600;
@@ -75,11 +79,19 @@ h1 {
   cursor: pointer;
   min-height: 65px;
   line-height: 1.2;
+  transition: all 0.2s ease;
+}
+
+body.light .tab {
+  border: 1px solid rgba(0, 155, 219, 1) !important;
+  background: #ffffff;
 }
 
 .tab.active {
   background: var(--accent) !important;
   color: white !important;
+  border-color: var(--accent) !important;
+  box-shadow: 0 8px 15px rgba(56, 189, 248, 0.2);
 }
 
 /* ==========================================================
@@ -127,104 +139,112 @@ h1 {
   justify-content: flex-start;
 }
 
-/* ESTILO BASE PARA CHIPS (Combinado) */
+/* ESTILO BASE PARA CHIPS (Estilo Ghost/Precio) */
 .chip {
-  padding: 5px 12px;
-  font-size: .75em;
-  border-radius: 14px;
+  padding: 4px 12px;
+  font-size: .70rem;
+  border-radius: 20px;
   white-space: nowrap;
   display: inline-flex;
   align-items: center;
-  font-weight: 700;
+  font-weight: 800;
   text-transform: none;
-  color: white;
-  /* Color de texto por defecto para destacar sobre los colores */
-  transition: transform 0.2s ease;
+  margin: 3px;
+  border: 1px solid;
+  /* El color lo define cada clase */
+  transition: all 0.2s ease;
 }
 
-/* Estilo por defecto cuando NO tiene color específico (Modo Dark) */
-.chip.bg-default {
-  background: rgba(255, 255, 255, .08);
-  border: 1px solid rgba(255, 255, 255, .2);
-}
-
-/* Ajuste para modo Light cuando no tiene color específico */
-body.light .chip.bg-default {
-  background: rgba(0, 0, 0, .05);
-  border-color: rgba(0, 0, 0, .15);
-  color: #333;
-}
-
-/* COLORES OFICIALES DE ALÉRGENOS */
+/* Colores estilo Ghost: Fondo suave (10% opacidad), borde y texto sólidos */
 .bg-gluten {
-  background-color: #e2924d !important;
-  border: none;
+  background-color: rgba(226, 146, 77, 0.1) !important;
+  color: #e2924d !important;
+  border-color: #e2924d !important;
 }
 
 .bg-lacteos {
-  background-color: #835634 !important;
-  border: none;
+  background-color: rgba(144, 132, 101, 0.1) !important;
+  color: #94a3b8 !important;
+  border-color: #94a3b8 !important;
 }
 
 .bg-sulfitos {
-  background-color: #921d56 !important;
-  border: none;
+  background-color: rgba(186, 45, 115, 0.1) !important;
+  color: #ba2d73 !important;
+  border-color: #ba2d73 !important;
 }
 
 .bg-soja {
-  background-color: #00843d !important;
-  border: none;
+  background-color: rgba(0, 132, 61, 0.1) !important;
+  color: #00843d !important;
+  border-color: #00843d !important;
 }
 
 .bg-pescado {
-  background-color: #003a8c !important;
-  border: none;
+  background-color: rgba(46, 115, 212, 0.1) !important;
+  color: #2e73d4 !important;
+  border-color: #2e73d4 !important;
 }
 
 .bg-cacahuete {
-  background-color: #b36b35 !important;
-  border: none;
+  background-color: rgba(179, 107, 53, 0.1) !important;
+  color: #b36b35 !important;
+  border-color: #b36b35 !important;
 }
 
 .bg-sesamo {
-  background-color: #908465 !important;
-  border: none;
+  background-color: rgba(144, 132, 101, 0.1) !important;
+  color: #908465 !important;
+  border-color: #908465 !important;
 }
 
 .bg-mostaza {
-  background-color: #ccac41 !important;
-  border: none;
+  background-color: rgba(204, 172, 65, 0.1) !important;
+  color: #ccac41 !important;
+  border-color: #ccac41 !important;
 }
 
 .bg-frutos-secos {
-  background-color: #c46d55 !important;
-  border: none;
+  background-color: rgba(196, 109, 85, 0.1) !important;
+  color: #c46d55 !important;
+  border-color: #c46d55 !important;
 }
 
 .bg-huevo {
-  background-color: #f7b52c !important;
-  border: none;
+  background-color: rgba(247, 181, 44, 0.1) !important;
+  color: #f7b52c !important;
+  border-color: #f7b52c !important;
 }
 
 .bg-crustaceos {
-  background-color: #009bdb !important;
-  border: none;
+  background-color: rgba(0, 155, 219, 0.1) !important;
+  color: #009bdb !important;
+  border-color: #009bdb !important;
 }
 
 .bg-moluscos {
-  background-color: #6eb7cd !important;
-  border: none;
+  background-color: rgba(110, 183, 205, 0.1) !important;
+  color: #6eb7cd !important;
+  border-color: #6eb7cd !important;
 }
 
 .bg-apio {
-  background-color: #55b848 !important;
-  border: none;
+  background-color: rgba(85, 184, 72, 0.1) !important;
+  color: #55b848 !important;
+  border-color: #55b848 !important;
 }
 
 .bg-altramuz {
-  background-color: #ffed00 !important;
-  color: #333 !important;
-  border: none;
+  background-color: rgba(255, 237, 0, 0.1) !important;
+  color: #ffed00 !important;
+  border-color: #ffed00 !important;
+}
+
+/* Estilo por defecto */
+.bg-default {
+  background: rgba(255, 255, 255, .05) !important;
+  color: #888 !important;
+  border: 1px solid #94a3b8 !important;
 }
 
 /* ==========================================================
@@ -286,5 +306,188 @@ button:hover {
 
   .container {
     max-width: 800px;
+  }
+}
+
+/* --- EL DIBUJO DEL CHECK --- */
+.checkmark-circle {
+  width: 80px;
+  height: 80px;
+  border: 4px solid var(--accent);
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 20px;
+  position: relative;
+  animation: fillCircle 0.4s ease-in-out forwards;
+}
+
+.checkmark-kick {
+  width: 30px;
+  height: 4px;
+  background-color: var(--accent);
+  position: absolute;
+  top: 45px;
+  left: 18px;
+  transform: rotate(45deg);
+  transform-origin: left;
+  animation: drawKick 0.2s 0.4s ease-out forwards;
+  opacity: 0;
+}
+
+.checkmark-stem {
+  width: 50px;
+  height: 4px;
+  background-color: var(--accent);
+  position: absolute;
+  top: 42px;
+  left: 35px;
+  transform: rotate(-45deg);
+  transform-origin: left;
+  animation: drawStem 0.2s 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+/* --- LAS ANIMACIONES --- */
+@keyframes fillCircle {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes drawKick {
+  from {
+    width: 0;
+    opacity: 1;
+  }
+
+  to {
+    width: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes drawStem {
+  from {
+    width: 0;
+    opacity: 1;
+  }
+
+  to {
+    width: 50px;
+    opacity: 1;
+  }
+}
+
+/* --- ANIMACIONES ADICIONALES (DIAMANTE Y BRILLO) --- */
+
+/* 1. Contenedor del brillo (el rayo de luz) */
+.animar-brillo {
+  position: relative;
+  overflow: hidden;
+  /* Importante: para que el rayo no se salga del modal */
+}
+
+.animar-brillo::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -100%;
+  width: 40%;
+  height: 200%;
+  background: linear-gradient(to right,
+      transparent,
+      rgba(255, 255, 255, 0.6),
+      transparent);
+  transform: rotate(30deg);
+  animation: brilloFlash 1.2s ease-out forwards;
+}
+
+@keyframes brilloFlash {
+  0% {
+    left: -100%;
+  }
+
+  100% {
+    left: 150%;
+  }
+}
+
+/* 2. El Diamante Flotante */
+.icono-flotante {
+  display: inline-block;
+  filter: drop-shadow(0 0 8px rgba(0, 191, 255, 0.4));
+  /* Resplandor azulado */
+  animation: flotarDiamante 2s ease-in-out infinite;
+}
+
+@keyframes flotarDiamante {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* 3. Ajuste para el Fuego */
+#contenedor-animacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100px;
+}
+
+/* 4. Podio del Honor */
+.cohete-despegue {
+  display: inline-block;
+  position: relative;
+  z-index: 10;
+  animation:
+    despegue 0.8s ease-out forwards,
+    rutaGranExplorador 6s linear infinite 0.8s;
+}
+
+@keyframes rutaGranExplorador {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+
+  20% {
+    transform: translate(120px, -40px) rotate(45deg);
+  }
+
+  40% {
+    transform: translate(0, -80px) rotate(0deg);
+  }
+
+  60% {
+    transform: translate(-120px, -40px) rotate(-45deg);
+  }
+
+  80% {
+    transform: translate(0, 40px) rotate(10deg);
+  }
+
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes despegue {
+  0% {
+    transform: translateY(150px) scale(0.2);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
   }
 }
