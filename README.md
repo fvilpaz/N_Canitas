@@ -1,3 +1,8 @@
+<div align="right">
+  <img src="https://img.shields.io/badge/EN-1a6fc4?style=flat-square" alt="English">
+  &nbsp;<a href="README.es.md"><img src="https://img.shields.io/badge/ES-555555?style=flat-square" alt="Español"></a>
+</div>
+
 # 👨‍🍳 Cañitas Maite · Interactive Training Platform
 
 ![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=flat-square&logo=html5&logoColor=white)
@@ -5,59 +10,59 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-%23F7DF1E.svg?style=flat-square&logo=javascript&logoColor=black)
 ![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-%2312100E.svg?style=flat-square&logo=github&logoColor=white)
 
-Plataforma interactiva de formación para el equipo de sala de **Cañitas Maite**. Diseñada para centralizar el conocimiento sobre la carta, la trazabilidad de los ingredientes y asegurar la excelencia en el servicio a través de un sistema de certificación interno.
+Interactive training platform for the front-of-house team at **Cañitas Maite**. Designed to centralize knowledge about the menu, ingredient traceability, and ensure service excellence through an internal certification system.
 
 ---
 
-## 🚀 Características Principales
-- **Fichas Técnicas Interactivas:** Historia, concepto y trazabilidad de cada plato.  
-- **Gestión de Alérgenos:** Visualización clara por cada plato de la carta.  
-- **Quizzes Individuales:** Micro-entrenamientos por plato para fijar conocimientos.  
-- **Examen de Certificación:** Super-test aleatorio que evalúa conocimiento global antes de permitir el servicio en sala.  
-- **Modo Noche/Día:** Adaptado a entornos con poca luz.
+## 🚀 Main Features
+- **Interactive Technical Sheets:** History, concept, and traceability for each dish.  
+- **Allergen Management:** Clear allergen display for each dish on the menu.  
+- **Individual Quizzes:** Micro-training sessions per dish to consolidate knowledge.  
+- **Certification Exam:** Random super-test that evaluates overall knowledge before allowing floor service.  
+- **Night/Day Mode:** Adapted for low-light environments.
 
 ---
 
-## 🛠️ Estructura del Proyecto
-- `index.html`: Estructura principal de la aplicación.  
-- `data.js`: Base de datos de la carta (precios, ingredientes, quizzes).  
-- `js/app.js`: Motor de la lógica y sistema de exámenes.  
-- `css/`: Estilos visuales personalizados.  
-- `assets/`: Logos e iconos oficiales.
+## 🛠️ Project Structure
+- `index.html`: Main application structure.  
+- `data.js`: Menu database (prices, ingredients, quizzes).  
+- `js/app.js`: Logic engine and exam system.  
+- `css/`: Custom visual styles.  
+- `assets/`: Official logos and icons.
 
 ---
 
-## 💻 Acceso / Demo
-- La aplicación funciona en ordenadores, tablets y dispositivos móviles (iOS/Android).  
-- **Prueba la plataforma aquí:** [https://fvilpaz.github.io/N_Canitas/](https://fvilpaz.github.io/N_Canitas/)
+## 💻 Access / Demo
+- The application works on computers, tablets, and mobile devices (iOS/Android).  
+- **Try the platform here:** [https://fvilpaz.github.io/N_Canitas/](https://fvilpaz.github.io/N_Canitas/)
 
 ---
 
-## 🛠️ Tecnologías y Créditos
-- **Desarrollo Principal:** Nando  
-- **Optimización y Prototipado:** Inteligencia Artificial (Google Gemini)  
+## 🛠️ Technologies and Credits
+- **Main Development:** Nando  
+- **Optimization and Prototyping:** Artificial Intelligence (Google Gemini)  
 - **Hosting:** GitHub Pages
 
 ---
 
-## 💡 Retos y Aprendizajes
-- Implementar quizzes aleatorios y certificaciones internas supuso un desafío de lógica y control de flujo.  
-- Optimización del flujo de datos con IA permitió iterar rápido y mejorar la eficiencia.  
-- Diseño de UI usable para tablets y móviles reforzó la atención al UX.  
-- Comprender cómo “traducir” instrucciones de IA a código funcional fue clave para consolidar habilidades de programación asistida.
+## 💡 Challenges and Learnings
+- Implementing random quizzes and internal certifications was a logic and control-flow challenge.  
+- Optimizing the data flow with AI allowed for fast iteration and improved efficiency.  
+- Designing a usable UI for tablets and mobile reinforced attention to UX.  
+- Understanding how to "translate" AI instructions into functional code was key to consolidating assisted programming skills.
 
 ---
 
-## ⚡ Cómo usar
-1. Abrir `index.html` o visitar el link de demo.  
-2. Navegar por las fichas técnicas de cada plato.  
-3. Realizar quizzes y examen de certificación.  
-4. Usar el modo noche si estás de guardia para seguir aprendiendo sin molestar.
+## ⚡ How to use
+1. Open `index.html` or visit the demo link.  
+2. Browse the technical sheets for each dish.  
+3. Take quizzes and the certification exam.  
+4. Use night mode if you're on shift to keep learning without disturbing others.
 
 ---
 
-## 🌠 Explora y Aprende en Cañitas Maite
-🎯 Aprende sobre cada plato – historia, ingredientes y trazabilidad.  
-🧩 Pon a prueba tus conocimientos – quizzes interactivos por plato.  
-🏆 Certifícate – demuestra que estás listo para el servicio en sala.  
-✨ Tip: Usa el modo Noche si estás trabajando y sigue aprendiendo sin molestar a nadie.
+## 🌠 Explore and Learn at Cañitas Maite
+🎯 Learn about each dish – history, ingredients, and traceability.  
+🧩 Test your knowledge – interactive quizzes per dish.  
+🏆 Get certified – prove you're ready for floor service.  
+✨ Tip: Use Night Mode if you're working and keep learning without bothering anyone.
